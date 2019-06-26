@@ -81,6 +81,7 @@
 <script>
 import RULES from '@/RULES';
 import ClipboardJS from 'clipboard';
+import throttle from 'lodash/throttle';
 export default {
     name: 'app',
 
@@ -90,6 +91,7 @@ export default {
         Object.freeze(RULES.reverse());
 
         return {
+            timer: null,
             keyword: '',
             rules: RULES,
             list: RULES.map(() => ({
@@ -136,9 +138,17 @@ export default {
             this.$refs.searchInput.select();
         },
 
-        mouseenterHandler(index) {
+        autoFocus(index) {
             this.$refs.input[index].focus();
         },
+
+        mouseenterHandler(index){
+           
+        },
+
+        // mouseenterHandler: throttle((index)=>{
+        //    this.$refs.input[index].focus();
+        // },1000).bind(this),
 
         reset(index) {
             this.$nextTick(() => {
@@ -174,14 +184,16 @@ $radius: 4px;
 
 @keyframes shrinkBorder {
     from {
+        transform: translateY(-100%);
     }
     50% {
-        width: 30px;
+        width: 4px;
         opacity: 0.62;
     }
 
     to {
         left: 0;
+        transform: translateY(0);
     }
 }
 main {
@@ -195,7 +207,7 @@ main {
     .fixed {
         position: fixed;
         z-index: 1986;
-        left: 15px;
+        right: 15px;
         bottom: 15px;
         box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
         border-radius: $radius;
@@ -271,7 +283,7 @@ main {
                 border-radius: $radius;
                 border-color: #eee;
                 > .border {
-                    animation: shrinkBorder 1s;
+                    animation: shrinkBorder 0.5s;
                     left: 0;
                 }
             }
