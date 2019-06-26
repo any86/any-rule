@@ -40,7 +40,7 @@
           <h2>{{title}}</h2>
           <p class="rule">
             <span :data-clipboard-text="rule" class="btn-copy">点击复制</span>
-            <a href="https://github.com/any86/any-rule/issues/new" target="_blank" class="btn-better">我有不同意见</a>
+            <a :href="`https://github.com/any86/any-rule/issues/new?title=我有更好的正则: ${title}`" target="_blank" class="btn-better">我有不同意见</a>
             {{rule}}
           </p>
           <section class="verification">
