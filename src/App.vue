@@ -40,6 +40,7 @@
           <h2>{{title}}</h2>
           <p class="rule">
             <span :data-clipboard-text="rule" class="btn-copy">点击复制</span>
+            <a href="https://github.com/any86/any-rule/issues/new" target="_blank" class="btn-better">我有不同意见</a>
             {{rule}}
           </p>
           <section class="verification">
@@ -322,6 +323,11 @@ main {
                     &:hover {
                         opacity: 0.6;
                     }
+                }
+
+                >.btn-better{
+                    @extend .btn-copy;
+                    background-color:#ff5722;
                 }
             }
 
