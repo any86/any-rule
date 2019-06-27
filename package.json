@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:md": "node ./scripts/md",
     "build:demo": "npm run build && node ./scripts/demo",
     "lint": "vue-cli-service lint"
   },
