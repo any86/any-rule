@@ -1,5 +1,5 @@
 # any-rule 
-正则大全
+查询界面: 
 https://any86.github.io/any-rule/
 
 ## 手机号
