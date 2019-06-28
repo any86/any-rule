@@ -59,7 +59,7 @@ https://any86.github.io/any-rule/
 
 ## 只包含中文
 ```javascript
-/^[\u4E00-\u9FA5]/
+/^[\u4E00-\u9FA5]+$/
 ```
 
 ## 是否小数
