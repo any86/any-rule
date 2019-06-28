@@ -1,7 +1,7 @@
 module.exports = [
   {
     title: 'URL正则',
-    rule: /^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})(\/\w\.-]*)*\/?$/,
+    rule: /^((https?|ftp|file):\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/\w\.-]*)*\/?$/,
     example: '如: www.qq.com 、file:///C:/Users/KD/index.js'
   },
   {
