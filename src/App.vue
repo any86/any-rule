@@ -69,7 +69,7 @@
                             target="_blank"
                             class="btn-better"
                         >我有不同意见</a>
-                        {{rule}}
+                        <code ref="code" class="javascript">{{rule}}</code>
                     </p>
                     <section class="verification">
                         <label>
@@ -136,6 +136,15 @@ export default {
     },
 
     mounted() {
+        // this.$nextTick(() => {
+        //     // 高亮
+        //     this.$refs.code.forEach((block) => {
+        //         console.log(block);
+        //         /* eslint-disable */
+        //         hljs.highlightBlock(block);
+        //     });
+        // });
+
         const clipboard = new ClipboardJS('.btn-copy');
 
         this.$on('hook:destroyed', () => {
