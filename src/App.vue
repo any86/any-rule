@@ -1,95 +1,116 @@
 <template>
-  <main>
-    <article class="fixed">
-      <a href="https://github.com/any86/any-rule" target="_blank" class="github">
-        <svg height="20" viewBox="0 0 16 16" version="1.1" width="20" aria-hidden="true">
-          <path
-            fill-rule="evenodd"
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-          ></path>
-        </svg>
-        <span>github</span>
-      </a>
-      <a class="message" href="https://github.com/any86/any-rule/issues/new" target="_blank">留言</a>
-    </article>
-    <header>
-      <h1>正则大全</h1>
-        <a style="margin-left:15px;color:#000;" href="https://github.com/any86/any-rule" target="_blank" class="github">
-            <svg height="20" viewBox="0 0 16 16" version="1.1" width="20" aria-hidden="true">
-          <path
-            fill-rule="evenodd"
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-          ></path>
-        </svg>
-        github</a>
-      <input
-        ref="searchInput"
-        v-model="keyword"
-        autofocus
-        @keyup="search"
-        @mouseenter="selectSearchInputText"
-        @focus="selectSearchInputText"
-        class="search-input"
-        placeholder="搜索关键词, 如'手机'"
-        type="text"
-      >
-    </header>
+    <main>
+        <article class="fixed">
+            <a
+                onclick="_hmt.push(['_trackEvent', '交互', '点击github', '悬浮'])"
+                href="https://github.com/any86/any-rule"
+                target="_blank"
+                class="github"
+            >
+                <svg height="20" viewBox="0 0 16 16" version="1.1" width="20" aria-hidden="true">
+                    <path
+                        fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                    ></path>
+                </svg>
+                <span>github</span>
+            </a>
+            <a
+                onclick="_hmt.push(['_trackEvent', '交互', '留言'])"
+                class="message"
+                href="https://github.com/any86/any-rule/issues/new"
+                target="_blank"
+            >留言</a>
+        </article>
+        <header>
+            <h1>正则大全</h1>
+            <a
+                onclick="_hmt.push(['_trackEvent', '交互', '点击github', '头部'])"
+                style="margin-left:15px;color:#000;"
+                href="https://github.com/any86/any-rule"
+                target="_blank"
+                class="github"
+            >
+                <svg height="20" viewBox="0 0 16 16" version="1.1" width="20" aria-hidden="true">
+                    <path
+                        fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                    ></path>
+                </svg>
+                github
+            </a>
+            <input
+                ref="searchInput"
+                v-model="keyword"
+                autofocus
+                @keyup="search"
+                @mouseenter="selectSearchInputText"
+                @focus="selectSearchInputText"
+                class="search-input"
+                placeholder="搜索关键词, 如'手机'"
+                type="text"
+            >
+        </header>
 
-    <article>
-      <ul v-if="0 < rules.length" class="list">
-        <li
-          @mouseenter="mouseenterHandler(index)"
-          v-for="({title, rule, events}, index) in rules"
-          :key="title"
-          class="row"
-        >
-          <i class="border"></i>
-          <h2>{{title}}</h2>
-          <p class="rule">
-            <span :data-clipboard-text="rule" class="btn-copy">点击复制</span>
-            <a :href="`https://github.com/any86/any-rule/issues/new?title=我有更好的正则: ${title}`" target="_blank" class="btn-better">我有不同意见</a>
-            {{rule}}
-          </p>
-          <section class="verification">
-            <label>
-              <input
-                ref="input"
-                v-model="list[index].value"
-                @blur="check(index, 'blur')"
-                @keyup="check(index, 'keyup')"
-              >
-              <span class="btn-clear" @click="reset(index)">清空</span>
-            </label>
+        <article>
+            <ul v-if="0 < rules.length" class="list">
+                <li
+                    @mouseenter="mouseenterHandler(index)"
+                    v-for="({title, rule, events}, index) in rules"
+                    :key="title"
+                    class="row"
+                >
+                    <i class="border"></i>
+                    <h2>{{title}}</h2>
+                    <p class="rule">
+                        <span :data-clipboard-text="rule" class="btn-copy">点击复制</span>
+                        <a
+                            :href="`https://github.com/any86/any-rule/issues/new?title=我有更好的正则: ${title}`"
+                            target="_blank"
+                            class="btn-better"
+                        >我有不同意见</a>
+                        {{rule}}
+                    </p>
+                    <section class="verification">
+                        <label>
+                            <input
+                                ref="input"
+                                v-model="list[index].value"
+                                @blur="check(index, 'blur')"
+                                @keyup="check(index, 'keyup')"
+                            >
+                            <span class="btn-clear" @click="reset(index)">清空</span>
+                        </label>
 
-            <div class="tip">
-              <template v-if="undefined !== list[index].isOk">
-                <p v-if="list[index].isOk" class="success">通过</p>
-                <p v-else class="error">不通过</p>
-              </template>
-            </div>
-          </section>
+                        <div class="tip">
+                            <template v-if="undefined !== list[index].isOk">
+                                <p v-if="list[index].isOk" class="success">通过</p>
+                                <p v-else class="error">不通过</p>
+                            </template>
+                        </div>
+                    </section>
 
-          <section class="trigger">
-            <h3>验证时机</h3>
-            <label>
-              <input v-model="list[index].events.blur" type="checkbox"> blur
-            </label>
+                    <section class="trigger">
+                        <h3>验证时机</h3>
+                        <label>
+                            <input v-model="list[index].events.blur" type="checkbox"> blur
+                        </label>
 
-            <label>
-              <input v-model="list[index].events.keyup" type="checkbox"> keyup
-            </label>
-          </section>
-        </li>
-      </ul>
-      <p v-else align="center">无数据</p>
-    </article>
-  </main>
+                        <label>
+                            <input v-model="list[index].events.keyup" type="checkbox"> keyup
+                        </label>
+                    </section>
+                </li>
+            </ul>
+            <p v-else align="center">无数据</p>
+        </article>
+    </main>
 </template>
 
 <script>
 import RULES from '@/RULES';
 import ClipboardJS from 'clipboard';
-import throttle from 'lodash/throttle';
+// import throttle from 'lodash/throttle';
 export default {
     name: 'app',
 
@@ -140,6 +161,8 @@ export default {
             } else {
                 this.rules = RULES;
             }
+            /* eslint-disable */
+            _hmt.push(['_trackEvent', '交互', '搜索', '关键词', this.keyword]);
         },
 
         selectSearchInputText() {
@@ -149,10 +172,8 @@ export default {
         autoFocus(index) {
             this.$refs.input[index].focus();
         },
-
-        mouseenterHandler(index){
-           
-        },
+        /* eslint-disable */
+        mouseenterHandler(index) {},
 
         // mouseenterHandler: throttle((index)=>{
         //    this.$refs.input[index].focus();
@@ -172,6 +193,11 @@ export default {
                 const { rule } = this.rules[index];
                 const row = this.list[index];
                 row.isOk = rule.test(row.value);
+            }
+
+            if ('blur' === type) {
+                /* eslint-disable */
+                _hmt.push(['_trackEvent', '交互', 'input框', this.list[index].value]);
             }
         }
     }
@@ -332,9 +358,9 @@ main {
                     }
                 }
 
-                >.btn-better{
+                > .btn-better {
                     @extend .btn-copy;
-                    background-color:#ff5722;
+                    background-color: #ff5722;
                 }
             }
 
