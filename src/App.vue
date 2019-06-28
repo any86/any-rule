@@ -39,7 +39,7 @@
       <ul v-if="0 < rules.length" class="list">
         <li
           @mouseenter="mouseenterHandler(index)"
-          v-for="({title, rule, events}, index) in rules"
+          v-for="({title, rule, example, events}, index) in rules"
           :key="title"
           class="row"
         >
@@ -55,6 +55,7 @@
               <input
                 ref="input"
                 v-model="list[index].value"
+                :placeholder="example"
                 @blur="check(index, 'blur')"
                 @keyup="check(index, 'keyup')"
               >
