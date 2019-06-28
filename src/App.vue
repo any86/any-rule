@@ -77,6 +77,9 @@
                                 ref="input"
                                 v-model="list[index].value"
                                 :placeholder="example"
+                                @compositionstart="check(index, 'blur')"
+                                @compositionupdate="check(index, 'blur')"
+                                @compositionend="check(index, 'blur')"
                                 @blur="check(index, 'blur')"
                                 @keyup="check(index, 'keyup')"
                             >
