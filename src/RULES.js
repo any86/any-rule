@@ -58,7 +58,7 @@ module.exports = [
   },
   {
     title: '只包含中文',
-    rule: /^[\u4E00-\u9FA5]/,
+    rule: /^[\u4E00-\u9FA5]+$/,
     example: '如: 正则、前端'
   },
   {
