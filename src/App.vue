@@ -118,7 +118,7 @@ export default {
     components: {},
 
     data() {
-        Object.freeze(RULES.reverse());
+        Object.freeze(RULES);
 
         return {
             timer: null,
