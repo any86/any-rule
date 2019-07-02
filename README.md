@@ -2,7 +2,10 @@
 正则大全
 https://any86.github.io/any-rule/
 ## 银行卡号 
-备注：16或者19位，第一位不为0，具体每个银行正则参考[匹配国内主流银行卡的正则](https://gist.github.com/yanweijia/7fea45eab57a0ff355d71546411b004a)
+备注：16或者19位，第一位不为0，具体每个银行正则参考 [匹配国内主流银行卡的正则](https://gist.github.com/yanweijia/7fea45eab57a0ff355d71546411b004a)，
+或者可以直接调用支付宝提供的接口：
+``` https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=6214832018989180 &cardBinCheck=true ```
+
 ```javascript
 /^([1-9]{1})(\d{15}|\d{18})$/
 ```
