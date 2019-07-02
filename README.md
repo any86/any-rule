@@ -1,6 +1,11 @@
 # any-rule 
 正则大全
 https://any86.github.io/any-rule/
+## 银行卡号 
+备注：16或者19位，第一位不为0，具体每个银行正则参考[匹配国内主流银行卡的正则](https://gist.github.com/yanweijia/7fea45eab57a0ff355d71546411b004a)
+```javascript
+/^([1-9]{1})(\d{15}|\d{18})$/
+```
 
 ## 中文姓名
 ```javascript
