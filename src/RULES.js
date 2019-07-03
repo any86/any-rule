@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     title: '中文姓名',
-    rule: /^([\u4e00-\u9fa5\·]{2,10})$/,
+    rule: /^([\u4e00-\u9fa5·]{2,10})$/,
     example: '如: 葛二蛋、凯文·杜兰特'
   },
   {

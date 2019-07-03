@@ -9,7 +9,7 @@ https://any86.github.io/any-rule/
 
 ## 中文姓名
 ```javascript
-/^([\u4e00-\u9fa5\·]{2,10})$/
+/^([\u4e00-\u9fa5·]{2,10})$/
 ```
 
 ## 新能源车牌号
