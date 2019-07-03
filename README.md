@@ -1,6 +1,6 @@
 # 正则大全
 
-https://any86.github.io/any-rule/
+图形界面: https://any86.github.io/any-rule/
 
 ## 银行卡号（16或19位）
 ```javascript
