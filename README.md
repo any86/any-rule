@@ -144,5 +144,5 @@ https://any86.github.io/any-rule/
 
 ## 非字母
 ```javascript
-/[^A-Za-z]/
+/[^A-Za-z]$/
 ```

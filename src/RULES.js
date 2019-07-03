@@ -144,7 +144,7 @@ module.exports = [
   },
   {
     title: '非字母',
-    rule: /[^A-Za-z]/,
+    rule: /[^A-Za-z]$/,
     example: '如: 你好6啊、Q3Q、ABC@¥()！'
   }
 ];
