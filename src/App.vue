@@ -218,7 +218,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$primary: rgb(139, 204, 102);
+$primary: #4caf50;
 $radius: 4px;
 @keyframes slide {
     from {
@@ -373,7 +373,7 @@ main {
 
                 > .btn-better {
                     @extend .btn-copy;
-                    background-color: #ff5722;
+                    background-color: #F44336;
                 }
             }
 
