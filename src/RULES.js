@@ -27,8 +27,8 @@ module.exports = [
   },
 
   {
-    title: 'URL链接',
-    rule: /^((https?|ftp|file):\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/\w\.-]*)*\/?$/,
+    title: 'URL链接(网址)',
+    rule: /^((https?|ftp|file):\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/\w\.-]*)*\/?/,
     example: '如: www.qq.com 、file:///C:/Users/KD/index.js'
   },
   {
