@@ -43,6 +43,30 @@
         li {
             list-style-type: none;
         }
+
+        @keyframes rotate{
+            from{
+                transform: rotate(0);
+            }
+            
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .loading{
+            animation: rotate 1s infinite linear;
+            margin:0;
+            padding:0;
+            position: fixed;
+            top:0;left:0;right: 0;bottom:0;
+            margin:auto;
+            display: block;
+            width:100px;
+            height:100px;
+            border:0 solid #4caf50;
+            border-right-width: 4px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -50,7 +74,10 @@
     <noscript>
         <strong>We're sorry but any-rule doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    
+    <div id="app">
+        <i class="loading"></i>
+    </div>
     <!-- built files will be auto injected -->
 </body>
 
