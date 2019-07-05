@@ -55,11 +55,7 @@ module.exports = [{
         rule: /^1[3-9]\d{9}$/,
         example: '如: 18311006933、17888829981'
     },
-    {
-        title: '大写字母',
-        rule: /^[A-Z]+$/,
-        example: '如: ABC、KD'
-    },
+
     {
         title: '日期, 如: 2000-01-01或2000-1-1',
         rule: /^\d{4}(-)([0-1][0-2]|\d)\1([0-2]\d|\d|30|31)$/,
@@ -96,7 +92,7 @@ module.exports = [{
         example: '如: justin、justin1989、justin_666'
     },
     {
-        title: '只包含中文',
+        title: '纯中文/汉字',
         rule: /^[\u4E00-\u9FA5]+$/,
         example: '如: 正则、前端'
     },
@@ -106,13 +102,13 @@ module.exports = [{
         example: '如: 0.0、0.09'
     },
     {
-        title: '是否电话格式(手机和座机)',
-        rule: /^((0\d{2,3}-\d{7,8})|(1[345789]\d{9}))$/,
-        example: '如: 0936-4211236、19888978261'
+        title: '电话(座机)',
+        rule: /^0\d{2,3}-\d{7,8}$/,
+        example: '如: 0936-4211236'
     },
     {
-        title: '是否8位纯数字',
-        rule: /^[0-9]{8}$/,
+        title: '纯数字',
+        rule:/^\d{1,}$/,
         example: '如: 12345678'
     },
     {
@@ -131,9 +127,19 @@ module.exports = [{
         example: '如: james666、haha233hi'
     },
     {
-        title: '是否小写字母组成',
+        title: '纯英文字母',
+        rule: /^[a-zA-Z]+$/,
+        example: '如: russel'  
+    },
+    {
+        title: '纯小写英文字母组成',
         rule: /^[a-z]+$/,
         example: '如: russel'
+    },
+    {
+        title: '纯大写英文字母',
+        rule: /^[A-Z]+$/,
+        example: '如: ABC、KD'
     },
     {
         title: '密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符',
