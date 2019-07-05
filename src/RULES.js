@@ -1,9 +1,9 @@
 module.exports = [{
-        title: '24小时制时间（HH-mm-ss）',
+        title: '24小时制时间（HH:mm:ss）',
         rule: /^((?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$)/
     },
     {
-      title: '12小时制时间（hh-mm-ss）',
+      title: '12小时制时间（hh:mm:ss）',
       rule: /^(1[0-2]|0?[1-9]):[0-5]\d:[0-5]\d$/
     },
     {
