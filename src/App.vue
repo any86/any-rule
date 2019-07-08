@@ -214,7 +214,7 @@ export default {
 
             if ('blur' === type) {
                 /* eslint-disable */
-                _hmt.push(['_trackEvent', '交互', 'input框', this.list[index].value]);
+                _hmt.push(['_trackEvent', 'input框', this.rules[index].title, this.list[index].value]);
             }
         }
     }
