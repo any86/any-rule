@@ -1,4 +1,4 @@
-# 正则大全
+# 正则大全(持续更新)
 图形界面: https://any86.github.io/any-rule/
 
 ## 24小时制时间（HH:mm:ss）
