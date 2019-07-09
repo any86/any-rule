@@ -1,10 +1,22 @@
 module.exports = [{
+      title: '视频链接地址（视频格式可按需增删）',
+      rule: /^https?:\/\/.*?(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i,
+      example: '如: http://www.abc.com/video/wc.avi'
+    },
+    {
+      title: '图片链接地址（图片格式可按需增删）',
+      rule: /^https?:\/\/.*?(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$/i,
+      example: '如: https://www.abc.com/logo.png'
+    },
+    {
         title: '24小时制时间（HH:mm:ss）',
-        rule: /^((?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$)/
+        rule: /^((?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$)/,
+        example: '如: 23:34:55'
     },
     {
       title: '12小时制时间（hh:mm:ss）',
-      rule: /^(1[0-2]|0?[1-9]):[0-5]\d:[0-5]\d$/
+      rule: /^(1[0-2]|0?[1-9]):[0-5]\d:[0-5]\d$/,
+      example: '如: 11:34:55合法、23:34:55不合法'
     },
     {
         title: 'base64格式',

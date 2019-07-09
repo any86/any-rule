@@ -1,5 +1,15 @@
-# 正则大全(持续更新)
+# 正则大全
 图形界面: https://any86.github.io/any-rule/
+
+## 视频链接地址（视频格式可按需增删）
+```javascript
+/^https?:\/\/.*?(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i
+```
+
+## 图片链接地址（图片格式可按需增删）
+```javascript
+/^https?:\/\/.*?(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$/i
+```
 
 ## 24小时制时间（HH:mm:ss）
 ```javascript
