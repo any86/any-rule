@@ -1,6 +1,16 @@
 # 正则大全
 图形界面: https://any86.github.io/any-rule/
 
+## html注释
+```javascript
+/<!--(.*?)-->/
+```
+
+## md5格式(32位)
+```javascript
+/^[a-f0-9]{32}$/
+```
+
 ## 版本号格式必须为X.Y.Z
 ```javascript
 /^\d+(\.\d+){2}$/
@@ -209,9 +219,4 @@
 ## 非字母
 ```javascript
 /[^A-Za-z]$/
-```
-
-## 解除注释
-```javascript
-/<!--(.*?)-->/
 ```

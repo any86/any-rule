@@ -1,4 +1,14 @@
-module.exports = [{
+module.exports = [
+    {
+        title: 'html注释',
+        rule: /<!--(.*?)-->/,
+        example: '如: <!--<div class="_bubble"></div>-->'
+    },
+    {
+        title: 'md5格式(32位)',
+        rule: /^[a-f0-9]{32}$/,
+        example: '21fe181c5bfc16306a6828c1f7b762e8',
+    }, {
         title: '版本号格式必须为X.Y.Z',
         rule: /^\d+(\.\d+){2}$/,
         example: '如: 16.3.10'
@@ -210,10 +220,5 @@ module.exports = [{
         title: '非字母',
         rule: /[^A-Za-z]$/,
         example: '如: 你好6啊、Q3Q、ABC@¥()！'
-    },
-    {
-        title: '解除注释',
-        rule: /<!--(.*?)-->/,
-        example: '如: <!--<div class="_bubble"></div>-->'
     }
 ];
