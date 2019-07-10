@@ -1,6 +1,8 @@
 # 正则大全
 图形界面: https://any86.github.io/any-rule/
 
+![](https://ws1.sinaimg.cn/large/005IQkzXly1g4uujrg5akj30ck0llwg1.jpg)
+
 ## 版本号格式必须为X.Y.Z
 ```javascript
 /^\d+(\.\d+){2}$/
