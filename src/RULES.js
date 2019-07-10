@@ -1,7 +1,7 @@
 module.exports = [
     {
         title: 'html注释',
-        rule: /<!--(.*?)-->/,
+        rule: /<!--(.*?)-->$/,
         example: '如: <!--<div class="_bubble"></div>-->'
     },
     {
