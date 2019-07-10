@@ -1,6 +1,11 @@
 # 正则大全
 图形界面: https://any86.github.io/any-rule/
 
+## 版本号格式必须为X.Y.Z
+```javascript
+/^\d+(\.\d+){2}$/
+```
+
 ## 视频链接地址（视频格式可按需增删）
 ```javascript
 /^https?:\/\/.*?(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i

@@ -1,12 +1,17 @@
 module.exports = [{
-      title: '视频链接地址（视频格式可按需增删）',
-      rule: /^https?:\/\/.*?(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i,
-      example: '如: http://www.abc.com/video/wc.avi'
+        title: '版本号格式必须为X.Y.Z',
+        rule: /^\d+(\.\d+){2}$/,
+        example: '如: 16.3.10'
     },
     {
-      title: '图片链接地址（图片格式可按需增删）',
-      rule: /^https?:\/\/.*?(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$/i,
-      example: '如: https://www.abc.com/logo.png'
+        title: '视频链接地址（视频格式可按需增删）',
+        rule: /^https?:\/\/.*?(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i,
+        example: '如: http://www.abc.com/video/wc.avi'
+    },
+    {
+        title: '图片链接地址（图片格式可按需增删）',
+        rule: /^https?:\/\/.*?(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$/i,
+        example: '如: https://www.abc.com/logo.png'
     },
     {
         title: '24小时制时间（HH:mm:ss）',
@@ -14,9 +19,9 @@ module.exports = [{
         example: '如: 23:34:55'
     },
     {
-      title: '12小时制时间（hh:mm:ss）',
-      rule: /^(1[0-2]|0?[1-9]):[0-5]\d:[0-5]\d$/,
-      example: '如: 11:34:55合法、23:34:55不合法'
+        title: '12小时制时间（hh:mm:ss）',
+        rule: /^(1[0-2]|0?[1-9]):[0-5]\d:[0-5]\d$/,
+        example: '如: 11:34:55合法、23:34:55不合法'
     },
     {
         title: 'base64格式',
@@ -98,12 +103,12 @@ module.exports = [{
     {
         title: '一代身份证号(15位数字)',
         rule: /^\d{8}(0\d|11|12)([0-2]\d|30|31)\d{3}$/,
-        example: '如: 622001790131123' 
+        example: '如: 622001790131123'
     },
     {
         title: '二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X',
         rule: /^\d{6}(18|19|20)\d{2}(0\d|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$/,
-        example: '如: 62222319991205131x' 
+        example: '如: 62222319991205131x'
     },
     {
         title: '身份证号, 支持1/2代(15位/18位数字)',
@@ -132,7 +137,7 @@ module.exports = [{
     },
     {
         title: '纯数字',
-        rule:/^\d{1,}$/,
+        rule: /^\d{1,}$/,
         example: '如: 12345678'
     },
     {
@@ -153,7 +158,7 @@ module.exports = [{
     {
         title: '纯英文字母',
         rule: /^[a-zA-Z]+$/,
-        example: '如: russel'  
+        example: '如: russel'
     },
     {
         title: '纯小写英文字母组成',
