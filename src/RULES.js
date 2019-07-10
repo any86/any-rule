@@ -210,5 +210,10 @@ module.exports = [{
         title: '非字母',
         rule: /[^A-Za-z]$/,
         example: '如: 你好6啊、Q3Q、ABC@¥()！'
+    },
+    {
+        title: '解除注释',
+        rule: /<!--(.*?)-->/,
+        example: '如: <!--<div class="_bubble"></div>-->'
     }
 ];
