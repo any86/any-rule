@@ -1,5 +1,6 @@
-# 正则大全
-图形界面: https://any86.github.io/any-rule/
+# 正则大全 ![](https://img.shields.io/badge/已收录-44条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
+:whale:图形界面: https://any86.github.io/any-rule/
+
 
 ## html注释
 ```javascript
@@ -103,7 +104,7 @@
 
 ## email地址
 ```javascript
-/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
 ## 国内座机电话,如: 0341-86091234
