@@ -16,11 +16,11 @@
                 <span>github</span>
             </a>
             <a
-                onclick="_hmt.push(['_trackEvent', '交互', '留言'])"
+                onclick="_hmt.push(['_trackEvent', '交互', '提问'])"
                 class="message"
                 href="https://github.com/any86/any-rule/issues/new"
                 target="_blank"
-            >留言</a>
+            >提问</a>
         </article>
         <header>
             <h1>正则大全</h1>
@@ -352,9 +352,10 @@ main {
                 border-radius: $radius;
                 line-height: 2;
                 > .btn-copy {
+                    display: inline-block;
                     border-radius: $radius;
                     margin-right: 15px;
-                    padding: 5px;
+                    padding:0 5px;
                     background: $primary;
                     color: #fff;
                     font-size: 12px;
@@ -385,15 +386,17 @@ main {
                     @extend .btn-copy;
                     background-color: #F44336;
                 }
+
+                >code{word-break:break-word;}
             }
 
             > section.verification {
                 margin-top: 15px;
                 overflow: hidden;
                 > label {
-                    display: block;
+                    display: flex;
                     > input {
-                        width: 40%;
+                        flex-grow: 1;
                         padding: 5px 15px;
                         border-radius: $radius;
                         border: 1px solid #ddd;
