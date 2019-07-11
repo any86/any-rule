@@ -1,7 +1,7 @@
 const fs = require('fs');
 const chalk = require('chalk');
 const json = require('../src/RULES.js');
-let content = `# 正则大全 ![](https://img.shields.io/badge/已收录-${json.length}条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
+let content = `# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-${json.length}条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
 :whale:图形界面: https://any86.github.io/any-rule/\r\n
 `;
 

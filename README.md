@@ -1,4 +1,4 @@
-# 正则大全 ![](https://img.shields.io/badge/已收录-47条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
+# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-47条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
 :whale:图形界面: https://any86.github.io/any-rule/
 
 
