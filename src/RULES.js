@@ -239,8 +239,8 @@ module.exports = [
         example: '如: 哈哈哈、你好6啊'
     },
     {
-        title: '非字母',
-        rule: /[^A-Za-z]$/,
-        example: '如: 你好6啊、Q3Q、ABC@¥()！'
+        title: '不能包含字母',
+        rule: /^[^A-Za-z]*$/,
+        example: '如: 你好6啊、@¥()！'
     }
 ];
