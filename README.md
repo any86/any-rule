@@ -1,6 +1,11 @@
-# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-48条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
+# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-49条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
 :whale:图形界面: https://any86.github.io/any-rule/
 
+
+## A股代码
+```javascript
+/^(s[hz]|S[HZ])(000[\d]{3}|002[\d]{3}|300[\d]{3}|600[\d]{3}|60[\d]{4})$/
+```
 
 ## 大于0, 小于150, 支持小数位出现5, 如145.5, 用于判断考卷分数
 ```javascript
