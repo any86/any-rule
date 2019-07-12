@@ -1,6 +1,11 @@
-# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-47条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
+# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-48条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
 :whale:图形界面: https://any86.github.io/any-rule/
 
+
+## 大于0, 小于150, 支持小数位出现5, 如果145.5, 用于判断考卷分数
+```javascript
+/^150$|(^\d|^\d{2}|^\d[0-4]\d)(\.5)?$/
+```
 
 ## html注释
 ```javascript

@@ -1,5 +1,10 @@
 module.exports = [
     {
+        title: '大于0, 小于150, 支持小数位出现5, 如果145.5, 用于判断考卷分数',
+        rule: /^150$|(^\d|^\d{2}|^\d[0-4]\d)(\.5)?$/,
+        example: '150, 100.5'
+    },
+    {
         title: 'html注释',
         rule: /<!--(.*?)-->$/,
         example: '如: <!--<div class="_bubble"></div>-->'
