@@ -1,5 +1,4 @@
-module.exports = [
-    {
+module.exports = [{
         title: 'A股代码',
         rule: /^(s[hz]|S[HZ])(000[\d]{3}|002[\d]{3}|300[\d]{3}|600[\d]{3}|60[\d]{4})$/,
         example: 'sz000858、SZ002136、sz300675、SH600600、sh601155'
@@ -18,7 +17,7 @@ module.exports = [
         title: 'md5格式(32位)',
         rule: /^[a-f0-9]{32}$/,
         example: '21fe181c5bfc16306a6828c1f7b762e8',
-    }, 
+    },
     {
         title: '版本号格式必须为X.Y.Z',
         rule: /^\d+(\.\d+){2}$/,
@@ -70,11 +69,11 @@ module.exports = [
         example: '如: 葛二蛋、凯文·杜兰特、德克·维尔纳·诺维茨基'
     },
     {
-      title: '英文姓名',
-      rule: /(^[a-zA-Z]{1}[a-zA-Z\s]{0,20}[a-zA-Z]{1}$)/,
+        title: '英文姓名',
+        rule: /(^[a-zA-Z]{1}[a-zA-Z\s]{0,20}[a-zA-Z]{1}$)/,
 
-      example: '如: James、Kevin Wayne Durant、Dirk Nowitzki'
-   },
+        example: '如: James、Kevin Wayne Durant、Dirk Nowitzki'
+    },
     {
         title: '新能源车牌号',
         rule: /[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(([0-9]{5}[DF])|([DF][A-HJ-NP-Z0-9][0-9]{4}))$/,
@@ -117,7 +116,7 @@ module.exports = [
     },
     {
         title: 'email地址',
-        rule:  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+        rule: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
         example: '如: 90203918@qq.com、nbilly@126.com'
     },
     {
@@ -141,10 +140,10 @@ module.exports = [
         example: '如: 622223199912051311'
     },
     {
-      title: '护照（包含香港、澳门）',
-      rule: /(^[EeKkGgDdSsPpHh]\d{8}$)|(^(([Ee][a-fA-F])|([DdSsPp][Ee])|([Kk][Jj])|([Mm][Aa])|(1[45]))\d{7}$)/,
-      example: '如: s28233515、141234567、159203084、MA1234567、K25345719'
-   },
+        title: '护照（包含香港、澳门）',
+        rule: /(^[EeKkGgDdSsPpHh]\d{8}$)|(^(([Ee][a-fA-F])|([DdSsPp][Ee])|([Kk][Jj])|([Mm][Aa])|(1[45]))\d{7}$)/,
+        example: '如: s28233515、141234567、159203084、MA1234567、K25345719'
+    },
     {
         title: '帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合',
         rule: /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/,
@@ -152,7 +151,8 @@ module.exports = [
     },
     {
         title: '纯中文/汉字',
-        rule: /^[\u4E00-\u9FA5]+$/,
+        // rule: /^[\u4E00-\u9FA5]+$/,
+        rule: /^[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29\u{20000}-\u{2A6D6}\u{2A700}-\u{2B734}\u{2B740}-\u{2B81D}\u{2B820}-\u{2CEA1}\u{2CEB0}-\u{2EBE0}]+$/u,
         example: '如: 正则、前端'
     },
     {
