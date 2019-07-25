@@ -79,6 +79,7 @@
                         <label>
                             <input
                                 ref="input"
+                                :key="title"
                                 v-model="list[index].value"
                                 :placeholder="example"
                                 @compositionstart="check(index, 'blur')"
