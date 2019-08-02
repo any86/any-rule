@@ -3,7 +3,7 @@ const chalk = require('chalk');
 const json = require('../packages/www/src/RULES');
 let content = `# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-${json.length}条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
 
-支持图形界面/vscode插件2种方式查询.
+支持**图形界面** / **vscode插件**2种查询方式.
 
 ## :whale:图形界面
 https://any86.github.io/any-rule/
