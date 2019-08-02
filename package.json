@@ -1,7 +1,8 @@
 {
-    "name": "any-rule",
+	"name": "any-rule",
+	"publisher":"russell",
     "displayName": "any-rule",
-    "description": "",
+    "description": "快速找到所需正则",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.36.0"
