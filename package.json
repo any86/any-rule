@@ -271,6 +271,7 @@
         ]
     },
     "scripts": {
+        "build:md": "node ./scripts/md.js",
         "build": "vsce package",
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
