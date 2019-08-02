@@ -1,8 +1,12 @@
 const fs = require('fs');
 const chalk = require('chalk');
-const json = require('../../www/src/RULES.js');
+const json = require('../packages/www/src/RULES');
 let content = `# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-${json.length}条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
-:whale:图形界面: https://any86.github.io/any-rule/\r\n
+
+支持图形界面/vscode插件2种方式查询.
+
+## :whale:图形界面
+https://any86.github.io/any-rule/
 
 ## vscode插件
 1. 进入vscode后按**F1**.
@@ -11,7 +15,7 @@ let content = `# 正则大全  ![](https://img.shields.io/badge/状态-积极更
 
 ![预览动画加载中...](https://camo.githubusercontent.com/1f8b23e9081ff2e3074fcaffddbfe98475ed9419/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f382f322f313663353136633434366430396633623f773d34323026683d32343326663d67696626733d32353537383036)
 
-## 已支持
+## 正则
 `;
 
 json.forEach(({title, rule})=>{
