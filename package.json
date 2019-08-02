@@ -1,15 +1,23 @@
 {
-	"name": "any-rule",
-	"publisher":"russell",
+    "name": "any-rule",
+    "publisher": "russell",
     "displayName": "any-rule",
     "description": "快速找到所需正则",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.36.0"
     },
     "categories": [
         "Other"
     ],
+    "icon": "https://ws1.sinaimg.cn/large/005IQkzXly1g5ldl77vuhj305j05jq30.jpg",
+    "bugs": {
+        "url": "https://github.com/any86/any-rule/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/any86/any-rule.git"
+    },
     "activationEvents": [
         "onCommand:extension.rule0",
         "onCommand:extension.rule1",
@@ -263,10 +271,10 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "yarn run compile",
+        "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "pretest": "yarn run compile",
+        "pretest": "npm run compile",
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
