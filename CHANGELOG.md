@@ -8,6 +8,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 
-- 0.0.2
+- 0.0.3
 解决vscode低版本兼容问题
 替换主页的git图地址

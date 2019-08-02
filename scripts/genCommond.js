@@ -14,8 +14,6 @@ RULES.forEach((rule, index) => {
 })
 
 
-
-
 // console.log(JSON.stringify(pkg));
-fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 4), 'utf-8');
+fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 4), 'utf8');
 console.log('完成!');
