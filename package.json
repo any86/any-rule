@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "engines": {
         "vscode": "^1.36.0"
     },
@@ -271,6 +271,7 @@
         ]
     },
     "scripts": {
+        "build": "vsce package",
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
