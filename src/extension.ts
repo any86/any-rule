@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 					});
 				});
 				// Display a message box to the user
-				vscode.window.showInformationMessage(`已插入${title}`);
+				vscode.window.showInformationMessage(`已插入: ${title}`);
 			} else {
 				vscode.window.showWarningMessage('any-rule: 只有在编辑文本的时候才可以使用!');
 			}
