@@ -1,47 +1,282 @@
 {
-	"name": "any-rule",
-	"displayName": "any-rule",
-	"description": "",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.36.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld",
-		"onCommand:extension.helloWorld1"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "zz: 日期"
-			},
-			{
-				"command": "extension.helloWorld1",
-				"title": "zz: 手机号"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "yarn run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "yarn run compile",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.6",
-		"@types/node": "^10.12.21",
-		"@types/vscode": "^1.36.0",
-		"glob": "^7.1.4",
-		"mocha": "^6.1.4",
-		"typescript": "^3.3.1",
-		"tslint": "^5.12.1",
-		"vscode-test": "^1.0.2"
-	}
+    "name": "any-rule",
+    "displayName": "any-rule",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.rule0",
+        "onCommand:extension.rule1",
+        "onCommand:extension.rule2",
+        "onCommand:extension.rule3",
+        "onCommand:extension.rule4",
+        "onCommand:extension.rule5",
+        "onCommand:extension.rule6",
+        "onCommand:extension.rule7",
+        "onCommand:extension.rule8",
+        "onCommand:extension.rule9",
+        "onCommand:extension.rule10",
+        "onCommand:extension.rule11",
+        "onCommand:extension.rule12",
+        "onCommand:extension.rule13",
+        "onCommand:extension.rule14",
+        "onCommand:extension.rule15",
+        "onCommand:extension.rule16",
+        "onCommand:extension.rule17",
+        "onCommand:extension.rule18",
+        "onCommand:extension.rule19",
+        "onCommand:extension.rule20",
+        "onCommand:extension.rule21",
+        "onCommand:extension.rule22",
+        "onCommand:extension.rule23",
+        "onCommand:extension.rule24",
+        "onCommand:extension.rule25",
+        "onCommand:extension.rule26",
+        "onCommand:extension.rule27",
+        "onCommand:extension.rule28",
+        "onCommand:extension.rule29",
+        "onCommand:extension.rule30",
+        "onCommand:extension.rule31",
+        "onCommand:extension.rule32",
+        "onCommand:extension.rule33",
+        "onCommand:extension.rule34",
+        "onCommand:extension.rule35",
+        "onCommand:extension.rule36",
+        "onCommand:extension.rule37",
+        "onCommand:extension.rule38",
+        "onCommand:extension.rule39",
+        "onCommand:extension.rule40",
+        "onCommand:extension.rule41",
+        "onCommand:extension.rule42",
+        "onCommand:extension.rule43",
+        "onCommand:extension.rule44",
+        "onCommand:extension.rule45",
+        "onCommand:extension.rule46",
+        "onCommand:extension.rule47",
+        "onCommand:extension.rule48"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.rule0",
+                "title": "zz: A股代码"
+            },
+            {
+                "command": "extension.rule1",
+                "title": "zz: 大于0, 小于150, 支持小数位出现5, 如145.5, 用于判断考卷分数"
+            },
+            {
+                "command": "extension.rule2",
+                "title": "zz: html注释"
+            },
+            {
+                "command": "extension.rule3",
+                "title": "zz: md5格式(32位)"
+            },
+            {
+                "command": "extension.rule4",
+                "title": "zz: 版本号格式必须为X.Y.Z"
+            },
+            {
+                "command": "extension.rule5",
+                "title": "zz: 视频链接地址（视频格式可按需增删）"
+            },
+            {
+                "command": "extension.rule6",
+                "title": "zz: 图片链接地址（图片格式可按需增删）"
+            },
+            {
+                "command": "extension.rule7",
+                "title": "zz: 24小时制时间（HH:mm:ss）"
+            },
+            {
+                "command": "extension.rule8",
+                "title": "zz: 12小时制时间（hh:mm:ss）"
+            },
+            {
+                "command": "extension.rule9",
+                "title": "zz: base64格式"
+            },
+            {
+                "command": "extension.rule10",
+                "title": "zz: 数字/货币金额（支持负数、千分位分隔符）"
+            },
+            {
+                "command": "extension.rule11",
+                "title": "zz: 数字/货币金额 (只支持正数、不支持校验千分位分隔符)"
+            },
+            {
+                "command": "extension.rule12",
+                "title": "zz: 银行卡号（16或19位）"
+            },
+            {
+                "command": "extension.rule13",
+                "title": "zz: 中文姓名"
+            },
+            {
+                "command": "extension.rule14",
+                "title": "zz: 英文姓名"
+            },
+            {
+                "command": "extension.rule15",
+                "title": "zz: 新能源车牌号"
+            },
+            {
+                "command": "extension.rule16",
+                "title": "zz: 非新能源车牌号"
+            },
+            {
+                "command": "extension.rule17",
+                "title": "zz: 车牌号(新能源+非新能源)"
+            },
+            {
+                "command": "extension.rule18",
+                "title": "zz: URL链接(网址)"
+            },
+            {
+                "command": "extension.rule19",
+                "title": "zz: 中国手机号(严谨), 根据工信部2019年最新公布的手机号段"
+            },
+            {
+                "command": "extension.rule20",
+                "title": "zz: 中国手机号(宽松), 只要是13,14,15,16,17,18,19开头即可"
+            },
+            {
+                "command": "extension.rule21",
+                "title": "zz: 中国手机号(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条"
+            },
+            {
+                "command": "extension.rule22",
+                "title": "zz: 日期, 如: 2000-01-01或2000-1-1"
+            },
+            {
+                "command": "extension.rule23",
+                "title": "zz: email地址"
+            },
+            {
+                "command": "extension.rule24",
+                "title": "zz: 国内座机电话,如: 0341-86091234"
+            },
+            {
+                "command": "extension.rule25",
+                "title": "zz: 一代身份证号(15位数字)"
+            },
+            {
+                "command": "extension.rule26",
+                "title": "zz: 二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X"
+            },
+            {
+                "command": "extension.rule27",
+                "title": "zz: 身份证号, 支持1/2代(15位/18位数字)"
+            },
+            {
+                "command": "extension.rule28",
+                "title": "zz: 护照（包含香港、澳门）"
+            },
+            {
+                "command": "extension.rule29",
+                "title": "zz: 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合"
+            },
+            {
+                "command": "extension.rule30",
+                "title": "zz: 纯中文/汉字"
+            },
+            {
+                "command": "extension.rule31",
+                "title": "zz: 是否小数"
+            },
+            {
+                "command": "extension.rule32",
+                "title": "zz: 电话(座机)"
+            },
+            {
+                "command": "extension.rule33",
+                "title": "zz: 纯数字"
+            },
+            {
+                "command": "extension.rule34",
+                "title": "zz: 是否html标签"
+            },
+            {
+                "command": "extension.rule35",
+                "title": "zz: 是否qq号格式正确"
+            },
+            {
+                "command": "extension.rule36",
+                "title": "zz: 是否由数字和字母组成"
+            },
+            {
+                "command": "extension.rule37",
+                "title": "zz: 纯英文字母"
+            },
+            {
+                "command": "extension.rule38",
+                "title": "zz: 纯小写英文字母组成"
+            },
+            {
+                "command": "extension.rule39",
+                "title": "zz: 纯大写英文字母"
+            },
+            {
+                "command": "extension.rule40",
+                "title": "zz: 密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"
+            },
+            {
+                "command": "extension.rule41",
+                "title": "zz: 用户名正则，4到16位（字母，数字，下划线，减号）"
+            },
+            {
+                "command": "extension.rule42",
+                "title": "zz: ip-v4"
+            },
+            {
+                "command": "extension.rule43",
+                "title": "zz: ip-v6"
+            },
+            {
+                "command": "extension.rule44",
+                "title": "zz: 16进制颜色"
+            },
+            {
+                "command": "extension.rule45",
+                "title": "zz: 微信号，6至20位，以字母开头，字母，数字，减号，下划线"
+            },
+            {
+                "command": "extension.rule46",
+                "title": "zz: 中国邮政编码"
+            },
+            {
+                "command": "extension.rule47",
+                "title": "zz: 只包含中文和数字"
+            },
+            {
+                "command": "extension.rule48",
+                "title": "zz: 不能包含字母"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "yarn run compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.6",
+        "@types/node": "^10.12.21",
+        "@types/vscode": "^1.36.0",
+        "glob": "^7.1.4",
+        "mocha": "^6.1.4",
+        "typescript": "^3.3.1",
+        "tslint": "^5.12.1",
+        "vscode-test": "^1.0.2"
+    }
 }
