@@ -10,7 +10,7 @@ module.exports = [{
     },
     {
         title: 'html注释',
-        rule: /<!--(.*?)-->$/,
+        rule: /^<!--[\s\S]*?-->$/,
         example: '如: <!--<div class="_bubble"></div>-->'
     },
     {
@@ -171,7 +171,7 @@ module.exports = [{
         example: '如: 12345678'
     },
     {
-        title: '是否html标签',
+        title: '是否html标签(宽松匹配)',
         rule: /<(.*)>.*<\/\1>|<(.*) \/>/,
         example: '如: <div> </div>'
     },
