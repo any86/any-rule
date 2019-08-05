@@ -10,7 +10,7 @@ module.exports = [{
     },
     {
         title: 'html注释',
-        rule: /<!--(.*?)-->$/,
+        rule: /<!--[\s\S]*?-->/,
         example: '如: <!--<div class="_bubble"></div>-->'
     },
     {
