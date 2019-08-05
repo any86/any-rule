@@ -8,7 +8,7 @@ https://any86.github.io/any-rule/
 ## vscode插件
 
 1. 安装vscode中插件搜索框输入**any-rule**
-2. 安装完毕后按**F1**.
+2. 安装完毕后按**F1**(或者ctrl+shift+p).
 3. 输入"**zz**"可以看到正则列表.
 4. 或者**输入关键词**, 比如"手机".
 
