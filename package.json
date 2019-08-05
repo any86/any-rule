@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.12.0"
     },
@@ -210,7 +210,7 @@
             },
             {
                 "command": "extension.rule34",
-                "title": "zz: 是否html标签"
+                "title": "zz: 是否html标签(宽松匹配)"
             },
             {
                 "command": "extension.rule35",
@@ -272,7 +272,7 @@
     },
     "scripts": {
         "build:md": "node ./scripts/md.js",
-        "build": "vsce package",
+        "build": "node ./scripts/genCommond.js && vsce package",
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
