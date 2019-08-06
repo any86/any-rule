@@ -52,10 +52,10 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-10.14.14.tgz#a47955df2acf76ba7f0ac3b205d325da193dc9ad"
   integrity sha512-xXD08vZsvpv4xptQXj1+ky22f7ZoKu5ZNI/4l+/BXG3X+XaeZsmaFbbTKuhSE3NjjvRuZFxFf9sQBMXIcZNFMQ==
 
-"@types/vscode@^1.36.0":
+"@types/vscode@^1.12.0":
   version "1.36.0"
-  resolved "https://registry.npmjs.org/@types/vscode/-/vscode-1.36.0.tgz#ae60242e893d9eda9a0d96d51ef56f1a3fae14ed"
-  integrity sha512-SbHR3Q5g/C3N+Ila3KrRf1rSZiyHxWdOZ7X3yFHXzw6HrvRLuVZrxnwEX0lTBMRpH9LkwZdqRTgXW+D075jxkg==
+  resolved "https://registry.npm.taobao.org/@types/vscode/download/@types/vscode-1.36.0.tgz#ae60242e893d9eda9a0d96d51ef56f1a3fae14ed"
+  integrity sha1-rmAkLok9ntqaDZbVHvVvGj+uFO0=
 
 agent-base@4, agent-base@^4.3.0:
   version "4.3.0"
