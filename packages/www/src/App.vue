@@ -60,7 +60,7 @@
             <ul v-if="0 < rules.length" class="list">
                 <li
                     @mouseenter="mouseenterHandler(index)"
-                    v-for="({title, rule, events,example}, index) in rules"
+                    v-for="({title, rule, events,examples,counterExamples}, index) in rules"
                     :key="title"
                     class="row"
                 >
@@ -72,7 +72,7 @@
                             :href="`https://github.com/any86/any-rule/issues/new?title=我有更好的正则: ${title}`"
                             target="_blank"
                             class="btn-better"
-                        >我有不同意见</a>
+                        >我有更好的正则</a>
                         <code ref="code" class="javascript">{{rule}}</code>
                     </p>
                     <section class="verification">
@@ -81,7 +81,7 @@
                                 ref="input"
                                 :key="title"
                                 v-model="list[index].value"
-                                :placeholder="example"
+                                :placeholder="parseExample(examples, counterExamples)"
                                 @compositionstart="check(index, 'blur')"
                                 @compositionupdate="check(index, 'blur')"
                                 @compositionend="check(index, 'blur')"
@@ -173,6 +173,14 @@ export default {
     },
 
     methods: {
+        parseExample(examples, counterExamples){
+            let arr = [`例如: ${examples.join(', ')}`];
+            if(undefined !== counterExamples) {
+                arr.push(`反例: ${counterExamples.join(', ')}`);
+            }
+            return arr.join(' , ');
+        },
+
         search() {
             if ('' !== this.keyword) {
                 this.rules = this.rules.filter(({ title }) => -1 !== title.indexOf(this.keyword.toLowerCase()));
@@ -223,7 +231,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$primary: #4caf50;
+$primary: #42b983;
+$danger: #ec5c51;
+
 $radius: 4px;
 @keyframes slide {
     from {
@@ -385,7 +395,7 @@ main {
 
                 > .btn-better {
                     @extend .btn-copy;
-                    background-color: #F44336;
+                    background-color: $danger;
                 }
 
                 >code{word-break:break-word;}
