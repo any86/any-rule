@@ -1,4 +1,4 @@
-# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-49条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg)
+# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-49条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://circleci.com/gh/any86/any-rule.svg?style=svg)](https://circleci.com/gh/any86/any-rule)
 
 支持**图形界面** / **vscode插件**2种查询方式.
 
@@ -20,7 +20,7 @@ https://any86.github.io/any-rule/
 /^(s[hz]|S[HZ])(000[\d]{3}|002[\d]{3}|300[\d]{3}|600[\d]{3}|60[\d]{4})$/
 ```
 
-### 大于0, 小于150, 支持小数位出现5, 如145.5, 用于判断考卷分数
+### 大于等于0, 小于等于150, 支持小数位出现5, 如145.5, 用于判断考卷分数
 ```javascript
 /^150$|^(?:\d|[1-9]\d|1[0-4]\d)(?:.5)?$/
 ```
@@ -105,9 +105,9 @@ https://any86.github.io/any-rule/
 /^([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(([0-9]{5}[DF])|([DF]([A-HJ-NP-Z0-9])[0-9]{4})))|([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9 挂学警港澳]{1})$/
 ```
 
-### URL链接(网址)
+### 网址
 ```javascript
-/^((https?|ftp|file):\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/\w\.-]*)*\/?/
+/^((https?|ftp):\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/\w\.-]*)*\/?/
 ```
 
 ### 中国手机号(严谨), 根据工信部2019年最新公布的手机号段
@@ -125,7 +125,7 @@ https://any86.github.io/any-rule/
 /^((\+|00)86)?1\d{10}$/
 ```
 
-### 日期, 如: 2000-01-01或2000-1-1
+### 日期
 ```javascript
 /^\d{4}(-)(1[0-2]|0?\d)\1([0-2]\d|\d|30|31)$/
 ```
