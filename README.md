@@ -1,4 +1,4 @@
-# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-54条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://circleci.com/gh/any86/any-rule.svg?style=svg)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-57条-4caf50.svg) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://circleci.com/gh/any86/any-rule.svg?style=svg)](https://circleci.com/gh/any86/any-rule)
 
 支持**图形界面** / **vscode插件**2种查询方式.
 
@@ -14,6 +14,21 @@ https://any86.github.io/any-rule/
 ![预览动画加载中...](https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/be46d88ca7efd1494ac05cc8e9f0bc3bceada406a864adfd552b675ab1f6f05a6d0102841b9705bbc3ef0b2022bb40b5?pictype=scale&from=30113&version=3.3.3.3&uin=383514580&fname=68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f382f322f313663353136633434366430396633623f773d34323026683d32343326663d67696626733d32353537383036.gif&size=750)
 
 ## 正则
+
+### 迅雷链接
+```javascript
+/^thunder:\/\/[a-zA-Z0-9]+=$/
+```
+
+### ed2k链接(宽松匹配)
+```javascript
+/^ed2k:\/\/|file|.+|\/$/
+```
+
+### 磁力链接(宽松匹配)
+```javascript
+/^magnet:\?xt=urn:btih:[0-9a-fA-F]{40,}.*$/
+```
 
 ### 子网掩码
 ```javascript

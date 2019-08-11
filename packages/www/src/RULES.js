@@ -1,4 +1,22 @@
 module.exports = [
+
+    {
+        title: '迅雷链接',
+        rule: /^thunder:\/\/[a-zA-Z0-9]+=$/,
+        examples: ['thunder://QUEsICdtYWduZXQ6P3h0PXVybjpidGloOjBCQTE0RTUxRkUwNjU1RjE0Qzc4NjE4RjY4NDY0QjZFNTEyNjcyOUMnWlo='],
+    },
+
+    {
+        title: 'ed2k链接(宽松匹配)',
+        rule: /^ed2k:\/\/|file|.+|\/$/,
+        examples: ['ed2k://|file|%E5%AF%84%E7%94%9F%E8%99%AB.PARASITE.2019.HD-1080p.X264.AAC-UUMp4(ED2000.COM).mp4|2501554832|C0B93E0879C6071CBED732C20CE577A3|h=5HTKZPQFYRKORN52I3M7GQ4QQCIHFIBV|/'],
+    },
+
+    {
+        title: '磁力链接(宽松匹配)',
+        rule: /^magnet:\?xt=urn:btih:[0-9a-fA-F]{40,}.*$/,
+        examples: ['magnet:?xt=urn:btih:40A89A6F4FB1498A98087109D012A9A851FBE0FC'],
+    },
     {
         title: '子网掩码',
         rule: /^(?:\d{1,2}|1\d\d|2[0-4]\d|25[0-5])(?:\.(?:\d{1,2}|1\d\d|2[0-4]\d|25[0-5])){3}$/,
