@@ -11,7 +11,7 @@ https://any86.github.io/any-rule/
 3. 输入"**zz**"可以看到正则列表.
 4. 或者**输入关键词**, 比如"手机".
 
-![预览动画加载中...](https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/be46d88ca7efd1494ac05cc8e9f0bc3bceada406a864adfd552b675ab1f6f05a6d0102841b9705bbc3ef0b2022bb40b5?pictype=scale&from=30113&version=3.3.3.3&uin=383514580&fname=68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f382f322f313663353136633434366430396633623f773d34323026683d32343326663d67696626733d32353537383036.gif&size=750)
+![预览动画加载中...](https://user-images.githubusercontent.com/8264787/62843347-d5188080-bceb-11e9-9daf-049876d3f773.gif)
 
 ## 正则
 
