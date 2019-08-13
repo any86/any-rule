@@ -159,7 +159,7 @@ module.exports = [
         examples: ['1990-12-12', '2020-1-1']
     },
     {
-        title: 'email地址',
+        title: '邮箱地址(email)',
         rule: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
         examples: ['90203918@qq.com', 'nbilly@126.com']
     },
