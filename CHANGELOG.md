@@ -1,10 +1,7 @@
-# Change Log
+# 更新日志
 
-All notable changes to the "any-rule" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
+- 0.0.6
+1. 修复"手机号(严禁)正则"错误.
 
 - 0.0.5
 1. 增加正则"迅雷链接" / "ed2k连接" / "磁力链接" / "子网掩码" / "linux文件(夹)路径" / "window文件(夹)路径"
