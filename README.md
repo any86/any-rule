@@ -1,4 +1,4 @@
-# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-57条-4caf50.svg) ![](https://badgen.net/vs-marketplace/v/russell.any-rule) ![](https://badgen.net/vs-marketplace/i/russell.any-rule)  ![](https://badgen.net/vs-marketplace/d/russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://circleci.com/gh/any86/any-rule.svg?style=svg)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![](https://img.shields.io/badge/状态-积极更新-673ab7.svg) ![](https://img.shields.io/badge/已收录-57条-4caf50.svg) ![](https://badgen.net/vs-marketplace/v/russell.any-rule) ![](https://badgen.net/vs-marketplace/i/russell.any-rule)  ![](https://badgen.net/vs-marketplace/d/russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 支持**图形界面** / **vscode插件**2种查询方式.
 
