@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "engines": {
         "vscode": "^1.12.0"
     },
@@ -162,7 +162,7 @@
             },
             {
                 "command": "extension.rule20",
-                "title": "zz: 银行卡号（16或19位）"
+                "title": "zz: 银行卡号（10到30位, 覆盖对公/私账户, 参考[微信支付](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=22_1)）"
             },
             {
                 "command": "extension.rule21",

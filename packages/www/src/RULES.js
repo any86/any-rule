@@ -104,9 +104,9 @@ module.exports = [
         examples: [0.99, 8.99, 666]
     },
     {
-        title: '银行卡号（16或19位）',
-        rule: /^(?:[1-9]{1})(?:\d{15}|\d{18})$/,
-        examples: [6222026006705354217]
+        title: '银行卡号（10到30位, 覆盖对公/私账户, 参考[微信支付](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=22_1)）',
+        rule: /^[1-9]\d{9,29}$/,
+        examples: [6234567890, 6222026006705354217]
     },
     {
         title: '中文姓名',
