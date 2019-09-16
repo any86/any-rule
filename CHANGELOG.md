@@ -1,5 +1,8 @@
 # 更新日志
 
+- 0.0.7
+1. 更新"银行卡"的匹配长度为10-30位,参考[微信支付](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=22_1)
+
 - 0.0.6
 1. 修复"手机号(严禁)正则"错误.
 
