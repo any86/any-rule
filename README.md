@@ -299,3 +299,9 @@ https://any86.github.io/any-rule/
 ```javascript
 /^[^A-Za-z]*$/
 ```
+
+
+### 铁皮盒子
+```javascript
+铁皮盒子真的流弊
+```
