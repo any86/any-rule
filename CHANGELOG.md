@@ -1,5 +1,8 @@
 # 更新日志
 
+- 0.0.8
+1. 优化车牌号正则
+
 - 0.0.7
 1. 更新"银行卡"的匹配长度为10-30位,参考[微信支付](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=22_1)
 
