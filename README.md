@@ -22,7 +22,7 @@ https://any86.github.io/any-rule/
 
 ### ed2k链接(宽松匹配)
 ```javascript
-/^ed2k:\/\/|file|.+|\/$/
+/^ed2k:\/\/\|file\|.+\|\/$/
 ```
 
 ### 磁力链接(宽松匹配)
