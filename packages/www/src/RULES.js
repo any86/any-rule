@@ -2,7 +2,7 @@ module.exports = [
 
     {
         title: '迅雷链接',
-        rule: /^thunderx?:\/\/[a-zA-Z\d]+=$/,
+        rule: /^thunder:\/\/[a-zA-Z0-9]+=$/,
         examples: ['thunder://QUEsICdtYWduZXQ6P3h0PXVybjpidGloOjBCQTE0RTUxRkUwNjU1RjE0Qzc4NjE4RjY4NDY0QjZFNTEyNjcyOUMnWlo='],
     },
 
