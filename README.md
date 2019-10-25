@@ -17,7 +17,7 @@ https://any86.github.io/any-rule/
 
 ### 迅雷链接
 ```javascript
-/^thunder:\/\/[a-zA-Z0-9]+=$/
+/^thunderx?:\/\/[a-zA-Z\d]+=$/
 ```
 
 ### ed2k链接(宽松匹配)
