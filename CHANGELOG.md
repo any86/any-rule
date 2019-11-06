@@ -1,5 +1,9 @@
 # 更新日志
 
+## 问题提交
+https://github.com/any86/any-rule/issues/new
+
+## 日志
 - 0.0.9
 1. 修复"ed2k"正则错误
 
