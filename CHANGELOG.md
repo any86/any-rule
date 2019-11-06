@@ -1,4 +1,6 @@
 # 更新日志
+- 0.0.10
+1. 迅雷正则增加thunderx规则的支持
 
 ## 问题提交
 https://github.com/any86/any-rule/issues/new
