@@ -75,244 +75,249 @@
         "onCommand:extension.rule53",
         "onCommand:extension.rule54",
         "onCommand:extension.rule55",
-        "onCommand:extension.rule56"
+        "onCommand:extension.rule56",
+        "onCommand:extension.rule57"
     ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
                 "command": "extension.rule0",
-                "title": "zz: 迅雷链接"
+                "title": "zz: 统一社会信用代码"
             },
             {
                 "command": "extension.rule1",
-                "title": "zz: ed2k链接(宽松匹配)"
+                "title": "zz: 迅雷链接"
             },
             {
                 "command": "extension.rule2",
-                "title": "zz: 磁力链接(宽松匹配)"
+                "title": "zz: ed2k链接(宽松匹配)"
             },
             {
                 "command": "extension.rule3",
-                "title": "zz: 子网掩码"
+                "title": "zz: 磁力链接(宽松匹配)"
             },
             {
                 "command": "extension.rule4",
-                "title": "zz: linux\"文件夹\"路径"
+                "title": "zz: 子网掩码"
             },
             {
                 "command": "extension.rule5",
-                "title": "zz: linux\"文件\"路径"
+                "title": "zz: linux\"文件夹\"路径"
             },
             {
                 "command": "extension.rule6",
-                "title": "zz: window下\"文件夹\"路径"
+                "title": "zz: linux\"文件\"路径"
             },
             {
                 "command": "extension.rule7",
-                "title": "zz: window下\"文件\"路径"
+                "title": "zz: window下\"文件夹\"路径"
             },
             {
                 "command": "extension.rule8",
-                "title": "zz: A股代码"
+                "title": "zz: window下\"文件\"路径"
             },
             {
                 "command": "extension.rule9",
-                "title": "zz: 大于等于0, 小于等于150, 支持小数位出现5, 如145.5, 用于判断考卷分数"
+                "title": "zz: A股代码"
             },
             {
                 "command": "extension.rule10",
-                "title": "zz: html注释"
+                "title": "zz: 大于等于0, 小于等于150, 支持小数位出现5, 如145.5, 用于判断考卷分数"
             },
             {
                 "command": "extension.rule11",
-                "title": "zz: md5格式(32位)"
+                "title": "zz: html注释"
             },
             {
                 "command": "extension.rule12",
-                "title": "zz: 版本号格式必须为X.Y.Z"
+                "title": "zz: md5格式(32位)"
             },
             {
                 "command": "extension.rule13",
-                "title": "zz: 视频链接地址（视频格式可按需增删）"
+                "title": "zz: 版本号格式必须为X.Y.Z"
             },
             {
                 "command": "extension.rule14",
-                "title": "zz: 图片链接地址（图片格式可按需增删）"
+                "title": "zz: 视频链接地址（视频格式可按需增删）"
             },
             {
                 "command": "extension.rule15",
-                "title": "zz: 24小时制时间（HH:mm:ss）"
+                "title": "zz: 图片链接地址（图片格式可按需增删）"
             },
             {
                 "command": "extension.rule16",
-                "title": "zz: 12小时制时间（hh:mm:ss）"
+                "title": "zz: 24小时制时间（HH:mm:ss）"
             },
             {
                 "command": "extension.rule17",
-                "title": "zz: base64格式"
+                "title": "zz: 12小时制时间（hh:mm:ss）"
             },
             {
                 "command": "extension.rule18",
-                "title": "zz: 数字/货币金额（支持负数、千分位分隔符）"
+                "title": "zz: base64格式"
             },
             {
                 "command": "extension.rule19",
-                "title": "zz: 数字/货币金额 (只支持正数、不支持校验千分位分隔符)"
+                "title": "zz: 数字/货币金额（支持负数、千分位分隔符）"
             },
             {
                 "command": "extension.rule20",
-                "title": "zz: 银行卡号（10到30位, 覆盖对公/私账户, 参考[微信支付](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=22_1)）"
+                "title": "zz: 数字/货币金额 (只支持正数、不支持校验千分位分隔符)"
             },
             {
                 "command": "extension.rule21",
-                "title": "zz: 中文姓名"
+                "title": "zz: 银行卡号（10到30位, 覆盖对公/私账户, 参考[微信支付](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=22_1)）"
             },
             {
                 "command": "extension.rule22",
-                "title": "zz: 英文姓名"
+                "title": "zz: 中文姓名"
             },
             {
                 "command": "extension.rule23",
-                "title": "zz: 新能源车牌号"
+                "title": "zz: 英文姓名"
             },
             {
                 "command": "extension.rule24",
-                "title": "zz: 非新能源车牌号"
+                "title": "zz: 新能源车牌号"
             },
             {
                 "command": "extension.rule25",
-                "title": "zz: 车牌号(新能源+非新能源)"
+                "title": "zz: 非新能源车牌号"
             },
             {
                 "command": "extension.rule26",
-                "title": "zz: 网址"
+                "title": "zz: 车牌号(新能源+非新能源)"
             },
             {
                 "command": "extension.rule27",
-                "title": "zz: 中国手机号(严谨), 根据工信部2019年最新公布的手机号段"
+                "title": "zz: 网址"
             },
             {
                 "command": "extension.rule28",
-                "title": "zz: 中国手机号(宽松), 只要是13,14,15,16,17,18,19开头即可"
+                "title": "zz: 中国手机号(严谨), 根据工信部2019年最新公布的手机号段"
             },
             {
                 "command": "extension.rule29",
-                "title": "zz: 中国手机号(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条"
+                "title": "zz: 中国手机号(宽松), 只要是13,14,15,16,17,18,19开头即可"
             },
             {
                 "command": "extension.rule30",
-                "title": "zz: 日期"
+                "title": "zz: 中国手机号(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条"
             },
             {
                 "command": "extension.rule31",
-                "title": "zz: 邮箱地址(email)"
+                "title": "zz: 日期"
             },
             {
                 "command": "extension.rule32",
-                "title": "zz: 国内座机电话,如: 0341-86091234"
+                "title": "zz: 邮箱地址(email)"
             },
             {
                 "command": "extension.rule33",
-                "title": "zz: 一代身份证号(15位数字)"
+                "title": "zz: 国内座机电话,如: 0341-86091234"
             },
             {
                 "command": "extension.rule34",
-                "title": "zz: 二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X"
+                "title": "zz: 一代身份证号(15位数字)"
             },
             {
                 "command": "extension.rule35",
-                "title": "zz: 身份证号, 支持1/2代(15位/18位数字)"
+                "title": "zz: 二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X"
             },
             {
                 "command": "extension.rule36",
-                "title": "zz: 护照（包含香港、澳门）"
+                "title": "zz: 身份证号, 支持1/2代(15位/18位数字)"
             },
             {
                 "command": "extension.rule37",
-                "title": "zz: 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合"
+                "title": "zz: 护照（包含香港、澳门）"
             },
             {
                 "command": "extension.rule38",
-                "title": "zz: 纯中文/汉字"
+                "title": "zz: 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合"
             },
             {
                 "command": "extension.rule39",
-                "title": "zz: 是否小数"
+                "title": "zz: 纯中文/汉字"
             },
             {
                 "command": "extension.rule40",
-                "title": "zz: 电话(座机)"
+                "title": "zz: 是否小数"
             },
             {
                 "command": "extension.rule41",
-                "title": "zz: 纯数字"
+                "title": "zz: 电话(座机)"
             },
             {
                 "command": "extension.rule42",
-                "title": "zz: 是否html标签(宽松匹配)"
+                "title": "zz: 纯数字"
             },
             {
                 "command": "extension.rule43",
-                "title": "zz: 是否qq号格式正确"
+                "title": "zz: 是否html标签(宽松匹配)"
             },
             {
                 "command": "extension.rule44",
-                "title": "zz: 是否由数字和字母组成"
+                "title": "zz: 是否qq号格式正确"
             },
             {
                 "command": "extension.rule45",
-                "title": "zz: 纯英文字母"
+                "title": "zz: 是否由数字和字母组成"
             },
             {
                 "command": "extension.rule46",
-                "title": "zz: 纯小写英文字母组成"
+                "title": "zz: 纯英文字母"
             },
             {
                 "command": "extension.rule47",
-                "title": "zz: 纯大写英文字母"
+                "title": "zz: 纯小写英文字母组成"
             },
             {
                 "command": "extension.rule48",
-                "title": "zz: 密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"
+                "title": "zz: 纯大写英文字母"
             },
             {
                 "command": "extension.rule49",
-                "title": "zz: 用户名正则，4到16位（字母，数字，下划线，减号）"
+                "title": "zz: 密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"
             },
             {
                 "command": "extension.rule50",
-                "title": "zz: ip-v4"
+                "title": "zz: 用户名正则，4到16位（字母，数字，下划线，减号）"
             },
             {
                 "command": "extension.rule51",
-                "title": "zz: ip-v6"
+                "title": "zz: ip-v4"
             },
             {
                 "command": "extension.rule52",
-                "title": "zz: 16进制颜色"
+                "title": "zz: ip-v6"
             },
             {
                 "command": "extension.rule53",
-                "title": "zz: 微信号，6至20位，以字母开头，字母，数字，减号，下划线"
+                "title": "zz: 16进制颜色"
             },
             {
                 "command": "extension.rule54",
-                "title": "zz: 中国邮政编码"
+                "title": "zz: 微信号，6至20位，以字母开头，字母，数字，减号，下划线"
             },
             {
                 "command": "extension.rule55",
-                "title": "zz: 只包含中文和数字"
+                "title": "zz: 中国邮政编码"
             },
             {
                 "command": "extension.rule56",
+                "title": "zz: 只包含中文和数字"
+            },
+            {
+                "command": "extension.rule57",
                 "title": "zz: 不能包含字母"
             }
         ]
     },
     "scripts": {
         "build:md": "node ./scripts/md.js",
-        "build": "node ./scripts/genCommond.js && vsce package",
+        "build": "npm version patch && node ./scripts/genCommond.js && vsce package",
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
