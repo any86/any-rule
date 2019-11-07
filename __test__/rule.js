@@ -40,9 +40,9 @@ function testOne(one) {
 }
 
 if(0 === failGroup.length) {
-    console.log(chalk.green('\r\n全部测试通过!'))
+    console.log(chalk.green('\r\n🚀 全部测试通过!'))
 } else {
-    console.log(chalk.red('='.repeat(30) + '未通过测试' + '='.repeat(30)));
+    console.log(chalk.red('='.repeat(30) + '🔥 未通过测试' + '='.repeat(30)));
 
     // 失败列表
     failGroup.forEach(item=>{

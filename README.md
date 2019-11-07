@@ -1,4 +1,4 @@
-# 正则大全  ![](https://img.shields.io/badge/已收录-57条-673ab7.svg) [![](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![](https://img.shields.io/badge/已收录-58条-673ab7.svg) [![](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 支持**图形界面** / **vscode插件**2种查询方式.
 
@@ -17,6 +17,11 @@ https://any86.github.io/any-rule/
 欢迎大家PR, 提交**正则**请在**packages/www/RULES.js**中添加, **README.md**无需修改, 我合并后会通过脚本自动更新文档. 在此感谢大家对**any-rule**做出的贡献! 
 
 ## 正则
+
+### 统一社会信用代码
+```javascript
+/[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}/
+```
 
 ### 迅雷链接
 ```javascript
