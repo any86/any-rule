@@ -14,7 +14,7 @@ https://any86.github.io/any-rule/
 ![预览动画加载中...](https://user-gold-cdn.xitu.io/2019/8/2/16c5181959ce0dd2?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 ## 关于PR
-欢迎大家PR, 提交**正则**请在**packages/www/RULES.js**中添加, **README.md**无需修改, 我合并后会通过脚本自动更新文档. 在此感谢大家对**any-rule**做出的贡献! 
+欢迎大家PR, 提交**正则**请在**packages/www/src/RULES.js**中添加, **README.md**无需修改, 我合并后会通过脚本自动更新文档. 在此感谢大家对**any-rule**做出的贡献! 
 
 ## 正则
 
