@@ -1,6 +1,12 @@
 module.exports = [
     {
-        title: '网址(支持端口和"?+参数"和"#+参数',
+        title: '必须带端口号的网址(或ip)',
+        rule: /^(((ht|f)tps?):\/\/)?[\w\-]+(\.[\w\-]+)+:\d{0,5}\/?/,
+        examples: ['https://www.qq.com:8080', '127.0.0.1:5050','baidu.com:8001', 'http://192.168.1.1:9090'],
+        counterExamples: ['192.168.1.1', 'https://www.jd.com']
+    },
+    {
+        title: '网址(支持端口和"?+参数"和"#+参数)',
         rule: /^(((ht|f)tps?):\/\/)?[\w\-]+(\.[\w\-]+)+([\w\-.,@?^=%&:\/~+#]*[\w\-@?^=%&\/~+#])?$/,
         examples: ['www.qq.com', 'https://baidu.com', '360.com:8080/vue/#/a=1&b=2'],
         counterExamples: ['....']
