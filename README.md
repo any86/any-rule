@@ -36,7 +36,7 @@ https://any86.github.io/any-rule/
 
 ### 统一社会信用代码
 ```javascript
-/[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}/
+/^[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}$/
 ```
 
 ### 迅雷链接
