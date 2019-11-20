@@ -1,9 +1,9 @@
 # 更新日志
+🚀 提交问题: https://github.com/any86/any-rule/issues/new
 
-## 问题提交
-https://github.com/any86/any-rule/issues/new
+- 0.0.11
+- [x] 增加"统一社会信用代码"正则
 
-## 日志
 - 0.0.10
 - [x] 迅雷正则增加thunderx规则的支持
 

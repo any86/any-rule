@@ -32,10 +32,10 @@ https://any86.github.io/any-rule/
 3. 输入"**zz**"可以看到正则列表.
 4. 或者**输入关键词**, 比如"手机".
 
-![预览动画加载中...](https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/be46d88ca7efd1494ac05cc8e9f0bc3bceada406a864adfd552b675ab1f6f05a6d0102841b9705bbc3ef0b2022bb40b5?pictype=scale&from=30113&version=3.3.3.3&uin=383514580&fname=68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f382f322f313663353136633434366430396633623f773d34323026683d32343326663d67696626733d32353537383036.gif&size=750)
+![预览视频](https://user-images.githubusercontent.com/8264787/69204566-36b97800-0b82-11ea-8553-dfc06f709926.gif)
 
 ## 关于PR
-欢迎大家PR, 提交**正则**请在**packages/www/RULES.js**中添加, **README.md**无需修改, 我合并后会通过脚本自动更新文档. 在此感谢大家对**any-rule**做出的贡献! 
+欢迎大家PR, 提交**正则**请在**packages/www/src/RULES.js**中添加, **README.md**无需修改, 我合并后会通过脚本自动更新文档. 在此感谢大家对**any-rule**做出的贡献! 
 
 ## 正则
 `;

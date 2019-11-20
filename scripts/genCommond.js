@@ -1,6 +1,7 @@
 const RULES = require('../packages/www/src/RULES.js');
 const pkg = require('../package.json');
 const fs = require('fs');
+const chalk = require('chalk');
 
 pkg.contributes.commands = [];
 pkg.activationEvents = [];
@@ -13,7 +14,6 @@ RULES.forEach((rule, index) => {
     pkg.activationEvents.push('onCommand:extension.rule'+index);
 })
 
-
 // console.log(JSON.stringify(pkg));
 fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 4), 'utf8');
-console.log('完成!');
+console.log(chalk.green('🚀 pkg文件修改完毕, 请等待生成vsc包...'));
