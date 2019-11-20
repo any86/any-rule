@@ -13,7 +13,7 @@ module.exports = [
     },
     {
         title: '统一社会信用代码',
-        rule: /[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}/,
+        rule: /^[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}$/,
         examples: ['91230184MA1BUFLT44', '92371000MA3MXH0E3W'],
     },
 
