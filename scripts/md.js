@@ -26,7 +26,7 @@ let content = `# 正则大全  ${badges.join(' ')}
 ## :rocket:图形界面
 https://any86.github.io/any-rule/
 
-## vscode插件
+## 🍭vscode插件
 1. 安装vscode中插件搜索框输入**any-rule**
 2. 安装完毕后按**F1**(或者ctrl+shift+p).
 3. 输入"**zz**"可以看到正则列表.
@@ -34,10 +34,10 @@ https://any86.github.io/any-rule/
 
 ![预览视频](https://user-images.githubusercontent.com/8264787/69204566-36b97800-0b82-11ea-8553-dfc06f709926.gif)
 
-## 关于PR
+## :fire:关于PR
 欢迎大家PR, 提交**正则**请在**packages/www/src/RULES.js**中添加, **README.md**无需修改, 我合并后会通过脚本自动更新文档. 在此感谢大家对**any-rule**做出的贡献! 
 
-## 正则
+## 🍔正则
 `;
 
 json.forEach(({title, rule})=>{
