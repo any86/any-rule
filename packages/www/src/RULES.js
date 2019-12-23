@@ -86,12 +86,12 @@ module.exports = [
     },
     {
         title: '视频链接地址（视频格式可按需增删）',
-        rule: /^https?:\/\/.*?(?:swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i,
+        rule: /^https?:\/\/(.+\/)+.+(\.(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4))$/i,
         examples: ['http://www.abc.com/video/wc.avi']
     },
     {
         title: '图片链接地址（图片格式可按需增删）',
-        rule: /^https?:\/\/.*?(?:gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$/i,
+        rule: /^https?:\/\/(.+\/)+.+(\.(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif))$/i,
         examples: ['https://www.abc.com/logo.png']
     },
     {
