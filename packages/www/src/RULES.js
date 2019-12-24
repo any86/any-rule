@@ -1,8 +1,17 @@
-module.exports = [
+module.exports = [{
+        title: '火车车次',
+        rule: /^[GCDZTSPKXLY1-9]\d{1,4}$/,
+        examples: ['G1868', 'D102', 'D9', 'Z5', 'Z24', 'Z17']
+    },
+    {
+        title: '手机机身码(IMEI)',
+        rule: /^\d{15,17}$/,
+        examples: ['123456789012345', '1234567890123456', '12345678901234567']
+    },
     {
         title: '必须带端口号的网址(或ip)',
         rule: /^(((ht|f)tps?):\/\/)?[\w\-]+(\.[\w\-]+)+:\d{0,5}\/?/,
-        examples: ['https://www.qq.com:8080', '127.0.0.1:5050','baidu.com:8001', 'http://192.168.1.1:9090'],
+        examples: ['https://www.qq.com:8080', '127.0.0.1:5050', 'baidu.com:8001', 'http://192.168.1.1:9090'],
         counterExamples: ['192.168.1.1', 'https://www.jd.com']
     },
     {
@@ -86,12 +95,12 @@ module.exports = [
     },
     {
         title: '视频链接地址（视频格式可按需增删）',
-        rule: /^https?:\/\/.*?(?:swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i,
+        rule: /^https?:\/\/(.+\/)+.+(\.(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4))$/i,
         examples: ['http://www.abc.com/video/wc.avi']
     },
     {
         title: '图片链接地址（图片格式可按需增删）',
-        rule: /^https?:\/\/.*?(?:gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$/i,
+        rule: /^https?:\/\/(.+\/)+.+(\.(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif))$/i,
         examples: ['https://www.abc.com/logo.png']
     },
     {
