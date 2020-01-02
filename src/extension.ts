@@ -1,10 +1,16 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
-const RULES = require('../packages/www/src/RULES.js');
+import {
+	window, workspace, commands,
+	ExtensionContext, ConfigurationChangeEvent
+} from 'vscode';
+import { IRule } from './interface';
+import { AnyRule } from './anyrule';
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: ExtensionContext) {
+
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "any-rule" is now active!');
@@ -12,44 +18,45 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-
-
 	// let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
-	// The code you place here will be executed every time your command is executed
+	// 	// The code you place here will be executed every time your command is executed
 
-	// Display a message box to the user
-	// vscode.window.showInformationMessage('Hello World123!');
+	// 	// Display a message box to the user
+	// 	vscode.window.showInformationMessage('Hello World!');
 	// });
-	// context.subscriptions.push(disposable);
+	const anyRule = new AnyRule(context);
 
-	RULES.forEach(({ title, rule }: { title: string, rule: RegExp, example: string }, index: string) => {
-		let disposable = vscode.commands.registerCommand(`extension.rule${index}`, () => {
-			// The code you place here will be executed every time your command is executed
-			const editor = vscode.window.activeTextEditor;
-			if (editor) {
-				const { selections } = editor;
-
-				editor.edit(editBuilder => {
-					selections.forEach(selection => {
-						const { start, end } = selection;
-						const range = new vscode.Range(start, end);
-						editBuilder.replace(range, String(rule));
-					});
-				});
-				// Display a message box to the user
-				vscode.window.showInformationMessage(`已插入正则: ${title}`);
-			} else {
-				vscode.window.showWarningMessage('any-rule: 只有在编辑文本的时候才可以使用!');
-			}
-		});
-		context.subscriptions.push(disposable);
+	workspace.onDidChangeConfiguration((event: ConfigurationChangeEvent) => {
+		anyRule.reload();
 	});
 
-
-
+	commands.registerCommand('extension.update', () => {
+		anyRule.update();
+	});
+	commands.registerCommand('extension.reload', () => {
+		anyRule.reload();
+		window.showInformationMessage('重新加载插件成功');
+	});
+	commands.registerCommand('extension.support', () => {
+		const currentLanguage = window.activeTextEditor?.document.languageId;
+		if (currentLanguage) {
+			try {
+				const configuration = workspace.getConfiguration();
+				const setting: string = configuration.get('anyRule.supportedLanguages') || 'javascript,typescirpt' as string;
+				const supportedLanguages = setting.split(',');
+				const set = new Set(supportedLanguages);
+				set.add(currentLanguage);
+				console.log(Array.from(set).join(','));
+				configuration.update('anyRule.supportedLanguages', Array.from(set).join(',')).then(() => {
+					anyRule.reload();
+				});
+				window.showInformationMessage('更新关联语言成功');
+			} catch(e) {
+				window.showInformationMessage('更新关联语言失败');
+			}
+		}
+	});
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {
-	vscode.window.showWarningMessage('any-rule: 已关闭!');
-}
+export function deactivate() { }
