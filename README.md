@@ -1,4 +1,4 @@
-# 正则大全  ![](https://img.shields.io/badge/已收录-61条-673ab7.svg) [![](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![](https://img.shields.io/badge/已收录-60条-673ab7.svg) [![](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 支持**图形界面** / **vscode插件**2种查询方式.
 
@@ -36,12 +36,12 @@ https://any86.github.io/any-rule/
 
 ### 必须带端口号的网址(或ip)
 ```javascript
-/^(((ht|f)tps?):\/\/)?[\w\-]+(\.[\w\-]+)+:\d{0,5}\/?/
+/^((ht|f)tps?:\/\/)?[\w-]+(\.[\w-]+)+:\d{1,5}\/?$/
 ```
 
 ### 网址(支持端口和"?+参数"和"#+参数)
 ```javascript
-/^(((ht|f)tps?):\/\/)?[\w\-]+(\.[\w\-]+)+([\w\-.,@?^=%&:\/~+#]*[\w\-@?^=%&\/~+#])?$/
+/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?$/
 ```
 
 ### 统一社会信用代码
@@ -101,12 +101,12 @@ https://any86.github.io/any-rule/
 
 ### html注释
 ```javascript
-/^<!--[\s\S]*?-->$/
+/<!--[\s\S]*?-->/
 ```
 
 ### md5格式(32位)
 ```javascript
-/^[a-f0-9]{32}$/
+/^([a-f\d]{32}|[A-F\d]{32})$/
 ```
 
 ### 版本号格式必须为X.Y.Z
@@ -141,7 +141,7 @@ https://any86.github.io/any-rule/
 
 ### 数字/货币金额（支持负数、千分位分隔符）
 ```javascript
-/(?:^[-]?[1-9]\d{0,2}(?:$|(?:,\d{3})*(?:$|(\.\d{1,2}$))))|(?:(?:^[0](\.\d{1,2})?)|(?:^[-][0]\.\d{1,2}))$/
+/^-?\d+(,\d{3})*(\.\d{1,2})?$/
 ```
 
 ### 数字/货币金额 (只支持正数、不支持校验千分位分隔符)
@@ -231,7 +231,7 @@ https://any86.github.io/any-rule/
 
 ### 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合
 ```javascript
-/^[a-zA-Z][a-zA-Z0-9_]{4,15}$/
+/^[a-zA-Z]\w{4,15}$/
 ```
 
 ### 纯中文/汉字
@@ -244,11 +244,6 @@ https://any86.github.io/any-rule/
 /^\d+\.\d+$/
 ```
 
-### 电话(座机)
-```javascript
-/^0\d{2,3}-\d{7,8}$/
-```
-
 ### 纯数字
 ```javascript
 /^\d{1,}$/
@@ -256,7 +251,7 @@ https://any86.github.io/any-rule/
 
 ### 是否html标签(宽松匹配)
 ```javascript
-/<(.*)>.*<\/\1>|<(.*) \/>/
+/<(\w+)[^>]*>(.*?<\/\1>)?/
 ```
 
 ### 是否qq号格式正确
