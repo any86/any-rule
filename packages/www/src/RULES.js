@@ -226,11 +226,6 @@ module.exports = [{
         examples: ['0.0', '0.09']
     },
     {
-        title: '电话(座机)',
-        rule: /^0\d{2,3}-\d{7,8}$/,
-        examples: ['0936-4211236']
-    },
-    {
         title: '纯数字',
         rule: /^\d{1,}$/,
         examples: [12345678]
