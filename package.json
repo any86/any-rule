@@ -3,9 +3,9 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.0.13",
+    "version": "0.1.0",
     "engines": {
-        "vscode": "^1.12.0"
+        "vscode": "^1.41.0"
     },
     "categories": [
         "Other"
@@ -20,67 +20,63 @@
     },
     "activationEvents": [
         "onCommand:extension.update",
-		"onCommand:extension.reload",
-		"onCommand:extension.support",
-		"*"
+        "onCommand:extension.reload",
+        "onCommand:extension.support",
+        "*"
     ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
-			{
-				"command": "extension.update",
-				"title": "Any Rule: 更新正则数据"
-			},
-			{
-				"command": "extension.reload",
-				"title": "Any Rule: 重新加载插件"
-			},
-			{
-				"command": "extension.support",
-				"title": "Any Rule: 支持当前文件类型"
-			}
-		],
-		"configuration": {
-			"type": "object",
-			"title": "Any Rule",
-			"properties": {
-				"anyRule.triggerString": {
-					"type": "string",
-					"default": "zz",
-					"description": "触发字符串"
-				},
-				"anyRule.supportedLanguages": {
-					"type": "string",
-					"default": "javascript,typescript",
-					"description": "激活AnyRule的文件类型，多个类型用逗号分隔"
-				}
-			}
-		}
+            {
+                "command": "extension.update",
+                "title": "AnyRule: 更新正则数据"
+            },
+            {
+                "command": "extension.reload",
+                "title": "AnyRule: 重新加载插件"
+            },
+            {
+                "command": "extension.support",
+                "title": "AnyRule: 支持当前文件类型"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Any Rule",
+            "properties": {
+                "anyRule.triggerString": {
+                    "type": "string",
+                    "default": "zz",
+                    "description": "触发字符串"
+                },
+                "anyRule.supportedLanguages": {
+                    "type": "string",
+                    "default": "javascript,typescript",
+                    "description": "激活AnyRule的文件类型，多个类型用逗号分隔"
+                }
+            }
+        }
     },
     "scripts": {
-        "build:md": "node ./scripts/md.js",
-        "build": "npm run test:rules && npm version patch && node ./scripts/genCommond.js && vsce package && npm run build:md",
-        "vscode:prepublish": "npm run compile",
+        "vscode:prepublish": "yarn run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile",
-        "test": "node ./out/test/runTest.js",
-        "test:rules": "node __test__/rule"
+        "pretest": "yarn run compile",
+        "test": "node ./out/test/runTest.js"
     },
     "dependencies": {
         "axios": "^0.19.0",
-		"pinyin": "^2.9.0"
+        "transliteration": "^2.1.8"
     },
     "devDependencies": {
         "@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.11.7",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.11.7",
         "@types/vscode": "^1.41.0",
-        "@types/pinyin": "^2.8.1",
-		"glob": "^7.1.5",
-		"mocha": "^6.2.2",
-		"tslint": "^5.20.0",
-		"typescript": "^3.6.4",
-		"vscode-test": "^1.2.2"
+        "glob": "^7.1.5",
+        "mocha": "^6.2.2",
+        "tslint": "^5.20.0",
+        "typescript": "^3.6.4",
+        "vscode-test": "^1.2.2"
     }
 }

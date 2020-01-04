@@ -56,6 +56,7 @@ export class AnyRule {
         }, '.');
 
         this.context.subscriptions.push(this.disposable);
+        window.showInformationMessage('AnyRule加载成功');
     }
 
     public reload() {
@@ -96,8 +97,10 @@ export class AnyRule {
                                 String(rule.regex)
                             );
                             // TODO 处理输入文本后选中字符串的问题
-                            const end = new Position(line.lineNumber, line.text.length + String(rule.regex).length);
-                            editor.selection = new Selection(end, end);
+                            setTimeout(() => {
+                                const end = new Position(line.lineNumber, line.text.length + String(rule.regex).length);
+                                editor.selection = new Selection(end, end);
+                            }, 0);
                         }
                     });
                 } else {

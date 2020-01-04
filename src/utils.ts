@@ -1,5 +1,6 @@
 import { IRule } from './interface';
-import * as pinyin from 'pinyin';
+// import { convertToPinyin } from 'tiny-pinyin';
+import { slugify } from 'transliteration';
 
 function preprocessText(START_IDENTIFIER: string, text: string): string[] | null {
     const start = text.indexOf(START_IDENTIFIER);
@@ -77,14 +78,10 @@ export function getRuleByText(START_IDENTIFIER: string, rules: IRule[], text: st
 export function generateFilterString(rule: IRule) {
     let filterString = '';
     filterString += rule.title;
+    const pinyin = slugify(rule.title).split('-');
     if (/.*[\u4e00-\u9fa5]+.*$/.test(rule.title)) {
-        filterString += ' ' + pinyin(rule.title, {
-            style: pinyin.STYLE_NORMAL
-        }).join('');
-
-        filterString += ' ' + pinyin(rule.title, {
-            style: pinyin.STYLE_FIRST_LETTER
-        }).join('');
+        filterString += ' ' + pinyin.join('');
+        filterString += ' ' + pinyin.map(item => item.length ? item[0] : '');
     }
 
     if (rule.keywords) {
