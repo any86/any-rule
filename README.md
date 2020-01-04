@@ -5,17 +5,19 @@
 ## :rocket:图形界面
 https://any86.github.io/any-rule/
 
-## 🍭vscode插件
+## 🍭使用方式
 - 默认的触发字符串为 `zz`，在JavaScript或者Typescript文件中输入 `zz.` 即可触发选择
+  - 输入标题名称的文本内容可以进行搜索
+  - 输入标题的拼音可以进行筛选（如邮箱、youxiang）
+  - 输入文字的拼音首字母同样也可以进行筛选，如（火车车次、hccc）
+  - 每个正则都可以配置关键字，可以用来进行搜索（如手机号、phone）
 
 - 可以在设置中修改
+  - 触发字符串
+  - 支持的语言类型
 
-## :fire:关于PR
-欢迎大家PR, 步骤如下:
-1. **正则**请在**packages/www/src/RULES.js**中添加.
-2. 运行`npm run test:rules`进行测试.
-3. 运行`npm run build:md`更新**README.md**.
-4. 请务必提交到**develop**分支.
+
+欢迎PR
 
 在此感谢大家对**any-rule**做出的贡献! 
 
