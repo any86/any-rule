@@ -32,7 +32,7 @@ async function loadRulesFromWeb(): Promise<IRule[]> {
 }
 
 export async function loadRules (extensionPath: string, force: boolean = false): Promise<IRule[]> {
-    const fileUri = Uri.parse(`file://${extensionPath}/rules.json`);
+    const fileUri = Uri.parse(`file://${extensionPath.length && extensionPath[0] === '/' ? '' :'/'}${extensionPath}/rules.json`);
     let rules: IRule[] | null = null;
     if (!force) {
         rules = await loadRulesFromFile(fileUri);
