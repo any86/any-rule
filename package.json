@@ -5,7 +5,7 @@
     "description": "你要的\"正则\"都在这!",
     "version": "0.1.0",
     "engines": {
-        "vscode": "^1.41.0"
+        "vscode": "^1.14.0"
     },
     "categories": [
         "Other"
@@ -24,7 +24,7 @@
         "onCommand:extension.support",
         "*"
     ],
-    "main": "./dist/extension.js",
+    "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
@@ -74,7 +74,7 @@
         "@types/glob": "^7.1.1",
         "@types/mocha": "^5.2.7",
         "@types/node": "^12.11.7",
-        "@types/vscode": "^1.41.0",
+        "@types/vscode": "^1.14.0",
         "glob": "^7.1.5",
         "mocha": "^6.2.2",
         "ts-loader": "^6.2.1",

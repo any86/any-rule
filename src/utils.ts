@@ -28,7 +28,6 @@ export function getRulesByText(START_IDENTIFIER: string, rules: IRule[], text: s
         if (path === START_IDENTIFIER) {
             currentRules = rules;
         } else if (path === '') {
-            console.log('path');
             break;
         } else {
             const searchRule = targetRules.find(rule => rule.title === path);

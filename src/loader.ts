@@ -1,11 +1,11 @@
-import { workspace, Uri } from 'vscode';
-
 import axios from 'axios';
 import { IRule } from './interface';
+import { writeFileSync, readFileSync } from 'fs';
+import { join as pathJoin } from 'path';
 
-async function loadRulesFromFile(path: Uri): Promise<IRule[] | null> {
+async function loadRulesFromFile(path: string): Promise<IRule[] | null> {
     try {
-        const json = await workspace.fs.readFile(path);
+        const json = readFileSync(path);
         return JSON.parse(json.toString()) as IRule[];
     } catch(e) {
         return null;
@@ -32,14 +32,14 @@ async function loadRulesFromWeb(): Promise<IRule[]> {
 }
 
 export async function loadRules (extensionPath: string, force: boolean = false): Promise<IRule[]> {
-    const fileUri = Uri.parse(`file://${extensionPath.length && extensionPath[0] === '/' ? '' :'/'}${extensionPath}/rules.json`);
+    const rulePath = pathJoin(extensionPath, 'rules.json');
     let rules: IRule[] | null = null;
     if (!force) {
-        rules = await loadRulesFromFile(fileUri);
+        rules = await loadRulesFromFile(rulePath);
     }
     if (!rules) {
         rules = await loadRulesFromWeb();
-        await workspace.fs.writeFile(fileUri, Buffer.from(JSON.stringify(rules)));
+        writeFileSync(rulePath, Buffer.from(JSON.stringify(rules)));
     }
     return rules;
 }
