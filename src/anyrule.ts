@@ -12,6 +12,7 @@ export class AnyRule {
         loadRules(context.extensionPath).then(rules => {
             this.rules = rules;
             this.load();
+            this.oldFunctionCompatible();
         });
     }
     public load() {
@@ -105,6 +106,32 @@ export class AnyRule {
                     });
                 } else {
                     commands.executeCommand('editor.action.triggerSuggest');
+                }
+            });
+        });
+    }
+
+    /**
+     * 兼容旧的功能，大概率会在未来废弃，仅过度使用
+     */
+    private oldFunctionCompatible() {
+        this.rules?.forEach((rule, index) => {
+            commands.registerCommand(`extension.rule${index}`, () => {
+                const editor = window.activeTextEditor;
+                if (editor) {
+                    const { selections } = editor;
+    
+                    editor.edit(editBuilder => {
+                        selections.forEach(selection => {
+                            const { start, end } = selection;
+                            const range = new Range(start, end);
+                            editBuilder.replace(range, String(rule.regex));
+                        });
+                    });
+                    // Display a message box to the user
+                    window.showInformationMessage(`已插入正则: ${rule.title}`);
+                } else {
+                    window.showWarningMessage('any-rule: 只有在编辑文本的时候才可以使用!');
                 }
             });
         });

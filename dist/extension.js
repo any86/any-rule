@@ -3513,6 +3513,7 @@ class AnyRule {
         loader_1.loadRules(context.extensionPath).then(rules => {
             this.rules = rules;
             this.load();
+            this.oldFunctionCompatible();
         });
     }
     load() {
@@ -3603,6 +3604,32 @@ class AnyRule {
             });
         });
     }
+    /**
+     * 兼容旧的功能，大概率会在未来废弃，仅过度使用
+     */
+    oldFunctionCompatible() {
+        var _a;
+        (_a = this.rules) === null || _a === void 0 ? void 0 : _a.forEach((rule, index) => {
+            vscode_1.commands.registerCommand(`extension.rule${index}`, () => {
+                const editor = vscode_1.window.activeTextEditor;
+                if (editor) {
+                    const { selections } = editor;
+                    editor.edit(editBuilder => {
+                        selections.forEach(selection => {
+                            const { start, end } = selection;
+                            const range = new vscode_1.Range(start, end);
+                            editBuilder.replace(range, String(rule.regex));
+                        });
+                    });
+                    // Display a message box to the user
+                    vscode_1.window.showInformationMessage(`已插入正则: ${rule.title}`);
+                }
+                else {
+                    vscode_1.window.showWarningMessage('any-rule: 只有在编辑文本的时候才可以使用!');
+                }
+            });
+        });
+    }
 }
 exports.AnyRule = AnyRule;
 
@@ -3634,9 +3661,6 @@ function activate(context) {
     // The commandId parameter must match the command field in package.json
     // let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
     // 	// The code you place here will be executed every time your command is executed
-    // 	// Display a message box to the user
-    // 	vscode.window.showInformationMessage('Hello World!');
-    // });
     const anyRule = new anyrule_1.AnyRule(context);
     vscode_1.workspace.onDidChangeConfiguration((event) => {
         anyRule.reload();
