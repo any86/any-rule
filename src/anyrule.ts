@@ -56,7 +56,7 @@ export class AnyRule {
         }, '.');
 
         this.context.subscriptions.push(this.disposable);
-        window.showInformationMessage('AnyRule加载成功');
+        // window.showInformationMessage('AnyRule加载成功');
     }
 
     public reload() {
