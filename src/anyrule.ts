@@ -2,13 +2,16 @@ import { ExtensionContext, CompletionItem, CompletionItemKind, languages, Dispos
 import { generateFilterString, getRulesByText } from "./utils";
 import { IRule } from "./interface";
 import { loadRules } from './loader';
+import { RegexDiagram } from './diagram/panel';
 
 export class AnyRule {
     context: ExtensionContext;
     disposable: Disposable | null = null;
     rules: IRule[] | null = null;
+    regexDiagram: RegexDiagram | null = null;
     constructor(context: ExtensionContext) {
         this.context = context;
+        this.regexDiagram = new RegexDiagram(context);
         loadRules(context.extensionPath).then(rules => {
             this.rules = rules;
             this.load();
