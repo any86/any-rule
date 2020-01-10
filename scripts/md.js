@@ -32,7 +32,7 @@ https://any86.github.io/any-rule/
 3. 输入"**zz**"可以看到正则列表.
 4. 或者**输入关键词**, 比如"手机".
 
-![预览视频](https://user-images.githubusercontent.com/8264787/69204566-36b97800-0b82-11ea-8553-dfc06f709926.gif)
+![预览gif](https://user-gold-cdn.xitu.io/2020/1/10/16f8e01a684a0a18?w=420&h=243&f=gif&s=414162)
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:

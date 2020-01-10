@@ -11,8 +11,7 @@ https://any86.github.io/any-rule/
 3. 输入"**zz**"可以看到正则列表.
 4. 或者**输入关键词**, 比如"手机".
 
-![gif](https://user-gold-cdn.xitu.io/2020/1/10/16f8ded13dd38b09?w=420&h=243&f=gif&s=414162)
-
+![预览gif](https://user-gold-cdn.xitu.io/2020/1/10/16f8e01a684a0a18?w=420&h=243&f=gif&s=414162)
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
@@ -72,12 +71,12 @@ https://any86.github.io/any-rule/
 
 ### linux"文件夹"路径
 ```javascript
-/^\/(\w+\/?)+$/
+/^(\/[^\/]+)+\/?$/
 ```
 
 ### linux"文件"路径
 ```javascript
-/^\/(\w+\/)+\w+\.\w+$/
+/^(\/[^\/]+)+$/
 ```
 
 ### window下"文件夹"路径
