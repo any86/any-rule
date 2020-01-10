@@ -55,7 +55,7 @@ module.exports = [{
     },
     {
         title: 'linux"文件"路径',
-        rule: /^\/(\w+\/)+\w+\.\w+$/,
+        rule: /^(\/[^\/]+)+$/,
         examples: ['/usr/ad/dd/a.js', '/root/b.ts']
     },
     {
