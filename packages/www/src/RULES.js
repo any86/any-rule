@@ -50,12 +50,12 @@ module.exports = [{
     },
     {
         title: 'linux"文件夹"路径',
-        rule: /^(\/[^\/]+)+\/?$/,
+        rule: /^(\/[^/]+)+\/?$/,
         examples: ['/usr/ad/dd', '/root/','/.gitignore']
     },
     {
         title: 'linux"文件"路径',
-        rule: /^(\/[^\/]+)+$/,
+        rule: /^(\/[^/]+)+$/,
         examples: ['/usr/ad/dd/a.js', '/root/b.ts']
     },
     {
