@@ -50,8 +50,8 @@ module.exports = [{
     },
     {
         title: 'linux"文件夹"路径',
-        rule: /^\/(\w+\/?)+$/,
-        examples: ['/usr/ad/dd', '/root/']
+        rule: /^(\/[^\/]+)+\/?$/,
+        examples: ['/usr/ad/dd', '/root/','/.gitignore']
     },
     {
         title: 'linux"文件"路径',
