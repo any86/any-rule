@@ -11,7 +11,8 @@ https://any86.github.io/any-rule/
 3. 输入"**zz**"可以看到正则列表.
 4. 或者**输入关键词**, 比如"手机".
 
-![any-rule](https://user-images.githubusercontent.com/8264787/72128171-f4a3fa00-33ac-11ea-84e5-78b0c42cd466.gif)
+![gif](https://user-gold-cdn.xitu.io/2020/1/10/16f8ded13dd38b09?w=420&h=243&f=gif&s=414162)
+
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
