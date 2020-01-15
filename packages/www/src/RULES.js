@@ -304,5 +304,10 @@ module.exports = [{
         title: '不能包含字母',
         rule: /^[^A-Za-z]*$/,
         examples: ['你好6啊', '@¥()！']
+    },
+    {
+        title: 'Android 包名校验',
+        rule: /^([a-zA-Z_][a-zA-Z0-9_]*)+([.][a-zA-Z_][a-zA-Z0-9_]*)+$/,
+        examples: ['com.bbb.name']
     }
 ];
