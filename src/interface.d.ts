@@ -5,3 +5,9 @@ export interface IRule {
     rules?: IRule[];
     examples?: string[];
 }
+
+export interface Rule{
+    title:string,
+    rule:RegExp,
+    examples:string[]
+}

@@ -354,8 +354,8 @@
         "@types/vscode": "^1.12.0",
         "glob": "^7.1.4",
         "mocha": "^6.1.4",
-        "typescript": "^3.3.1",
         "tslint": "^5.12.1",
+        "typescript": "^3.3.1",
         "vscode-test": "^1.0.2"
     },
     "configuration": {
@@ -373,5 +373,8 @@
                 "description": "激活AnyRule的文件类型，多个类型用逗号分隔"
             }
         }
+    },
+    "dependencies": {
+        "transliteration": "^2.1.8"
     }
 }
