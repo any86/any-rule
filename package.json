@@ -79,7 +79,14 @@
         "onCommand:extension.rule57",
         "onCommand:extension.rule58",
         "onCommand:extension.rule59",
-        "onCommand:extension.rule60"
+        "onCommand:extension.rule60",
+        "onLanguage:html",
+        "onLanguage:vue",
+        "onLanguage:jsx",
+        "onLanguage:js",
+        "onLanguage:mjs",
+        "onLanguage:ts",
+        "onLanguage:plaintext"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -350,5 +357,21 @@
         "typescript": "^3.3.1",
         "tslint": "^5.12.1",
         "vscode-test": "^1.0.2"
+    },
+    "configuration": {
+        "type": "object",
+        "title": "Any Rule",
+        "properties": {
+            "anyRule.triggerString": {
+                "type": "string",
+                "default": "zz",
+                "description": "触发字符串"
+            },
+            "anyRule.supportedLanguages": {
+                "type": "string",
+                "default": "javascript,typescript,javascriptreact,typescriptreact,vue,coffeescript",
+                "description": "激活AnyRule的文件类型，多个类型用逗号分隔"
+            }
+        }
     }
 }
