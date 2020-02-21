@@ -1,4 +1,4 @@
-# 正则大全  ![](https://img.shields.io/badge/已收录-61条-673ab7.svg) [![](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![](https://img.shields.io/badge/已收录-61条-673ab7.svg) [![](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![Node CI](https://github.com/any86/any-rule/workflows/Node%20CI/badge.svg)](https://github.com/any86/any-rule/actions)
 
 支持**图形界面** / **vscode插件**2种查询方式.
 
@@ -60,7 +60,7 @@ https://any86.github.io/any-rule/
 
 ### 网址(支持端口和"?+参数"和"#+参数)
 ```javascript
-/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?$/
+/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/
 ```
 
 ### 统一社会信用代码
@@ -90,15 +90,15 @@ https://any86.github.io/any-rule/
 
 ### linux"文件夹"路径
 ```javascript
-/^(\/[^\/]+)+\/?$/
+/^(\/[^/]+)+\/?$/
 ```
 
 ### linux"文件"路径
 ```javascript
-/^(\/[^\/]+)+$/
+/^(\/[^/]+)+$/
 ```
 
-### window下"文件夹"路径
+### window"文件夹"路径
 ```javascript
 /^[a-zA-Z]:\\(?:\w+\\?)*$/
 ```
@@ -108,7 +108,7 @@ https://any86.github.io/any-rule/
 /^[a-zA-Z]:\\(?:\w+\\)*\w+\.\w+$/
 ```
 
-### A股代码
+### 股票代码(A股)
 ```javascript
 /^(s[hz]|S[HZ])(000[\d]{3}|002[\d]{3}|300[\d]{3}|600[\d]{3}|60[\d]{4})$/
 ```
@@ -155,7 +155,7 @@ https://any86.github.io/any-rule/
 
 ### base64格式
 ```javascript
-/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)\s*$/i
+/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)\s*$/i
 ```
 
 ### 数字/货币金额（支持负数、千分位分隔符）
@@ -183,12 +183,12 @@ https://any86.github.io/any-rule/
 /(^[a-zA-Z]{1}[a-zA-Z\s]{0,20}[a-zA-Z]{1}$)/
 ```
 
-### 新能源车牌号
+### 车牌号(新能源)
 ```javascript
 /[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(([0-9]{5}[DF])|([DF][A-HJ-NP-Z0-9][0-9]{4}))$/
 ```
 
-### 非新能源车牌号
+### 车牌号(非新能源)
 ```javascript
 /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/
 ```
@@ -198,17 +198,17 @@ https://any86.github.io/any-rule/
 /^(?:[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(?:(?:[0-9]{5}[DF])|(?:[DF](?:[A-HJ-NP-Z0-9])[0-9]{4})))|(?:[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-Z]{1}[A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9 挂学警港澳]{1})$/
 ```
 
-### 中国手机号(严谨), 根据工信部2019年最新公布的手机号段
+### 手机号中国(严谨), 根据工信部2019年最新公布的手机号段
 ```javascript
 /^(?:(?:\+|00)86)?1(?:(?:3[\d])|(?:4[5-7|9])|(?:5[0-3|5-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\d])|(?:9[1|8|9]))\d{8}$/
 ```
 
-### 中国手机号(宽松), 只要是13,14,15,16,17,18,19开头即可
+### 手机号中国(宽松), 只要是13,14,15,16,17,18,19开头即可
 ```javascript
 /^(?:(?:\+|00)86)?1[3-9]\d{9}$/
 ```
 
-### 中国手机号(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条
+### 手机号中国(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条
 ```javascript
 /^(?:(?:\+|00)86)?1\d{10}$/
 ```
@@ -218,22 +218,22 @@ https://any86.github.io/any-rule/
 /^\d{4}(-)(1[0-2]|0?\d)\1([0-2]\d|\d|30|31)$/
 ```
 
-### 邮箱地址(email)
+### email(邮箱)
 ```javascript
-/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
-### 国内座机电话,如: 0341-86091234
+### 座机电话(国内),如: 0341-86091234
 ```javascript
 /\d{3}-\d{8}|\d{4}-\d{7}/
 ```
 
-### 一代身份证号(15位数字)
+### 身份证号(1代,15位数字)
 ```javascript
 /^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$/
 ```
 
-### 二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X
+### 身份证号(2代,18位数字),最后一位是校验位,可能为数字或字符X
 ```javascript
 /^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}[\dXx]$/
 ```
@@ -253,47 +253,47 @@ https://any86.github.io/any-rule/
 /^[a-zA-Z]\w{4,15}$/
 ```
 
-### 纯中文/汉字
+### 中文/汉字
 ```javascript
 /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/
 ```
 
-### 是否小数
+### 小数
 ```javascript
 /^\d+\.\d+$/
 ```
 
-### 纯数字
+### 数字
 ```javascript
 /^\d{1,}$/
 ```
 
-### 是否html标签(宽松匹配)
+### html标签(宽松匹配)
 ```javascript
 /<(\w+)[^>]*>(.*?<\/\1>)?/
 ```
 
-### 是否qq号格式正确
+### qq号格式正确
 ```javascript
 /^[1-9][0-9]{4,10}$/
 ```
 
-### 是否由数字和字母组成
+### 数字和字母组成
 ```javascript
 /^[A-Za-z0-9]+$/
 ```
 
-### 纯英文字母
+### 英文字母
 ```javascript
 /^[a-zA-Z]+$/
 ```
 
-### 纯小写英文字母组成
+### 小写英文字母组成
 ```javascript
 /^[a-z]+$/
 ```
 
-### 纯大写英文字母
+### 大写英文字母
 ```javascript
 /^[A-Z]+$/
 ```
@@ -328,12 +328,12 @@ https://any86.github.io/any-rule/
 /^[a-zA-Z][-_a-zA-Z0-9]{5,19}$/
 ```
 
-### 中国邮政编码
+### 邮政编码(中国)
 ```javascript
 /^(0[1-7]|1[0-356]|2[0-7]|3[0-6]|4[0-7]|5[1-7]|6[1-7]|7[0-5]|8[013-6])\d{4}$/
 ```
 
-### 只包含中文和数字
+### 中文和数字
 ```javascript
 /^((?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])|(\d))+$/
 ```
@@ -343,7 +343,7 @@ https://any86.github.io/any-rule/
 /^[^A-Za-z]*$/
 ```
 
-### Android 包名校验
+### java包名
 ```javascript
 /^([a-zA-Z_][a-zA-Z0-9_]*)+([.][a-zA-Z_][a-zA-Z0-9_]*)+$/
 ```
