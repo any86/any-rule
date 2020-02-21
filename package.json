@@ -369,6 +369,7 @@
         }
     },
     "dependencies": {
+        "axios": "^0.19.2",
         "transliteration": "^2.1.8"
     }
 }

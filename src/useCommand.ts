@@ -1,22 +1,36 @@
-import * as vscode from "vscode";
+import {window,version,commands,Range,ExtensionContext,extensions} from "vscode";
 import { Rule } from './interface';
-export default function (context: vscode.ExtensionContext, RULES: Rule[]) {
+import inserLog from './inserLog';
+
+export default function (context: ExtensionContext, RULES: Rule[]) {
     RULES.forEach(({ title, rule }, index) => {
-        let disposable = vscode.commands.registerCommand(`extension.rule${index}`, () => {
-            const editor = vscode.window.activeTextEditor;
+        let disposable = commands.registerCommand(`extension.rule${index}`, () => {
+            const editor = window.activeTextEditor;
             if (editor) {
                 const { selections } = editor;
 
                 editor.edit(editBuilder => {
                     selections.forEach(selection => {
                         const { start, end } = selection;
-                        const range = new vscode.Range(start, end);
+                        const range = new Range(start, end);
                         editBuilder.replace(range, String(rule));
                     });
                 });
-                vscode.window.showInformationMessage(`已插入正则: ${title}`);
+
+                // 日志
+                const language = window.activeTextEditor ? window.activeTextEditor.document.languageId as string : '';
+                const e = extensions.getExtension('russell.any-rule')
+                inserLog({
+                    vscodeVersion: version,
+                    language,
+                    rule: String(rule),
+                    title,
+                    extensionVersion: e && e.packageJSON.version,
+                    method: 'Command'
+                });
+                window.showInformationMessage(`已插入正则: ${title}`);
             } else {
-                vscode.window.showWarningMessage('any-rule: 只有在编辑文本的时候才可以使用!');
+                window.showWarningMessage('any-rule: 只有在编辑文本的时候才可以使用!');
             }
         });
         context.subscriptions.push(disposable);

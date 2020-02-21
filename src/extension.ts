@@ -7,7 +7,6 @@ const RULES: { title: string, rule: RegExp, examples: string[] }[] = require('..
 import useCommand from './useCommand';
 import useCompletion from './useCompletion';
 
-
 export function activate(context: ExtensionContext) {
 	useCommand(context, RULES);
 	useCompletion(context, RULES);
