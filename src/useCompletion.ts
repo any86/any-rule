@@ -12,23 +12,23 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
             if (!linePrefix.endsWith(COMPLETION_TRIGGER_ID)) return;
 
             // showQuickPick
-            let index = -1;
-            window.showQuickPick(RULES.map(({ examples, title }, i) => {
-                index = i;
-                return { 
+            window.showQuickPick(RULES.map(({ examples, title, rule }, i) => {
+                // const match = title.match(/\((.+)\)/);
+                return {
                     label: title,
-                    // description:'例如: ' + examples[0],
-                    detail:`例如: ${examples.join(' 或 ')}`
+                    // description: null !== match ? match[1] : '',
+                    rule: String(rule), // 非标准字段, 仅仅为了传值
+                    detail: `例如: ${examples.join(' 或 ')}`
                 };
             }), {
                 placeHolder: '请输入关键词',
                 // onDidSelectItem(item){
-                //     console.log(item)
+                // console.log(item)
                 // }
-            }).then(text => {
-                if (!text) return
-                insertRule(document, position, '' + RULES[index].rule)
-                window.showInformationMessage('' + RULES[index].rule);
+            }).then(item => {
+                if (!item) return
+                insertRule(document, position, item.rule)
+                window.showInformationMessage(item.rule);
             });
 
             return void 0;
@@ -50,18 +50,20 @@ function insertRule(document: TextDocument, position: Position, ruleString: stri
         // 起始
         const startPostion = new Position(line.lineNumber, line.text.indexOf(COMPLETION_TRIGGER_ID));
 
-        // 结束
-        const endPostion = new Position(line.lineNumber, startPostion.character + ruleString.length + COMPLETION_TRIGGER_ID.length);
-        window.showInformationMessage('asdad')
+        // 结束(replace用)
+        const endPostion = new Position(line.lineNumber, startPostion.character + COMPLETION_TRIGGER_ID.length);
+
 
         // window.showInformationMessage(
         //     '' + startPostion.character
-        //     , ''+endPostion.character
-        //     );
+        //     , '' + endPostion.character
+        // );
 
         editBuilder.replace(new Range(startPostion, endPostion), ruleString);
 
         setTimeout(() => {
+            // 结束(selection用)
+            const endPostion = new Position(line.lineNumber, startPostion.character + ruleString.length);
             editor.selection = new Selection(startPostion, endPostion);
         }, 0);
     });
