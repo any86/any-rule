@@ -11,7 +11,7 @@ RULES.forEach((rule, index) => {
         title: `zz: ${rule.title}`
     });
 
-    pkg.activationEvents.push('onCommand:extension.rule'+index);
+    pkg.activationEvents.push('*');
 })
 
 // console.log(JSON.stringify(pkg));
