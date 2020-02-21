@@ -6,7 +6,7 @@ import { COMPLETION_TRIGGER_ID } from './constant';
 export default function (context: ExtensionContext, RULES: Rule[]) {
     // commands.registerCommand('functions.insertRegex', insertRule);
 
-    const disposable = languages.registerCompletionItemProvider('plaintext', {
+    const disposable = languages.registerCompletionItemProvider('*', {
         provideCompletionItems(document, position) {
             const linePrefix = document.lineAt(position).text.substr(0, position.character);
             if (!linePrefix.endsWith(COMPLETION_TRIGGER_ID)) return;

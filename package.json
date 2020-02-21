@@ -80,13 +80,7 @@
         "onCommand:extension.rule58",
         "onCommand:extension.rule59",
         "onCommand:extension.rule60",
-        "onLanguage:html",
-        "onLanguage:vue",
-        "onLanguage:jsx",
-        "onLanguage:js",
-        "onLanguage:mjs",
-        "onLanguage:ts",
-        "onLanguage:plaintext"
+        "*"
     ],
     "main": "./out/extension.js",
     "contributes": {
