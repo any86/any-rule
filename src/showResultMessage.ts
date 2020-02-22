@@ -1,6 +1,6 @@
 import { extensions, window, version, env, Uri, languages } from 'vscode';
 import { getCodeLanguage, getExtensionVersion } from './shared'
-import { URL } from 'url';
+import insertLog from './insertLog';
 
 const BUTTON_FEEDBACK = '🚀反馈问题';
 const BUTTON_DIAGRAMMATIZE = '🦕图解正则';
@@ -10,9 +10,19 @@ export default function (title: string, rule: string): void {
     // window.setStatusBarMessage(`已插入正则: "${title}", 点击查看更多🔥`)
     window.showInformationMessage(`已插入正则: "${title}"`, BUTTON_DIAGRAMMATIZE, BUTTON_FEEDBACK, BUTTON_CANCEL).then(value => {
         if (BUTTON_FEEDBACK === value) {
+            insertLog({
+                rule,
+                title,
+                method: BUTTON_FEEDBACK
+            });
             const URL = Uri.parse(genGithubIssueURL(title));
             env.openExternal(URL);
         } else if (BUTTON_DIAGRAMMATIZE === value) {
+            insertLog({
+                rule,
+                title,
+                method: BUTTON_DIAGRAMMATIZE
+            });
             const URL = Uri.parse(`https://regexper.com/#${rule}`);
             env.openExternal(URL);
         }
