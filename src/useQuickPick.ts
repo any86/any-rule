@@ -12,15 +12,15 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
         provideCompletionItems(document, position) {
             const { triggerString } = getConfig();
             // 如果为空表示关闭
-            if (!triggerString) return;
+            if (!triggerString) return [];
 
             const linePrefix = document.lineAt(position).text.substr(0, position.character);
-            if (!linePrefix.endsWith(triggerString)) return;
+            if (!linePrefix.endsWith(triggerString)) return [];
 
-            // 增加优先级
+            // 滞后执行
             setTimeout(() => {
                 // showQuickPick
-                window.showQuickPick(RULES.map(({ examples, title, rule }, i) => {
+                window.showQuickPick(RULES.map(({ examples, title, rule }) => {
                     // const match = title.match(/\((.+)\)/);
                     return {
                         label: title,
@@ -45,10 +45,8 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
                     });
                     showResultMessage(item.label);
                 });
-            }, 0)
-
-
-            return void 0;
+            }, 100)
+            return [];
         },
 
         resolveCompletionItem(item) {
