@@ -16,9 +16,10 @@ const badges = [
 
     `![MIT](https://img.shields.io/badge/license-MIT-F44336.svg)`,
 
-    // `[![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)`
+    `[![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)`
 
-    `[![Node CI](https://github.com/any86/any-rule/workflows/Node%20CI/badge.svg)](https://github.com/any86/any-rule/actions)`
+    // vscode上传不让用svg
+    // `[![Node CI](https://github.com/any86/any-rule/workflows/Node%20CI/badge.svg)](https://github.com/any86/any-rule/actions)`
 ];
 
 let content = `# 正则大全  ${badges.join(' ')}
