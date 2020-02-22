@@ -45,7 +45,7 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
                     });
                     showResultMessage(item.label);
                 });
-            }, 100)
+            }, 10)
             return [];
         },
 
