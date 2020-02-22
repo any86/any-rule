@@ -43,7 +43,7 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
                         title: item.label,
                         method: 'QuickPick'
                     });
-                    showResultMessage(item.label);
+                    showResultMessage(item.label,item.rule);
                 });
             }, 10)
             return [];
