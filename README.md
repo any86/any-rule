@@ -1,14 +1,13 @@
-# 正则大全  ![](https://img.shields.io/badge/已收录-61条-673ab7.svg) [![](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![](https://img.shields.io/badge/license-MIT-F44336.svg) [![Node CI](https://github.com/any86/any-rule/workflows/Node%20CI/badge.svg)](https://github.com/any86/any-rule/actions)
+# 正则大全  ![已收录61条](https://img.shields.io/badge/已收录-61条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![Node CI](https://github.com/any86/any-rule/workflows/Node%20CI/badge.svg)](https://github.com/any86/any-rule/actions)
 
-支持**图形界面** / **vscode插件**2种查询方式.
+支持**web** / **vscode插件**2种查询方式.
 
-## :rocket:web版
+## :rocket:web版本
 https://any86.github.io/any-rule/
 
 ## 🍭vscode插件
-
 ### 安装
-vscode应用商店中搜索**any-rule**
+vscode应用商店中搜索"**any-rule**".
 
 ### 使用
 **方式1:**
@@ -20,7 +19,7 @@ vscode应用商店中搜索**any-rule**
 
 **方式2:**
 
-在任意文件任意代码中输入"**zz.**"
+在代码的任意位置输入"**zz.**"
 
 ![预览gif](https://user-gold-cdn.xitu.io/2020/2/23/1706df78b18466fd?w=954&h=372&f=gif&s=1732199)
 
