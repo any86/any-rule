@@ -3,16 +3,11 @@ const pkg = require('../package.json');
 const fs = require('fs');
 const chalk = require('chalk');
 
-pkg.contributes.commands = [];
-pkg.activationEvents = [];
-RULES.forEach((rule, index) => {
-    pkg.contributes.commands.push({
-        command: 'extension.rule' + index,
-        title: `zz: ${rule.title}`
-    });
-
-    pkg.activationEvents.push('*');
-})
+pkg.activationEvents = ['*'];
+pkg.contributes.commands = RULES.map((rule, index) => ({
+    command: 'extension.rule' + index,
+    title: `$(rocket) zz: ${rule.title}`
+}));
 
 // console.log(JSON.stringify(pkg));
 fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 4), 'utf8');

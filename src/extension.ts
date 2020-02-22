@@ -5,11 +5,11 @@ import {
 } from 'vscode';
 const RULES: { title: string, rule: RegExp, examples: string[] }[] = require('../packages/www/src/RULES.js');
 import useCommand from './useCommand';
-import useCompletion from './useCompletion';
+import useQuickPick from './useQuickPick';
 
 export function activate(context: ExtensionContext) {
 	useCommand(context, RULES);
-	useCompletion(context, RULES);
+	useQuickPick(context, RULES);
 }
 
 export function deactivate() { }

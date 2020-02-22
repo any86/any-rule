@@ -1,8 +1,9 @@
-import { ExtensionContext, version, CompletionItemKind, languages, Disposable, Extension, window, commands, TextDocument, Position, Range, Selection, MarkdownString, extensions } from "vscode";
+import { ExtensionContext, version, CompletionItemKind, languages, env, Extension, window, commands, TextDocument, Position, Range, Selection, MarkdownString, extensions, Uri } from "vscode";
 import { Rule } from './interface';
 import { COMPLETION_TRIGGER_ID } from './constant';
 // import { slugify } from 'transliteration';
-import inserLog from './inserLog';
+import insertLog from './insertLog';
+import showResultMessage from './showResultMessage';
 
 export default function (context: ExtensionContext, RULES: Rule[]) {
     // commands.registerCommand('functions.insertRegex', insertRule);
@@ -30,24 +31,13 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
                 if (!item) return
                 insertRule(document, position, item.rule);
 
-                const language = window.activeTextEditor ? window.activeTextEditor.document.languageId as string : '';
-
                 // 日志
-                const e = extensions.getExtension('russell.any-rule')
-                inserLog({
-                    vscodeVersion: version,
-                    language,
+                insertLog({
                     rule: item.rule,
                     title: item.label,
-                    extensionVersion: e && e.packageJSON.version,
                     method: 'QuickPick'
                 });
-
-                // https://github.com/any86/any-rule/issues/new?title=%E6%9D%A5%E8%87%AAvscode%E7%9A%84%E5%8F%8D%E9%A6%88(1.4.2%20-%20java)
-                window.showInformationMessage(`已插入正则: "${item.label}"`, '🦕图解正则', '🚀反馈问题', version, language).then(value => {
-
-                    // window.showInformationMessage();
-                });
+                showResultMessage(item.label);
             });
 
             return void 0;

@@ -1,6 +1,7 @@
 import {window,version,commands,Range,ExtensionContext,extensions} from "vscode";
 import { Rule } from './interface';
-import inserLog from './inserLog';
+import insertLog from './insertLog';
+import showResultMessage from './showResultMessage';
 
 export default function (context: ExtensionContext, RULES: Rule[]) {
     RULES.forEach(({ title, rule }, index) => {
@@ -16,19 +17,15 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
                         editBuilder.replace(range, String(rule));
                     });
                 });
-
+                
                 // 日志
-                const language = window.activeTextEditor ? window.activeTextEditor.document.languageId as string : '';
-                const e = extensions.getExtension('russell.any-rule')
-                inserLog({
-                    vscodeVersion: version,
-                    language,
+                insertLog({
                     rule: String(rule),
                     title,
-                    extensionVersion: e && e.packageJSON.version,
                     method: 'Command'
                 });
-                window.showInformationMessage(`已插入正则: ${title}`);
+                
+                showResultMessage(title);
             } else {
                 window.showWarningMessage('any-rule: 只有在编辑文本的时候才可以使用!');
             }
