@@ -4,6 +4,16 @@
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
     "version": "0.0.13",
+    "scripts": {
+        "build:md": "node ./scripts/md.js",
+        "build": "npm run test:rules && npm version patch && node ./scripts/genCommond.js && vsce package && npm run build:md",
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTest.js",
+        "test:rules": "node __test__/rule"
+    },
     "engines": {
         "vscode": "^1.12.0"
     },
@@ -285,16 +295,6 @@
                 "title": "$(rocket) zz: java包名"
             }
         ]
-    },
-    "scripts": {
-        "build:md": "node ./scripts/md.js",
-        "build": "npm run test:rules && npm version patch && node ./scripts/genCommond.js && vsce package && npm run build:md",
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile",
-        "test": "node ./out/test/runTest.js",
-        "test:rules": "node __test__/rule"
     },
     "devDependencies": {
         "@types/glob": "^7.1.1",
