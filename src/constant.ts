@@ -1,1 +1,0 @@
-export const COMPLETION_TRIGGER_ID = 'zz.';

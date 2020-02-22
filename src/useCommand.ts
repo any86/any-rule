@@ -1,11 +1,11 @@
-import {window,version,commands,Range,ExtensionContext,extensions} from "vscode";
+import {window,commands,Range,ExtensionContext} from "vscode";
 import { Rule } from './interface';
 import insertLog from './insertLog';
 import showResultMessage from './showResultMessage';
 
 export default function (context: ExtensionContext, RULES: Rule[]) {
     RULES.forEach(({ title, rule }, index) => {
-        let disposable = commands.registerCommand(`extension.rule${index}`, () => {
+        const disposable = commands.registerCommand(`extension.rule${index}`, () => {
             const editor = window.activeTextEditor;
             if (editor) {
                 const { selections } = editor;

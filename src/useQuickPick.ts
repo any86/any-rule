@@ -1,44 +1,52 @@
-import { ExtensionContext, version, CompletionItemKind, languages, env, Extension, window, commands, TextDocument, Position, Range, Selection, MarkdownString, extensions, Uri } from "vscode";
+import { ExtensionContext, workspace, languages, window, TextDocument, Position, Range, Selection } from "vscode";
 import { Rule } from './interface';
-import { COMPLETION_TRIGGER_ID } from './constant';
 // import { slugify } from 'transliteration';
 import insertLog from './insertLog';
 import showResultMessage from './showResultMessage';
 
 export default function (context: ExtensionContext, RULES: Rule[]) {
     // commands.registerCommand('functions.insertRegex', insertRule);
-
-    const disposable = languages.registerCompletionItemProvider('*', {
+    // 不确定是不是都兼容"*", 保守    
+    const { supportedLanguages, triggerStringEnd } = getConfig();
+    const disposable = languages.registerCompletionItemProvider(supportedLanguages.split(','), {
         provideCompletionItems(document, position) {
+            const { triggerString } = getConfig();
+            // 如果为空表示关闭
+            if (!triggerString) return;
+
             const linePrefix = document.lineAt(position).text.substr(0, position.character);
-            if (!linePrefix.endsWith(COMPLETION_TRIGGER_ID)) return;
+            if (!linePrefix.endsWith(triggerString)) return;
 
-            // showQuickPick
-            window.showQuickPick(RULES.map(({ examples, title, rule }, i) => {
-                // const match = title.match(/\((.+)\)/);
-                return {
-                    label: title,
-                    // description: null !== match ? match[1] : '',
-                    rule: String(rule), // 非标准字段, 仅仅为了传值
-                    detail: `例如: ${examples.join(' 或 ')}`
-                };
-            }), {
-                placeHolder: '请输入关键词',
-                // onDidSelectItem(item){
-                // console.log(item)
-                // }
-            }).then(item => {
-                if (!item) return
-                insertRule(document, position, item.rule);
+            // 增加优先级
+            setTimeout(() => {
+                // showQuickPick
+                window.showQuickPick(RULES.map(({ examples, title, rule }, i) => {
+                    // const match = title.match(/\((.+)\)/);
+                    return {
+                        label: title,
+                        // description: null !== match ? match[1] : '',
+                        rule: String(rule), // 非标准字段, 仅仅为了传值
+                        detail: `例如: ${examples.join(' 或 ')}`
+                    };
+                }), {
+                    placeHolder: '请输入关键词',
+                    // onDidSelectItem(item){
+                    // console.log(item)
+                    // }
+                }).then(item => {
+                    if (!item) return
+                    insertRule(document, position, item.rule);
 
-                // 日志
-                insertLog({
-                    rule: item.rule,
-                    title: item.label,
-                    method: 'QuickPick'
+                    // 日志
+                    insertLog({
+                        rule: item.rule,
+                        title: item.label,
+                        method: 'QuickPick'
+                    });
+                    showResultMessage(item.label);
                 });
-                showResultMessage(item.label);
-            });
+            }, 0)
+
 
             return void 0;
         },
@@ -46,35 +54,41 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
         resolveCompletionItem(item) {
             return item;
         }
-    }, '.');
+    }, triggerStringEnd);
     context.subscriptions.push(disposable);
 }
 
 
 function insertRule(document: TextDocument, position: Position, ruleString: string) {
+    const { triggerString } = getConfig();
+
     const editor = window.activeTextEditor;
     if (void 0 === editor) return;
     editor.edit(editBuilder => {
         const line = document.lineAt(position);
-        // 起始
-        const startPostion = new Position(line.lineNumber, line.text.indexOf(COMPLETION_TRIGGER_ID));
 
-        // 结束(replace用)
-        const endPostion = new Position(line.lineNumber, startPostion.character + COMPLETION_TRIGGER_ID.length);
+        // 起始, "zz."前面的位置
+        const startPostion = position.translate(0, -triggerString.length);
 
-
-        // window.showInformationMessage(
-        //     '' + startPostion.character
-        //     , '' + endPostion.character
-        // );
-
-        editBuilder.replace(new Range(startPostion, endPostion), ruleString);
+        editBuilder.replace(new Range(startPostion, position), ruleString);
 
         setTimeout(() => {
-            // 结束(selection用)
+            // 全选正则字符串
             const endPostion = new Position(line.lineNumber, startPostion.character + ruleString.length);
             editor.selection = new Selection(startPostion, endPostion);
         }, 0);
     });
 }
 
+// 获取配置
+function getConfig() {
+    const configuration = workspace.getConfiguration();
+    const { triggerString, supportedLanguages = '*' } = configuration.AnyRule;
+    const { length } = triggerString;
+    const triggerStringStart = triggerString.substr(0, length - 1);
+    const triggerStringEnd = triggerString.substr(-1);
+
+    return {
+        triggerStringStart, triggerStringEnd, triggerString, supportedLanguages
+    }
+}

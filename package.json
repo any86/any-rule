@@ -23,6 +23,22 @@
     ],
     "main": "./out/extension.js",
     "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "any-rule",
+            "properties": {
+                "AnyRule.triggerString": {
+                    "type": "string",
+                    "default": "zz.",
+                    "description": "触发字符串"
+                },
+                "AnyRule.supportedLanguages": {
+                    "type": "string",
+                    "default": "*, javascript, typescript, javascriptreact, typescriptreact, markdown, jsx, vue, html, json, plaintext, coffeescript",
+                    "description": "如果您的文件格式未被支持, 请在此处添加(⚡添加成功后需要重启vscode)"
+                }
+            }
+        },
         "commands": [
             {
                 "command": "extension.rule0",
@@ -290,22 +306,6 @@
         "tslint": "^5.12.1",
         "typescript": "^3.3.1",
         "vscode-test": "^1.0.2"
-    },
-    "configuration": {
-        "type": "object",
-        "title": "Any Rule",
-        "properties": {
-            "anyRule.triggerString": {
-                "type": "string",
-                "default": "zz",
-                "description": "触发字符串"
-            },
-            "anyRule.supportedLanguages": {
-                "type": "string",
-                "default": "javascript,typescript,javascriptreact,typescriptreact,vue,coffeescript",
-                "description": "激活AnyRule的文件类型，多个类型用逗号分隔"
-            }
-        }
     },
     "dependencies": {
         "transliteration": "^2.1.8"
