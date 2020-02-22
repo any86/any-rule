@@ -2,16 +2,27 @@
 
 支持**图形界面** / **vscode插件**2种查询方式.
 
-## :rocket:图形界面
+## :rocket:web版
 https://any86.github.io/any-rule/
 
 ## 🍭vscode插件
-1. 安装vscode中插件搜索框输入**any-rule**
-2. 安装完毕后按**F1**(或者ctrl+shift+p).
-3. 输入"**zz**"可以看到正则列表.
-4. 或者**输入关键词**, 比如"手机".
+
+### 安装
+vscode应用商店中搜索**any-rule**
+
+### 使用
+**方式1:**
+1. 安装完毕后按**F1**(或者ctrl+shift+p).
+2. 输入"**zz**"可以看到正则列表.
+3. 或者**输入关键词**, 比如"手机".
 
 ![预览gif](https://user-gold-cdn.xitu.io/2020/1/10/16f8e01a684a0a18?w=420&h=243&f=gif&s=414162)
+
+**方式2:**
+
+在任意文件任意代码中输入"**zz.**"
+
+![预览gif](https://user-gold-cdn.xitu.io/2020/2/23/1706df78b18466fd?w=954&h=372&f=gif&s=1732199)
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
