@@ -59,7 +59,7 @@ module.exports = [{
         examples: ['/usr/ad/dd/a.js', '/root/b.ts']
     },
     {
-        title: 'window下"文件夹"路径',
+        title: 'window"文件夹"路径',
         rule: /^[a-zA-Z]:\\(?:\w+\\?)*$/,
         examples: ['C:\\Users\\Administrator\\Desktop', 'e:\\m\\']
     },
@@ -69,7 +69,7 @@ module.exports = [{
         examples: ['C:\\Users\\Administrator\\Desktop\\qq.link', 'e:\\m\\vscode.exe']
     },
     {
-        title: 'A股代码',
+        title: '股票代码(A股)',
         rule: /^(s[hz]|S[HZ])(000[\d]{3}|002[\d]{3}|300[\d]{3}|600[\d]{3}|60[\d]{4})$/,
         examples: ['sz000858', 'SZ002136', 'sz300675', 'SH600600', 'sh601155']
     },
@@ -145,12 +145,12 @@ module.exports = [{
         examples: ['James', 'Kevin Wayne Durant', 'Dirk Nowitzki']
     },
     {
-        title: '新能源车牌号',
+        title: '车牌号(新能源)',
         rule: /[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}(([0-9]{5}[DF])|([DF][A-HJ-NP-Z0-9][0-9]{4}))$/,
         examples: ['京AD92035', '甘G23459F'],
     },
     {
-        title: '非新能源车牌号',
+        title: '车牌号(非新能源)',
         rule: /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领 A-Z]{1}[A-HJ-NP-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/,
         examples: ['京A00599', '黑D23908']
     },
@@ -160,17 +160,17 @@ module.exports = [{
         examples: ['京A12345D', '京A00599']
     },
     {
-        title: '中国手机号(严谨), 根据工信部2019年最新公布的手机号段',
+        title: '手机号中国(严谨), 根据工信部2019年最新公布的手机号段',
         rule: /^(?:(?:\+|00)86)?1(?:(?:3[\d])|(?:4[5-7|9])|(?:5[0-3|5-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\d])|(?:9[1|8|9]))\d{8}$/,
         examples: ['008618311006933', '+8617888829981', '19119255642']
     },
     {
-        title: '中国手机号(宽松), 只要是13,14,15,16,17,18,19开头即可',
+        title: '手机号中国(宽松), 只要是13,14,15,16,17,18,19开头即可',
         rule: /^(?:(?:\+|00)86)?1[3-9]\d{9}$/,
         examples: ['008618311006933', '+8617888829981', '19119255642']
     },
     {
-        title: '中国手机号(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条',
+        title: '手机号中国(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条',
         rule: /^(?:(?:\+|00)86)?1\d{10}$/,
         examples: ['008618311006933', '+8617888829981', '19119255642']
     },
@@ -180,22 +180,22 @@ module.exports = [{
         examples: ['1990-12-12', '2020-1-1']
     },
     {
-        title: '邮箱地址(email)',
+        title: 'email(邮箱)',
         rule: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
         examples: ['90203918@qq.com', 'nbilly@126.com']
     },
     {
-        title: '国内座机电话,如: 0341-86091234',
+        title: '座机电话(国内),如: 0341-86091234',
         rule: /\d{3}-\d{8}|\d{4}-\d{7}/,
         examples: ['0936-4211235']
     },
     {
-        title: '一代身份证号(15位数字)',
+        title: '身份证号(1代,15位数字)',
         rule: /^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$/,
         examples: ['622001790131123']
     },
     {
-        title: '二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X',
+        title: '身份证号(2代,18位数字),最后一位是校验位,可能为数字或字符X',
         rule: /^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}[\dXx]$/,
         examples: ['62222319991205131x']
     },
@@ -215,48 +215,48 @@ module.exports = [{
         examples: ['justin', 'justin1989', 'justin_666']
     },
     {
-        title: '纯中文/汉字',
+        title: '中文/汉字',
         // rule: /^[\u4E00-\u9FA5]+$/,
         rule: /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/,
         examples: ['正则', '前端']
     },
     {
-        title: '是否小数',
+        title: '小数',
         rule: /^\d+\.\d+$/,
         examples: ['0.0', '0.09']
     },
     {
-        title: '纯数字',
+        title: '数字',
         rule: /^\d{1,}$/,
         examples: [12345678]
     },
     {
-        title: '是否html标签(宽松匹配)',
+        title: 'html标签(宽松匹配)',
         rule: /<(\w+)[^>]*>(.*?<\/\1>)?/,
         examples: ['<div id="app"> 2333 </div>', '<input type="text">', '<br>']
     },
     {
-        title: '是否qq号格式正确',
+        title: 'qq号格式正确',
         rule: /^[1-9][0-9]{4,10}$/,
         examples: [903013545, 9020304]
     },
     {
-        title: '是否由数字和字母组成',
+        title: '数字和字母组成',
         rule: /^[A-Za-z0-9]+$/,
         examples: ['james666', 'haha233hi']
     },
     {
-        title: '纯英文字母',
+        title: '英文字母',
         rule: /^[a-zA-Z]+$/,
         examples: ['Russel']
     },
     {
-        title: '纯小写英文字母组成',
+        title: '小写英文字母组成',
         rule: /^[a-z]+$/,
         examples: ['russel']
     },
     {
-        title: '纯大写英文字母',
+        title: '大写英文字母',
         rule: /^[A-Z]+$/,
         examples: ['ABC', 'KD']
     },
@@ -291,12 +291,12 @@ module.exports = [{
         examples: ['github666', 'kd_-666']
     },
     {
-        title: '中国邮政编码',
+        title: '邮政编码(中国)',
         rule: /^(0[1-7]|1[0-356]|2[0-7]|3[0-6]|4[0-7]|5[1-7]|6[1-7]|7[0-5]|8[013-6])\d{4}$/,
         examples: ['734500', '100101']
     },
     {
-        title: '只包含中文和数字',
+        title: '中文和数字',
         rule: /^((?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])|(\d))+$/,
         examples: ['哈哈哈', '你好6啊']
     },
@@ -306,7 +306,7 @@ module.exports = [{
         examples: ['你好6啊', '@¥()！']
     },
     {
-        title: 'Android 包名校验',
+        title: 'java包名',
         rule: /^([a-zA-Z_][a-zA-Z0-9_]*)+([.][a-zA-Z_][a-zA-Z0-9_]*)+$/,
         examples: ['com.bbb.name']
     }
