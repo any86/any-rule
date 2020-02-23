@@ -8,7 +8,7 @@
         "build:md": "node ./scripts/md.js",
         "build": "npm run test:rules && npm version patch && node ./scripts/genCommond.js && vsce package && npm run build:md",
         "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
+        "compile": "webpack --mode production",
         "watch": "tsc -watch -p ./",
         "pretest": "npm run compile",
         "test": "node ./out/test/runTest.js",
@@ -303,9 +303,12 @@
         "@types/vscode": "^1.12.0",
         "glob": "^7.1.4",
         "mocha": "^6.1.4",
+        "ts-loader": "^6.2.1",
         "tslint": "^5.12.1",
         "typescript": "^3.3.1",
-        "vscode-test": "^1.0.2"
+        "vscode-test": "^1.0.2",
+        "webpack": "^4.41.6",
+        "webpack-cli": "^3.3.11"
     },
     "dependencies": {
         "axios": "^0.19.2",
