@@ -39,7 +39,7 @@
             "properties": {
                 "AnyRule.triggerString": {
                     "type": "string",
-                    "default": "zz.",
+                    "default": "@zz",
                     "description": "触发字符串"
                 },
                 "AnyRule.supportedLanguages": {
