@@ -42,14 +42,20 @@ vscode应用商店中搜索"**any-rule**".
 ![预览gif](https://user-gold-cdn.xitu.io/2020/1/10/16f8e01a684a0a18?w=420&h=243&f=gif&s=414162)
 
 **方式2:**
+1. 右键选择"🦕正则大全".
 
-1. 在代码的任意位置输入"**zz.**"弹出正则列表.
+![](https://user-gold-cdn.xitu.io/2020/2/28/17087735718cca3b?w=389&h=400&f=png&s=55934)
+
+**方式3:**
+1. 在代码的任意位置输入"**@zz**"弹出正则列表.
 2. **输入关键词搜索**, 比如"手机".
 
 ![预览gif](https://user-gold-cdn.xitu.io/2020/2/23/1706df78b18466fd?w=954&h=372&f=gif&s=1732199)
 
-## 🦕图解正则
-在vscode中选择正则后, 可点击"🦕图解正则".
+## 🤖图解正则
+<details>
+<summary>查看详情</summary>
+在vscode中选择正则后, 可点击"🤖图解正则".
 
 ![预览gif](https://user-gold-cdn.xitu.io/2020/2/23/1706e32c3a6fb116?w=533&h=95&f=png&s=21563)
 
@@ -58,6 +64,7 @@ vscode应用商店中搜索"**any-rule**".
 ![预览gif](https://user-gold-cdn.xitu.io/2020/2/23/1706e349b600c28b?w=1151&h=500&f=png&s=45210)
 
 **注意**: 图解直接使用了https://regexper.com, 在此对作者表示敬意和感谢.
+</details>
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
