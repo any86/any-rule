@@ -2,8 +2,8 @@ import { extensions, window, version, env, Uri, languages } from 'vscode';
 import { getCodeLanguage, getExtensionVersion } from './shared'
 import insertLog from './insertLog';
 
-const BUTTON_FEEDBACK = '🚀反馈问题';
-const BUTTON_DIAGRAMMATIZE = '🦕图解正则';
+const BUTTON_FEEDBACK = '✋意见反馈';
+const BUTTON_DIAGRAMMATIZE = '🤖图解正则';
 const BUTTON_CANCEL = '关闭';
 
 export default function (title: string, rule: string): void {
