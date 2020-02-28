@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "scripts": {
         "build:md": "node ./scripts/md.js",
         "build": "npm run test:rules && npm version patch && node ./scripts/genCommond.js && vsce package && npm run build:md",
@@ -37,17 +37,21 @@
             "type": "object",
             "title": "any-rule",
             "properties": {
-                "AnyRule.triggerString": {
+                "any-rule.triggerString": {
                     "type": "string",
-                    "default": "zz.",
+                    "default": "@zz",
                     "description": "触发字符串"
-                },
-                "AnyRule.supportedLanguages": {
-                    "type": "string",
-                    "default": "*, javascript, typescript, javascriptreact, typescriptreact, markdown, jsx, vue, html, json, plaintext, coffeescript",
-                    "description": "如果您的文件格式未被支持, 请在此处添加(⚡添加成功后需要重启vscode)"
                 }
             }
+        },
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "editorFocus",
+                    "command": "extension.rule.callByMenu",
+                    "group": "navigation"
+                }
+            ]
         },
         "commands": [
             {
@@ -293,6 +297,10 @@
             {
                 "command": "extension.rule60",
                 "title": "$(rocket) zz: java包名"
+            },
+            {
+                "command": "extension.rule.callByMenu",
+                "title": "🦕正则大全(61条)"
             }
         ]
     },
