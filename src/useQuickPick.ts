@@ -43,7 +43,7 @@ export default function (context: ExtensionContext, RULES: Rule[]) {
                         title: item.label,
                         method: 'QuickPick'
                     });
-                    showResultMessage(item.label,item.rule);
+                    showResultMessage(item.label, item.rule);
                 });
             }, 10)
             return [];
@@ -81,12 +81,12 @@ function insertRule(document: TextDocument, position: Position, ruleString: stri
 // 获取配置
 function getConfig() {
     const configuration = workspace.getConfiguration();
-    const { triggerString, supportedLanguages = '*' } = configuration.AnyRule;
+    const { triggerString } = configuration.AnyRule;
     const { length } = triggerString;
     const triggerStringStart = triggerString.substr(0, length - 1);
     const triggerStringEnd = triggerString.substr(-1);
 
     return {
-        triggerStringStart, triggerStringEnd, triggerString, supportedLanguages
+        triggerStringStart, triggerStringEnd, triggerString, supportedLanguages: '*'
     }
 }

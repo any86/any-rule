@@ -41,11 +41,6 @@
                     "type": "string",
                     "default": "@zz",
                     "description": "触发字符串"
-                },
-                "any-rule.supportedLanguages": {
-                    "type": "string",
-                    "default": "*, javascript, typescript, javascriptreact, typescriptreact, markdown, jsx, vue, html, json, plaintext, coffeescript",
-                    "description": "如果您的文件格式未被支持, 请在此处添加(⚡添加成功后需要重启vscode)"
                 }
             }
         },
