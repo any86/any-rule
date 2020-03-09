@@ -7,7 +7,13 @@ import showResultMessage from './showResultMessage';
 export default function (context: ExtensionContext, RULES: Rule[]) {
     // commands.registerCommand('functions.insertRegex', insertRule);
     // 不确定是不是都兼容"*", 保守    
-    const { supportedLanguages, triggerStringEnd } = getConfig();
+    let { supportedLanguages, triggerStringEnd } = getConfig();
+    workspace.onDidChangeConfiguration(() => {
+        const config = getConfig();
+        supportedLanguages = config.supportedLanguages;
+        triggerStringEnd = config.triggerStringEnd;
+    });
+
     const disposable = languages.registerCompletionItemProvider(supportedLanguages.split(','), {
         provideCompletionItems(document, position) {
             const { triggerString } = getConfig();
@@ -81,12 +87,16 @@ function insertRule(document: TextDocument, position: Position, ruleString: stri
 // 获取配置
 function getConfig() {
     const configuration = workspace.getConfiguration();
-    const { triggerString } = configuration.AnyRule;
+    const { triggerString } = configuration['any-rule'];
     const { length } = triggerString;
     const triggerStringStart = triggerString.substr(0, length - 1);
     const triggerStringEnd = triggerString.substr(-1);
 
     return {
-        triggerStringStart, triggerStringEnd, triggerString, supportedLanguages: '*'
+        triggerStringStart,
+        triggerStringEnd,
+        triggerString,
+        // 预留
+        supportedLanguages: '*'
     }
 }
