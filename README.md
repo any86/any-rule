@@ -30,7 +30,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ![预览图](https://user-gold-cdn.xitu.io/2020/2/28/17089999afc7a21c?w=722&h=408&f=gif&s=299355)
 
-## 🤖图解正则
+## 👩‍🏫图解正则
 <details>
 <summary>查看详情</summary>
 在vscode中选择正则后, 可点击"🤖图解正则".
