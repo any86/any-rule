@@ -92,11 +92,11 @@
             },
             {
                 "command": "extension.rule9",
-                "title": "$(rocket) zz: linux\"文件夹\"路径"
+                "title": "$(rocket) zz: linux\"隐藏文件\"路径"
             },
             {
                 "command": "extension.rule10",
-                "title": "$(rocket) zz: linux\"文件\"路径"
+                "title": "$(rocket) zz: linux\"文件(夹)\"路径"
             },
             {
                 "command": "extension.rule11",
