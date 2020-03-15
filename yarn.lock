@@ -2719,6 +2719,11 @@ punycode@^2.1.0:
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+qiniu-js@^2.5.5:
+  version "2.5.5"
+  resolved "https://registry.npmjs.org/qiniu-js/-/qiniu-js-2.5.5.tgz#77d295f222620f9377d6148f3f757d189a1e4977"
+  integrity sha512-cJcdZMCfU4OJirjCzKJwPXSgrXF0INB2qtqA6ImNBe2PJFqi8kWE7rp3qr1RKH0H4OTtPOXyBC2FVSl/zM7ERg==
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.npmjs.org/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
