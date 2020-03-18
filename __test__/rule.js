@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-18 22:55:56
- * @LastEditTime: 2020-03-18 23:05:30
+ * @LastEditTime: 2020-03-18 23:06:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \any-rule\__test__\rule.js
@@ -12,6 +12,7 @@ let failGroup = [];
 
 
 RULES.forEach(RULE => {
+    // test develop
     testOne(RULE);
 });
 
