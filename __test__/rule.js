@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-03-18 22:55:56
+ * @LastEditTime: 2020-03-18 23:05:30
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \any-rule\__test__\rule.js
+ */
 const chalk = require('chalk');
 const RULES = require('../packages/www/src/RULES');
 let failGroup = [];
