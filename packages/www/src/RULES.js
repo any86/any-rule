@@ -49,14 +49,14 @@ module.exports = [{
         examples: ['255.255.255.0', '255.224.0.0']
     },
     {
-        title: 'linux"文件夹"路径',
-        rule: /^(\/[^/]+)+\/?$/,
-        examples: ['/usr/ad/dd', '/root/','/.gitignore']
+        title: 'linux"隐藏文件"路径',
+        rule: /^\/(?:[^/]+\/)*\.[^/]*/,
+        examples: ['/usr/ad/.dd', '/root/.gitignore', '/.gitignore']
     },
     {
-        title: 'linux"文件"路径',
-        rule: /^(\/[^/]+)+$/,
-        examples: ['/usr/ad/dd/a.js', '/root/b.ts']
+        title: 'linux"文件(夹)"路径',
+        rule: /^\/[\s\S]+/,
+        examples: ['/usr/ad/dd/', '/root/b.ts','/root/abc']
     },
     {
         title: 'window"文件夹"路径',
