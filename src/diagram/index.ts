@@ -1,4 +1,4 @@
-import { Webview, window, ViewColumn, Uri, ExtensionContext } from 'vscode';
+import { TextEditor, window, ViewColumn, Uri, ExtensionContext, Range, commands } from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -32,14 +32,34 @@ function getWebViewContent(context: ExtensionContext, templatePath: string) {
 }
 
 export default function useDiagram(context: ExtensionContext) {
-  const panel = window.createWebviewPanel(
-    'Diagram',
-    'Diagram',
-    ViewColumn.One,
-    {
-      enableScripts: true,
+
+  commands.registerTextEditorCommand('extension.showDiagram', (editor, edit) => {
+    console.log('show diagram triggered');
+    const position = editor?.selection.active;
+    const line = editor?.document.lineAt(position?.line!);
+    const text = editor?.document.getText(new Range(line?.range.start!, line?.range.end!));
+    const regex = /(?<!\\)\/(.+?)(?<!\\)\//g;
+    const regexpList: string[] = []; // text?.match(/(?<!\\)\/(.+?)(?<!\\)\//g);
+    let matches;
+    while ((matches = regex.exec(text)) !== null) {
+      // This is necessary to avoid infinite loops with zero-width matches
+      if (matches.index === regex.lastIndex) {
+        regex.lastIndex++;
+      }
+      regexpList.push(matches[1]);
     }
-  );
-  panel.webview.html = getWebViewContent(context, 'out/diagram/index.html')
-    .replace('{{ inject-script }}', `<script src="${getExtensionFileVscodeResource(context, 'out/diagram/diagram.js')}"></script>`);
+    const panel = window.createWebviewPanel(
+      'Diagram',
+      'Diagram',
+      ViewColumn.Two,
+      {
+        enableScripts: true,
+      }
+    );
+    panel.webview.html = getWebViewContent(context, 'out/diagram/index.html')
+      .replace('{{ inject-script }}', `<script src="${getExtensionFileVscodeResource(context, 'out/diagram/diagram.js')}"></script>`);
+    panel.webview.postMessage({
+      regexpGroups: regexpList,
+    });
+  });
 }

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { RegexpDiagram } from './views/RegexpDiagram';
+import { RegexpDiagramView } from './views/RegexpDiagram';
 
 class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <RegexpDiagram />
+        <RegexpDiagramView />
       </div>
     );
   }
