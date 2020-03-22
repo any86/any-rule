@@ -7,11 +7,13 @@ const RULES: { title: string, rule: RegExp, examples: string[] }[] = require('..
 import useCommand from './useCommand';
 import useQuickPick from './useQuickPick';
 import useMenuCommand from './useMenuCommand';
+import useDiagram from './diagram';
 
 export function activate(context: ExtensionContext) {
 	useCommand(context, RULES);
 	useQuickPick(context, RULES);
 	useMenuCommand(context, RULES);
+	useDiagram(context);
 }
 
 export function deactivate() { }

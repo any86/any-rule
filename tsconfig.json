@@ -2,9 +2,10 @@
 	"compilerOptions": {
 		"module": "commonjs",
 		"target": "es6",
+		"jsx": "react",
 		"outDir": "out",
 		"lib": [
-			"es6"
+      "es2015", "es2016", "es2017", "dom", "dom.iterable"
 		],
 		"sourceMap": true,
 		"rootDir": "src",

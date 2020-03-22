@@ -9,7 +9,7 @@
         "build": "npm run test:rules && npm version patch && node ./scripts/genCommond.js && vsce package && npm run build:md",
         "vscode:prepublish": "npm run compile",
         "compile": "webpack --mode production",
-        "watch": "tsc -watch -p ./",
+        "watch": "webpack --mode development",
         "pretest": "npm run compile",
         "test": "node ./out/test/runTest.js",
         "test:rules": "node __test__/rule"
@@ -308,7 +308,10 @@
         "@types/glob": "^7.1.1",
         "@types/mocha": "^5.2.6",
         "@types/node": "^10.12.21",
+        "@types/react": "^16.9.25",
+        "@types/react-dom": "^16.9.5",
         "@types/vscode": "^1.12.0",
+        "copy-webpack-plugin": "^5.1.1",
         "glob": "^7.1.4",
         "mocha": "^6.1.4",
         "ts-loader": "^6.2.1",
@@ -321,6 +324,8 @@
     },
     "dependencies": {
         "axios": "^0.19.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "transliteration": "^2.1.8"
     }
 }
