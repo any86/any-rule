@@ -2,7 +2,7 @@ import * as React from 'react';
 import { parse, visualize, Raphael } from 'regulex-cjs';
 import { useEffect } from 'react';
 
-interface IDiagramProps {
+interface IDiagramProps extends React.HTMLAttributes<HTMLDivElement> {
   regexp: string | RegExp;
 }
 

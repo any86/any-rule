@@ -38,7 +38,7 @@ export default function useDiagram(context: ExtensionContext) {
     const position = editor?.selection.active;
     const line = editor?.document.lineAt(position?.line!);
     const text = editor?.document.getText(new Range(line?.range.start!, line?.range.end!));
-    const regex = /(?<!\\)\/(.+?)(?<!\\)\//g;
+    const regex = /(?<!\\)\/(.+?)(?<!\\)\/([gmiyus]{0,6})/g;
     const regexpList: string[] = []; // text?.match(/(?<!\\)\/(.+?)(?<!\\)\//g);
     let matches;
     while ((matches = regex.exec(text)) !== null) {
@@ -46,20 +46,25 @@ export default function useDiagram(context: ExtensionContext) {
       if (matches.index === regex.lastIndex) {
         regex.lastIndex++;
       }
+      console.log(matches);
       regexpList.push(matches[1]);
     }
-    const panel = window.createWebviewPanel(
-      'Diagram',
-      'Diagram',
-      ViewColumn.Two,
-      {
-        enableScripts: true,
-      }
-    );
-    panel.webview.html = getWebViewContent(context, 'out/diagram/index.html')
-      .replace('{{ inject-script }}', `<script src="${getExtensionFileVscodeResource(context, 'out/diagram/diagram.js')}"></script>`);
-    panel.webview.postMessage({
-      regexpGroups: regexpList,
-    });
+    if (regexpList.length) {
+      const panel = window.createWebviewPanel(
+        'Diagram',
+        'Diagram',
+        ViewColumn.Two,
+        {
+          enableScripts: true,
+        }
+      );
+      panel.webview.html = getWebViewContent(context, 'out/diagram/index.html')
+        .replace('{{ inject-script }}', `<script src="${getExtensionFileVscodeResource(context, 'out/diagram/diagram.js')}"></script>`);
+      panel.webview.postMessage({
+        regexpGroups: regexpList,
+      });
+    } else {
+      window.showWarningMessage('未找到正则表达式');
+    }
   });
 }

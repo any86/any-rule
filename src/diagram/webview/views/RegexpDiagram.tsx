@@ -8,7 +8,7 @@ export const RegexpDiagramView: React.FC = () => {
   return (
     <>
       <div>
-        {regexpGroups.map((regexp: string) => <RegExpDiagram regexp={new RegExp(regexp)} />)}
+        {regexpGroups.map((regexp: string) => <RegExpDiagram className="regexp-diagram" regexp={new RegExp(regexp)} />)}
       </div>
     </>
   );
