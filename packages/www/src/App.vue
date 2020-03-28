@@ -57,6 +57,8 @@
         </header>
 
         <article>
+            <h1>123</h1>
+            <label><input type="file" @change="onFileChange"/></label>
             <ul v-if="0 < rules.length" class="list">
                 <li
                     @mouseenter="mouseenterHandler(index)"
@@ -119,6 +121,9 @@
 <script>
 import RULES from '@/RULES';
 import ClipboardJS from 'clipboard';
+import axios from 'axios'
+const CryptoJS = require('crypto-js')
+
 // import throttle from 'lodash/throttle';
 export default {
     name: 'app',
@@ -129,6 +134,7 @@ export default {
         Object.freeze(RULES);
 
         return {
+            token:'',
             timer: null,
             keyword: '',
             rules: RULES,
@@ -144,6 +150,10 @@ export default {
     },
 
     mounted() {
+this.token = this.getToken();
+
+
+
         // this.$nextTick(() => {
         //     // 高亮
         //     this.$refs.code.forEach((block) => {
@@ -173,6 +183,35 @@ export default {
     },
 
     methods: {
+        
+        getToken(){
+            const AccessKey = 'rM1vf31ZmX54Y5CjW1T_PLU6dnyGSAVIi230FbZx';
+const SecretKey = 'FJ93nk_P7fTp6rTNA4sCqNvzRf257cYoDk1VWIz6';
+let timestamp = new Date().getTime() // 当前的时间戳
+timestamp = parseInt(timestamp / 1000) + 36000
+let putPolicy = {'scope': 'image9999', 'deadline': timestamp}
+let encodedPutPolicy = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(JSON.stringify(putPolicy)))
+let encodedSign = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA1(encodedPutPolicy, SecretKey)) // 第一个参数为加密字符串，第二个参数为公共秘钥
+return AccessKey + ':' + encodedSign + ':' + encodedPutPolicy
+        },
+
+        async onFileChange(ev){
+// const {code, data} = await axios.get('http://service.soas.top/qiniu/token?nsukey=dSnyoF2fHP%2FVex4MAKEOVDUq4th5W69CrZCh6CrDNWtWRKOoKrBYXwQDgUcMg%2FS31kufpGgmkkyF0Lek5C9FCAxuTYqnMzvqFwti7JWcgc6HFjM9Cg%2FxF6o%2FCZaBrS7PLDGSP5in%2F%2FOIeTI5StrGtcRpWxV9XBTAz7iltnZ6im4mIP%2BrkwkAwXuGW8etxo1z2QDsnzrDHUnbWpZzzEeMPQ%3D%3D');
+// console.log(data)
+            // if(1 == code){
+                const token = this.token;
+                const file = ev.target.files[0];
+                const formData = new FormData()
+                formData.append('file', file);
+                formData.append('token', token);
+                const {code, data} = await axios.post('http://upload.qiniup.com', formData,{
+                    headers:{'Content-Type':'multipart/form-data'}
+                });
+                console.log(code, data);
+            // }
+
+        },
+
         parseExample(examples, counterExamples){
             let arr = [`例如: ${examples.join(', ')}`];
             if(undefined !== counterExamples) {
