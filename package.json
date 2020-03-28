@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "scripts": {
         "build:md": "node ./scripts/md.js",
         "build": "npm run test:rules && npm version patch && node ./scripts/genCommond.js && vsce package && npm run build:md",
@@ -92,11 +92,11 @@
             },
             {
                 "command": "extension.rule9",
-                "title": "$(rocket) zz: linux\"文件夹\"路径"
+                "title": "$(rocket) zz: linux\"隐藏文件\"路径"
             },
             {
                 "command": "extension.rule10",
-                "title": "$(rocket) zz: linux\"文件\"路径"
+                "title": "$(rocket) zz: linux\"文件(夹)\"路径"
             },
             {
                 "command": "extension.rule11",
@@ -314,6 +314,7 @@
         "ts-loader": "^6.2.1",
         "tslint": "^5.12.1",
         "typescript": "^3.3.1",
+        "vsce": "^1.74.0",
         "vscode-test": "^1.0.2",
         "webpack": "^4.41.6",
         "webpack-cli": "^3.3.11"
