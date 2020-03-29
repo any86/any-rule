@@ -54,9 +54,14 @@ module.exports = [{
         examples: ['/usr/ad/.dd', '/root/.gitignore', '/.gitignore']
     },
     {
-        title: 'linux"文件(夹)"路径',
-        rule: /^\/[\s\S]+/,
-        examples: ['/usr/ad/dd/', '/root/b.ts','/root/abc']
+        title: 'linux文件夹路径',
+        rule: /^\/(?:[^/]+\/)*$/,
+        examples: ['/usr/ad/dd/', '/','/root/']
+    },
+    {
+        title: 'linux文件路径',
+        rule: /^\/(?:[^/]+\/)*[^/]+$/,
+        examples: ['/root/b.ts','/root/abc']
     },
     {
         title: 'window"文件夹"路径',
