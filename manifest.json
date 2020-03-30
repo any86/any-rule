@@ -3,17 +3,17 @@
     "name": "正则大全",
     "icons": [
         {
-            "src": "https://user-images.githubusercontent.com/8264787/77868778-edcfa980-726e-11ea-810d-25ce415bdd9b.png",
+            "src": "icon.png",
             "type": "image/png",
             "sizes": "48x48"
         },
         {
-            "src": "https://user-images.githubusercontent.com/8264787/77868778-edcfa980-726e-11ea-810d-25ce415bdd9b.png",
+            "src": "icon.png",
             "type": "image/png",
             "sizes": "96x96"
         },
         {
-            "src": "https://user-images.githubusercontent.com/8264787/77868778-edcfa980-726e-11ea-810d-25ce415bdd9b.png",
+            "src": "icon.png",
             "type": "image/png",
             "sizes": "192x192"
         }
