@@ -5,16 +5,6 @@
         {
             "src": "/any-rule/icon.png",
             "type": "image/png",
-            "sizes": "48x48"
-        },
-        {
-            "src": "/any-rule/icon.png",
-            "type": "image/png",
-            "sizes": "96x96"
-        },
-        {
-            "src": "/any-rule/icon.png",
-            "type": "image/png",
             "sizes": "192x192"
         }
     ],
