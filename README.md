@@ -1,4 +1,4 @@
-# 正则大全  ![已收录61条](https://img.shields.io/badge/已收录-61条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录62条](https://img.shields.io/badge/已收录-62条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 支持**web** / **vscode插件**2种查询方式.
 
@@ -91,7 +91,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 网址(支持端口和"?+参数"和"#+参数)
 ```javascript
-/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/
+/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?$/
 ```
 
 ### 统一社会信用代码
@@ -121,12 +121,17 @@ vscode应用商店中搜索"**any-rule**".
 
 ### linux"隐藏文件"路径
 ```javascript
-/^\/(?:[^/]+\/)*\.[^/]*/
+/^\/(?:[^\/]+\/)*\.[^\/]*/
 ```
 
-### linux"文件(夹)"路径
+### linux文件夹路径
 ```javascript
-/^\/[\s\S]+/
+/^\/(?:[^\/]+\/)*$/
+```
+
+### linux文件路径
+```javascript
+/^\/(?:[^\/]+\/)*[^\/]+$/
 ```
 
 ### window"文件夹"路径
@@ -186,7 +191,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### base64格式
 ```javascript
-/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)\s*$/i
+/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)\s*$/i
 ```
 
 ### 数字/货币金额（支持负数、千分位分隔符）
@@ -251,7 +256,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### email(邮箱)
 ```javascript
-/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
 ### 座机电话(国内),如: 0341-86091234
