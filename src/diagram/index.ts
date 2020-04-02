@@ -31,6 +31,23 @@ function getWebViewContent(context: ExtensionContext, templatePath: string) {
   return html;
 }
 
+/**
+ * 从一段文本中提取出所有的正则表达式字符串
+ * 1. 通过栈 来匹配正则的配对规则来匹配，区域可重叠（确保是正确的格式）
+ *   - 每一个 '/' 都作为起始字符来处理来进行扫描
+ *   - [] 中可以有不配对的 '[', ']', '(', ')' 字符
+ *   - 对正则进行语法检测，可以使用 Regulex 的相关方法
+ * 2. 对正则列表根据上下文进行可靠性判断
+ *   - 如果正则开始符号或终止符号，在上下文的字符串中，在上下文的计算式中（作为除号），则排除这个式子
+ *   - 对于赋值语句的判断，比如将正则赋值给一个变量的这种情况判定为可靠
+ *   - 排除占用了已经确定的正则的开始或终止标识的正则
+ *   - 实在没办法的就通过，一起列出来。存在待处理文本是经过不可靠的截断导致上下文失效的情况
+ * @param content 待处理文本
+ */
+function pickRegularExpressions(content: string) {
+  // TODO 实现一个可靠的正则表达式提取算法
+}
+
 export default function useDiagram(context: ExtensionContext) {
 
   commands.registerTextEditorCommand('extension.showDiagram', (editor, edit) => {
@@ -50,6 +67,7 @@ export default function useDiagram(context: ExtensionContext) {
       regexpList.push(matches[1]);
     }
     if (regexpList.length) {
+      console.log(regexpList);
       const panel = window.createWebviewPanel(
         'Diagram',
         'Diagram',
@@ -60,8 +78,20 @@ export default function useDiagram(context: ExtensionContext) {
       );
       panel.webview.html = getWebViewContent(context, 'out/diagram/index.html')
         .replace('{{ inject-script }}', `<script src="${getExtensionFileVscodeResource(context, 'out/diagram/diagram.js')}"></script>`);
-      panel.webview.postMessage({
-        regexpGroups: regexpList,
+      panel.webview.onDidReceiveMessage(message => {
+        switch (message.command) {
+          case 'getRegexpList':
+            panel.webview.postMessage({
+              regexpList
+            });
+            break;
+          case 'replaceRegexp':
+            console.log(message.regexp);
+            break;
+          case 'insertRegexp':
+            console.log(message.regexp);
+            break;
+        }
       });
     } else {
       window.showWarningMessage('未找到正则表达式');

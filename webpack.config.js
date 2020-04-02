@@ -65,11 +65,33 @@ const webviewConfig = {
           },
         ],
       },
+      {
+        test: /\.(css|less)$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'less-loader',
+            options: {
+              modifyVars: {
+                // 'primary-color': 'var(--vscode-button-background)',
+                // '@link-color': '#1DA57A',
+                // '@border-radius-base': '0px',
+              },
+              javascriptEnabled: true,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new CopyPlugin([
-      { from: 'src/diagram/webview/index.html', to: 'diagram/index.html'},
+      { from: 'src/diagram/webview/index.html', to: 'diagram/index.html' },
     ]),
   ],
 };

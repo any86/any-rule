@@ -1,0 +1,49 @@
+@primary-color: var(--vscode-button-background);
+
+html,
+body {
+  padding: 0;
+  font-family: var(--vscode-editor-font-family);
+  font-size: var(--vscode-font-size);
+  color: var(--vscode-foreground);
+  background: var(--vscode-editor-background);
+}
+
+body.vscode-light {
+  color: black;
+}
+
+body.vscode-dark {
+  color: white;
+}
+
+.app {
+  background: transparent;
+
+  .ant-collapse-borderless {
+    background: transparent;
+  }
+
+  .ant-collapse-borderless {
+    background: transparent;
+  }
+
+  .ant-collapse-header {
+    background: var(--vscode-sideBarSectionHeader-background);
+    color: var(--vscode-editor-foreground) !important;
+    font-weight: 700;
+  }
+
+  .ant-btn-primary {
+    background: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    &:hover {
+      background: var(--vscode-button-hoverBackground);
+    }
+  }
+
+  .regex-collapse-panel {
+    border: 0;
+  }
+}

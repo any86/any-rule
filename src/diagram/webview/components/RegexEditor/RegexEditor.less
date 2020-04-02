@@ -1,0 +1,47 @@
+.regex-editor {
+  display: flex;
+
+  input.ant-input {
+    border: none;
+    background: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    outline: none;
+    border-radius: 0;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .codemirror-wrapper {
+    width: calc(100% - 32px);
+  }
+
+  .CodeMirror {
+    background: var(--vscode-input-background) !important;
+    border: none !important;
+    height: 32px;
+  }
+
+  .CodeMirror-hscrollbar {
+    display: none !important;
+  }
+
+  .CodeMirror-scroll {
+    overflow: hidden !important;
+  }
+
+  .separator {
+    background: var(--vscode-input-background);
+    color: #bbb;
+    width: 16px;
+    max-width: 16px;
+    min-width: 16px;
+    line-height: 32px;
+    height: 32px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+}
