@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="manifest" href="<%= BASE_URL %>manifest.json">
     <title>正则大全</title>
     <!-- 百度统计 -->
     <script>
@@ -20,9 +21,10 @@
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
     <style>
-        :root{
+        :root {
             --primary: #42b983;
         }
+
         * {
             padding: 0;
             margin: 0;
@@ -47,26 +49,30 @@
             list-style-type: none;
         }
 
-        @keyframes rotate{
-            from{
+        @keyframes rotate {
+            from {
                 transform: rotate(0);
             }
-            
-            to{
+
+            to {
                 transform: rotate(360deg);
             }
         }
-        .loading{
+
+        .loading {
             animation: rotate 1s infinite linear;
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             position: fixed;
-            top:0;left:0;right: 0;bottom:0;
-            margin:auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
             display: block;
-            width:100px;
-            height:100px;
-            border:0 solid #42b983;
+            width: 100px;
+            height: 100px;
+            border: 0 solid #42b983;
             border-right-width: 4px;
             border-radius: 50%;
         }
@@ -77,7 +83,7 @@
     <noscript>
         <strong>We're sorry but any-rule doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    
+
     <div id="app">
         <i class="loading"></i>
     </div>

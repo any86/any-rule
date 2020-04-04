@@ -57,7 +57,7 @@ vscode应用商店中搜索"**any-rule**".
 ## 👩‍🏫图解正则
 <details>
 <summary>查看详情</summary>
-在vscode中选择正则后, 可点击"🤖图解正则".
+每次在any-rule中选择正则后会弹出提示, 可点击"🤖图解正则".
 
 ![预览图](https://user-gold-cdn.xitu.io/2020/2/23/1706e32c3a6fb116?w=533&h=95&f=png&s=21563)
 
