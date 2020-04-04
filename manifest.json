@@ -1,20 +1,15 @@
 {
-    "name": "PWA-DEMO",  
-    "short_name": "DEMO",   
-    "icons": [  
-      {
-        "src": "./1.jpg",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "./1.jpg",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
+    "short_name": "any-rule",
+    "name": "正则大全",
+    "icons": [
+        {
+            "src": "/any-rule/icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
     ],
-    "start_url": "./index.html",   
-    "display": "standalone",     
-    "background_color": "#000000",   
-    "theme_color": "#4DBA87"   
-  }
+    "background_color": "#2196F3",
+    "theme_color": "#2196F3",
+    "display": "standalone",
+    "start_url": "/any-rule"
+}
