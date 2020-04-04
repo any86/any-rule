@@ -12,7 +12,9 @@
         "watch": "tsc -watch -p ./",
         "pretest": "npm run compile",
         "test": "node ./out/test/runTest.js",
-        "test:rules": "node __test__/rule"
+        "test:rules": "node __test__/rule",
+        "release:demo":"cd packages/www && yarn release",
+        "dev:demo":"cd packages/www && yarn serve"
     },
     "engines": {
         "vscode": "^1.12.0"
