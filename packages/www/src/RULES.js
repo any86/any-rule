@@ -314,5 +314,10 @@ module.exports = [{
         title: 'java包名',
         rule: /^([a-zA-Z_][a-zA-Z0-9_]*)+([.][a-zA-Z_][a-zA-Z0-9_]*)+$/,
         examples: ['com.bbb.name']
+    },
+    {
+        title: 'mac地址',
+        rule: /^((([a-f0-9]{2}:){5})|(([a-f0-9]{2}-){5}))[a-f0-9]{2}$/i,
+        examples: ['38:f9:d3:4b:f5:51','00-0C-29-CA-E4-66']
     }
 ];
