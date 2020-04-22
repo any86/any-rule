@@ -1,6 +1,7 @@
 # 正则大全  ![已收录63条](https://img.shields.io/badge/已收录-63条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 ## 🔥 2020-04-21 新增idea版本
+![预览gif](https://camo.githubusercontent.com/2b241996f53b8fa5612a1da64b7e6ce5c17247b4/687474703a2f2f7777772e35327a686f756a69612e636e2f75706c6f61642f323032302f30342f366a37336d6468736a34673461717076727632336166386174762e676966)
 感谢[Olange](https://github.com/zhoriya)的辛勤的付出. [使用说明](https://github.com/zhoriya/idea-rule)
 
 支持**web** / **vscode插件**2种查询方式.
