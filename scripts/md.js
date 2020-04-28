@@ -24,12 +24,20 @@ const badges = [
 
 let content = `# 正则大全  ${badges.join(' ')}
 
-支持**web** / **vscode插件**2种查询方式.
+🦕支持**web** / **vscode** / **idea** 多平台
+
+## 🔥 2020-04-21 新增idea版本
+
+### 安装
+IDEA应用商店中搜索"**any-rule**".
+
+感谢[Olange](https://github.com/zhoriya)的辛勤的付出. 具体使用说明请浏览[他的仓库](https://github.com/zhoriya/idea-rule), 记得帮他star哦.
 
 ## :rocket:web版本
 https://any86.github.io/any-rule/
 
 ## 🍭vscode插件
+
 ### 安装
 vscode应用商店中搜索"**any-rule**".
 
