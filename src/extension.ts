@@ -15,7 +15,7 @@ export function activate(context: ExtensionContext) {
 }
 
 export function test(){
-	return '测试代码';
+	return '测试代码 yyyy';
 }
 
 export function deactivate() { }
