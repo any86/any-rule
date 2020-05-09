@@ -14,4 +14,8 @@ export function activate(context: ExtensionContext) {
 	useMenuCommand(context, RULES);
 }
 
+export function test(){
+	return '测试代码';
+}
+
 export function deactivate() { }
