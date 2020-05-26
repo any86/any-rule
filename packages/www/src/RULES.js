@@ -314,5 +314,10 @@ module.exports = [{
         title: 'java包名',
         rule: /^([a-zA-Z_][a-zA-Z0-9_]*)+([.][a-zA-Z_][a-zA-Z0-9_]*)+$/,
         examples: ['com.bbb.name']
+    },
+    {
+        title: '匹配连续重复的字符',
+        rule: /(.)*(.)\2{1}(.)*/,
+        examples: ['11234', '11111', '我我']
     }
 ];
