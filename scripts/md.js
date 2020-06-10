@@ -70,7 +70,7 @@ vscode应用商店中搜索"**any-rule**".
 </details>
 
 ## 社区版本
-[idea版](https://github.com/zhoriya)
+[idea版](https://github.com/zhoriya/idea-rule)
 
 [Alfred Workflow版](https://github.com/cccyb/workflows)
 
