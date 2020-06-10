@@ -1,13 +1,6 @@
-# 正则大全  ![已收录63条](https://img.shields.io/badge/已收录-63条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录64条](https://img.shields.io/badge/已收录-64条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
-🦕支持**web** / **vscode** / **idea** 多平台
-
-## 🔥 2020-04-21 新增idea版本
-
-### 安装
-IDEA应用商店中搜索"**any-rule**".
-
-感谢[Olange](https://github.com/zhoriya)的辛勤的付出. 具体使用说明请浏览[他的仓库](https://github.com/zhoriya/idea-rule), 记得帮他star哦.
+🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
 ## :rocket:web版本
 https://any86.github.io/any-rule/
@@ -51,6 +44,11 @@ vscode应用商店中搜索"**any-rule**".
 
 **注意**: 图解直接使用了https://regexper.com, 在此对作者表示敬意和感谢.
 </details>
+
+## 社区版本
+[idea版](https://github.com/zhoriya)
+
+[Alfred Workflow版](https://github.com/cccyb/workflows)
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
@@ -279,12 +277,12 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 身份证号(2代,18位数字),最后一位是校验位,可能为数字或字符X
 ```javascript
-/^[1-9]\d{5}(?:18|19|20)\d{2}(?:0\d|10|11|12)(?:0[1-9]|[1-2]\d|30|31)\d{3}[\dXx]$/
+/^[1-9]\d{5}(?:18|19|20)\d{2}(?:0[1-9]|10|11|12)(?:0[1-9]|[1-2]\d|30|31)\d{3}[\dXx]$/
 ```
 
 ### 身份证号, 支持1/2代(15位/18位数字)
 ```javascript
-/(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0\d|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/
+/(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0[1-9]|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/
 ```
 
 ### 护照（包含香港、澳门）
@@ -395,4 +393,9 @@ vscode应用商店中搜索"**any-rule**".
 ### mac地址
 ```javascript
 /^((([a-f0-9]{2}:){5})|(([a-f0-9]{2}-){5}))[a-f0-9]{2}$/i
+```
+
+### 匹配连续重复的字符
+```javascript
+/(.)\1+/
 ```
