@@ -24,12 +24,13 @@ const badges = [
 
 let content = `# 正则大全  ${badges.join(' ')}
 
-支持**web** / **vscode插件**2种查询方式.
+🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
 ## :rocket:web版本
 https://any86.github.io/any-rule/
 
 ## 🍭vscode插件
+
 ### 安装
 vscode应用商店中搜索"**any-rule**".
 
@@ -67,6 +68,11 @@ vscode应用商店中搜索"**any-rule**".
 
 **注意**: 图解直接使用了https://regexper.com, 在此对作者表示敬意和感谢.
 </details>
+
+## 社区版本
+[idea版](https://github.com/zhoriya)
+
+[Alfred Workflow版](https://github.com/cccyb/workflows)
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
