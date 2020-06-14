@@ -314,8 +314,12 @@
                 "title": "$(rocket) zz: mac地址"
             },
             {
+                "command": "extension.rule63",
+                "title": "$(rocket) zz: 匹配连续重复的字符"
+            },
+            {
                 "command": "extension.rule.callByMenu",
-                "title": "🦕正则大全(63条)"
+                "title": "🦕正则大全(64条)"
             }
         ]
     },
