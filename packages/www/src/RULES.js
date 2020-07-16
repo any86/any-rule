@@ -25,7 +25,11 @@ module.exports = [{
         rule: /^[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}$/,
         examples: ['91230184MA1BUFLT44', '92371000MA3MXH0E3W'],
     },
-
+    {
+        title: '统一社会信用代码(宽松匹配)(15位/18位/20位数字/字母)',
+        rule: /^(([0-9A-Za-z]{15})|([0-9A-Za-z]{18})|([0-9A-Za-z]{20}))$/,
+        examples: ['91110108772551611J', '911101085923662400']
+    },
     {
         title: '迅雷链接',
         rule: /^thunderx?:\/\/[a-zA-Z\d]+=$/,
