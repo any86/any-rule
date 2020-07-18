@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "husky": {
         "hooks": {
             "pre-push": "npm run test:rules && npm run build:md && git add README.md && git commit -m 'docs: 更新文档'"
