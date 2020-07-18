@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "husky": {
         "hooks": {
             "pre-push": "npm run test:rules && npm run build:md && git add README.md && git commit -m 'docs: 更新文档'"
@@ -318,8 +318,12 @@
                 "title": "$(rocket) zz: 匹配连续重复的字符"
             },
             {
+                "command": "extension.rule64",
+                "title": "$(rocket) zz: 数字和英文字母组成，并且同时含有数字和英文字母"
+            },
+            {
                 "command": "extension.rule.callByMenu",
-                "title": "🦕正则大全(64条)"
+                "title": "🦕正则大全(65条)"
             }
         ]
     },
