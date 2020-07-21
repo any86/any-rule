@@ -105,6 +105,11 @@ vscode应用商店中搜索"**any-rule**".
 /^[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}$/
 ```
 
+### 统一社会信用代码(宽松匹配)(15位/18位/20位数字/字母)
+```javascript
+/^(([0-9A-Za-z]{15})|([0-9A-Za-z]{18})|([0-9A-Za-z]{20}))$/
+```
+
 ### 迅雷链接
 ```javascript
 /^thunderx?:\/\/[a-zA-Z\d]+=$/
