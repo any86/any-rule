@@ -1,4 +1,4 @@
-# 正则大全  ![已收录65条](https://img.shields.io/badge/已收录-65条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录69条](https://img.shields.io/badge/已收录-69条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
@@ -97,7 +97,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 网址(url,支持端口和"?+参数"和"#+参数)
 ```javascript
-/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?$/
+/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/
 ```
 
 ### 统一社会信用代码
@@ -132,17 +132,17 @@ vscode应用商店中搜索"**any-rule**".
 
 ### linux"隐藏文件"路径
 ```javascript
-/^\/(?:[^\/]+\/)*\.[^\/]*/
+/^\/(?:[^/]+\/)*\.[^/]*/
 ```
 
 ### linux文件夹路径
 ```javascript
-/^\/(?:[^\/]+\/)*$/
+/^\/(?:[^/]+\/)*$/
 ```
 
 ### linux文件路径
 ```javascript
-/^\/(?:[^\/]+\/)*[^\/]+$/
+/^\/(?:[^/]+\/)*[^/]+$/
 ```
 
 ### window"文件夹"路径
@@ -202,7 +202,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### base64格式
 ```javascript
-/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)\s*$/i
+/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)\s*$/i
 ```
 
 ### 数字/货币金额（支持负数、千分位分隔符）
@@ -408,4 +408,19 @@ vscode应用商店中搜索"**any-rule**".
 ### 数字和英文字母组成，并且同时含有数字和英文字母
 ```javascript
 /^(?=.*[a-zA-Z])(?=.*\d).+$/
+```
+
+### 香港身份证 
+```javascript
+/^[a-zA-Z]\d{6}\([\dA]\)$/
+```
+
+### 澳门身份证 
+```javascript
+/^[1|5|7]\d{6}[(\d)]{3}$/
+```
+
+### 台湾身份证 
+```javascript
+/^[a-zA-Z][0-9]{9}$/
 ```
