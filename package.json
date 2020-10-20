@@ -235,7 +235,7 @@
             },
             {
                 "command": "extension.rule43",
-                "title": "$(rocket) zz: 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合"
+                "title": "$(rocket) zz: 账号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合"
             },
             {
                 "command": "extension.rule44",
