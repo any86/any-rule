@@ -1,4 +1,4 @@
-# 正则大全  ![已收录70条](https://img.shields.io/badge/已收录-70条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录69条](https://img.shields.io/badge/已收录-69条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
@@ -272,12 +272,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 座机(tel phone)电话(国内),如: 0341-86091234
 ```javascript
-/^\d{3}-\d{8}$|^\d{4}-\d{7,8}$/
-```
-
-### 座机(tel phone)电话(国内), 区号可选,如: 0341-86091234
-```javascript
-/^(?:\d{3}-)?\d{8}$|^(?:\d{4}-)?\d{7,8}$/
+/^(?:(?:\d{3}-)?\d{8}|^(?:\d{4}-)?\d{7,8})(?:-\d+)?$/
 ```
 
 ### 身份证号(1代,15位数字)
