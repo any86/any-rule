@@ -2,44 +2,41 @@
     <main>
         <article class="fixed">
             <a
-                onclick="_hmt.push(['_trackEvent', '交互', '点击github', '悬浮'])"
-                href="https://github.com/any86/any-rule"
-                target="_blank"
-                class="github"
-            >
-                <svg height="20" viewBox="0 0 16 16" version="1.1" width="20" aria-hidden="true">
-                    <path
-                        fill-rule="evenodd"
-                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                    ></path>
-                </svg>
-                <span>github</span>
-            </a>
-            <a
                 onclick="_hmt.push(['_trackEvent', '交互', '提问'])"
                 class="message"
                 href="https://github.com/any86/any-rule/issues/new"
                 target="_blank"
-                >提问</a
+                ><svg
+                    style="margin-right: 8px"
+                    height="24"
+                    width="24"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    aria-hidden="true"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        fill="#fff"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                    ></path>
+                </svg>
+                提问</a
             >
         </article>
         <header>
-            <h1>正则大全</h1>
-
             <a
                 onclick="_hmt.push(['_trackEvent', '交互', '点击github', '头部'])"
-                style="margin-left: 15px; color: #000"
                 href="https://github.com/any86/any-rule"
                 target="_blank"
                 class="github"
             >
-                <svg height="20" viewBox="0 0 16 16" version="1.1" width="20" aria-hidden="true">
+                <!-- <svg height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
                     <path
                         fill-rule="evenodd"
                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
                     ></path>
-                </svg>
-                <span>github</span>
+                </svg> -->
+                <h1>🦕正则大全</h1>
             </a>
 
             <iframe
@@ -276,18 +273,17 @@ main {
         z-index: 1986;
         right: 15px;
         bottom: 15px;
-        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
-        border-radius: $radius;
-        overflow: hidden;
         > a {
             display: flex;
+            border-radius: $radius;
             align-content: center;
             align-items: center;
             justify-content: center;
             justify-items: center;
             font-size: 16px;
             text-align: center;
-            padding: 15px;
+            padding: 16px;
+            box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
             &:active {
                 opacity: 0.6;
                 box-shadow: none;
@@ -321,13 +317,15 @@ main {
             border-radius: $radius;
             box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            display: inline-block;
-        }
+
+        // 标题
         > .github {
             display: inline-flex;
-            > span {
-                margin-left: 5px;
+            align-items: center;
+            color: #000;
+
+            h1 {
+                margin-left: 8px;
             }
         }
     }
@@ -356,6 +354,7 @@ main {
                 transition: all 600ms;
                 border-radius: $radius;
                 border-color: #eee;
+                box-shadow: none;
                 > .border {
                     animation: shrinkBorder 0.5s;
                     left: 0;
@@ -377,6 +376,7 @@ main {
                     color: #fff;
                     font-size: 12px;
                     cursor: pointer;
+                    box-shadow: 1px 2px 3px 1px $primary;
                     &.success {
                         &:after {
                             content: '复制成功';
@@ -395,13 +395,16 @@ main {
                     }
 
                     &:hover {
+                        transition: all 0.3s;
                         opacity: 0.6;
+                        box-shadow: none;
                     }
                 }
 
                 > .btn-better {
                     @extend .btn-copy;
                     background-color: $danger;
+                    box-shadow: 1px 2px 3px 1px $danger;
                 }
 
                 > code {
@@ -421,6 +424,7 @@ main {
                         border: 1px solid #ddd;
                         font-size: 16px;
                         & + .btn-clear {
+                            cursor: pointer;
                             padding: 5px;
                             color: #000;
                             display: inline-block;
