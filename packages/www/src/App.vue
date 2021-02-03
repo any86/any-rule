@@ -20,14 +20,15 @@
                 class="message"
                 href="https://github.com/any86/any-rule/issues/new"
                 target="_blank"
-            >提问</a>
+                >提问</a
+            >
         </article>
         <header>
             <h1>正则大全</h1>
-            
+
             <a
                 onclick="_hmt.push(['_trackEvent', '交互', '点击github', '头部'])"
-                style="margin-left:15px;color:#000;"
+                style="margin-left: 15px; color: #000"
                 href="https://github.com/any86/any-rule"
                 target="_blank"
                 class="github"
@@ -40,8 +41,15 @@
                 </svg>
                 <span>github</span>
             </a>
-            
-            <iframe style="display:block;margin-top:15px;" src="https://ghbtns.com/github-btn.html?user=any86&repo=any-rule&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+            <iframe
+                style="display: block; margin-top: 15px"
+                src="https://ghbtns.com/github-btn.html?user=any86&repo=any-rule&type=star&count=true"
+                frameborder="0"
+                scrolling="0"
+                width="170px"
+                height="20px"
+            ></iframe>
 
             <input
                 ref="searchInput"
@@ -53,27 +61,28 @@
                 class="search-input"
                 placeholder="搜索关键词, 如'手机'"
                 type="text"
-            >
+            />
         </header>
 
         <article>
             <ul v-if="0 < rules.length" class="list">
                 <li
                     @mouseenter="mouseenterHandler(index)"
-                    v-for="({title, rule, events,examples,counterExamples}, index) in rules"
+                    v-for="({ title, rule, events, examples, counterExamples }, index) in rules"
                     :key="title"
                     class="row"
                 >
                     <i class="border"></i>
-                    <h2>{{title}}</h2>
+                    <h2>{{ title }}</h2>
                     <p class="rule">
                         <span :data-clipboard-text="rule" class="btn-copy">点击复制</span>
                         <a
                             :href="`https://github.com/any86/any-rule/issues/new?title=我有更好的正则: ${title}`"
                             target="_blank"
                             class="btn-better"
-                        >我有更好的正则</a>
-                        <code ref="code" class="javascript">{{rule}}</code>
+                            >我有更好的正则</a
+                        >
+                        <code ref="code" class="javascript">{{ rule }}</code>
                     </p>
                     <section class="verification">
                         <label>
@@ -87,7 +96,7 @@
                                 @compositionend="check(index, 'blur')"
                                 @blur="check(index, 'blur')"
                                 @keyup="check(index, 'keyup')"
-                            >
+                            />
                             <span class="btn-clear" @click="reset(index)">清空</span>
                         </label>
 
@@ -101,13 +110,9 @@
 
                     <section class="trigger">
                         <h3>验证时机</h3>
-                        <label>
-                            <input v-model="list[index].events.blur" type="checkbox"> blur
-                        </label>
+                        <label> <input v-model="list[index].events.blur" type="checkbox" /> blur </label>
 
-                        <label>
-                            <input v-model="list[index].events.keyup" type="checkbox"> keyup
-                        </label>
+                        <label> <input v-model="list[index].events.keyup" type="checkbox" /> keyup </label>
                     </section>
                 </li>
             </ul>
@@ -128,7 +133,7 @@ export default {
         Object.freeze(RULES);
 
         return {
-            token:'',
+            token: '',
             timer: null,
             keyword: '',
             rules: RULES,
@@ -137,9 +142,9 @@ export default {
                 isOk: undefined,
                 events: {
                     blur: true,
-                    keyup: true
-                }
-            }))
+                    keyup: true,
+                },
+            })),
         };
     },
 
@@ -173,9 +178,9 @@ export default {
     },
 
     methods: {
-        parseExample(examples, counterExamples){
+        parseExample(examples, counterExamples) {
             let arr = [`例如: ${examples.join(', ')}`];
-            if(undefined !== counterExamples) {
+            if (undefined !== counterExamples) {
                 arr.push(`反例: ${counterExamples.join(', ')}`);
             }
             return arr.join(' , ');
@@ -225,8 +230,8 @@ export default {
                 /* eslint-disable */
                 _hmt.push(['_trackEvent', 'input框', this.rules[index].title, this.list[index].value]);
             }
-        }
-    }
+        },
+    },
 };
 </script>
 
@@ -319,8 +324,9 @@ main {
         h1 {
             display: inline-block;
         }
-        >.github{display: inline-flex;
-            >span{
+        > .github {
+            display: inline-flex;
+            > span {
                 margin-left: 5px;
             }
         }
@@ -336,7 +342,7 @@ main {
             border-color: #eee;
             border-width: 1px;
             border-style: solid;
-
+            box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.1);
             > .border {
                 position: absolute;
                 background: $primary;
@@ -366,7 +372,7 @@ main {
                     display: inline-block;
                     border-radius: $radius;
                     margin-right: 15px;
-                    padding:0 5px;
+                    padding: 0 5px;
                     background: $primary;
                     color: #fff;
                     font-size: 12px;
@@ -398,7 +404,9 @@ main {
                     background-color: $danger;
                 }
 
-                >code{word-break:break-word;}
+                > code {
+                    word-break: break-word;
+                }
             }
 
             > section.verification {
