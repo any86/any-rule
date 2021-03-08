@@ -185,7 +185,7 @@ export default {
 
         search() {
             if ('' !== this.keyword) {
-                this.rules = this.rules.filter(({ title }) => -1 !== title.indexOf(this.keyword.toLowerCase()));
+                this.rules = this.rules.filter(({ title }) => -1 !== title.toLowerCase().indexOf(this.keyword.toLowerCase()));
             } else {
                 this.rules = RULES;
             }
