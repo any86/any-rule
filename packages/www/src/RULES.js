@@ -98,7 +98,7 @@ module.exports = [{
     examples: ['21fe181c5bfc16306a6828c1f7b762e8'],
 },
 {
-    title: 'GUID(Globally Unique Identifier 全球唯一标识符) / UUID(Universally Unique IDentifier)',
+    title: 'GUID/UUID',
     rule: /^[a-f\d]{4}(?:[a-f\d]{4}-){4}[a-f\d]{12}$/i,
     examples: ['e155518c-ca1b-443c-9be9-fe90fdab7345', '41E3DAF5-6E37-4BCC-9F8E-0D9521E2AA8D', '00000000-0000-0000-0000-000000000000'],
 },
