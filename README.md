@@ -1,4 +1,4 @@
-# 正则大全  ![已收录70条](https://img.shields.io/badge/已收录-70条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录71条](https://img.shields.io/badge/已收录-71条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
@@ -58,25 +58,6 @@ vscode应用商店中搜索"**any-rule**".
 4. 请务必提交到**develop**分支.
 
 在此感谢大家对**any-rule**做出的贡献! 
-
-## 👽主要开发者
-按照加入时间排序
-<table>
-    <tr>
-        <td>
-            <a href="https://github.com/MrTenger"><img width="60" src="https://avatars3.githubusercontent.com/u/10781715?s=60&v=4"></a>
-        </td>
-        <td>
-            <a href="https://github.com/giraffeComing"><img width="60" src="https://avatars2.githubusercontent.com/u/14800669?s=460&v=4"></a>
-        </td>
-        <td>
-            <a href="https://github.com/microud"><img width="60" src="https://avatars1.githubusercontent.com/u/10163257?s=60&v=4"></a>
-        </td>
-        <td>
-            <a href="https://github.com/52cik"><img width="60" src="https://avatars0.githubusercontent.com/u/5033310?s=60&v=4"></a>
-        </td>
-    </tr>
-</table>
 
 ## 🍔正则
 
@@ -175,7 +156,7 @@ vscode应用商店中搜索"**any-rule**".
 /^([a-f\d]{32}|[A-F\d]{32})$/
 ```
 
-### GUID(Globally Unique Identifier 全球唯一标识符) / UUID(Universally Unique IDentifier)
+### GUID/UUID
 ```javascript
 /^[a-f\d]{4}(?:[a-f\d]{4}-){4}[a-f\d]{12}$/i
 ```
@@ -267,7 +248,12 @@ vscode应用商店中搜索"**any-rule**".
 
 ### date(日期)
 ```javascript
-/^\d{4}(-)(1[0-2]|0?\d)\1([0-2]\d|\d|30|31)$/
+/^\d{1,4}(-)(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31)$/
+```
+
+### 可以被moment转化成功的时间 YYYYMMDD HH:mm:ss
+```javascript
+/^\d{4}([/:-\S])(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31) (?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$/
 ```
 
 ### email(邮箱)
