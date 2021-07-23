@@ -89,8 +89,8 @@ module.exports = [{
 },
 {
     title: 'html注释',
-    rule: /^<!--[\s\S]*?-->$/,
-    examples: ['<!--<div class="_bubble"></div>-->']
+    rule: /<!--[\s\S]*?-->/g,
+    examples: ['<!--<div class="_bubble"></div>--><div>chenguzhen87</div><div class="_bubble"></div>-->']
 },
 {
     title: 'md5格式(32位)',
