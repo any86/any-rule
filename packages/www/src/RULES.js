@@ -89,8 +89,8 @@ module.exports = [{
 },
 {
     title: 'html注释',
-    rule: /^<!--[\s\S]*?-->$/,
-    examples: ['<!--<div class="_bubble"></div>-->']
+    rule: /<!--[\s\S]*?-->/g,
+    examples: ['<!--<div class="_bubble"></div>--><div>chenguzhen87</div><div class="_bubble"></div>-->']
 },
 {
     title: 'md5格式(32位)',
@@ -98,7 +98,7 @@ module.exports = [{
     examples: ['21fe181c5bfc16306a6828c1f7b762e8'],
 },
 {
-    title: 'GUID(Globally Unique Identifier 全球唯一标识符) / UUID(Universally Unique IDentifier)',
+    title: 'GUID/UUID',
     rule: /^[a-f\d]{4}(?:[a-f\d]{4}-){4}[a-f\d]{12}$/i,
     examples: ['e155518c-ca1b-443c-9be9-fe90fdab7345', '41E3DAF5-6E37-4BCC-9F8E-0D9521E2AA8D', '00000000-0000-0000-0000-000000000000'],
 },
@@ -191,8 +191,9 @@ module.exports = [{
 },
 {
     title: 'date(日期)',
-    rule: /^\d{4}(-)(1[0-2]|0?\d)\1([0-2]\d|\d|30|31)$/,
-    examples: ['1990-12-12', '2020-1-1']
+    rule: /^\d{1,4}(-)(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31)$/,
+    examples: ['1990-12-12', '1-1-1','0000-1-1'],
+    counterExamples: ['2020-00-01']
 },
 {
     title: 'email(邮箱)',
