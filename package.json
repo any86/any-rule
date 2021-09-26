@@ -48,6 +48,11 @@
                     "type": "string",
                     "default": "@zz",
                     "description": "触发字符串"
+                },
+                "any-rule.supportedLanguages": {
+                    "type": "string",
+                    "default": "*,javascript,javascriptreact,typescript,typescriptreact,vue,vue-postcss,vue-sugarss,vue-html,json,jsonc,graphql,dart,sql,go,java,php,jade,python,swift,markdown",
+                    "description": "支持的开发语言(用','分割)"
                 }
             }
         },
