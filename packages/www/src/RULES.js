@@ -1,4 +1,5 @@
-module.exports = [{
+module.exports = [
+{
     title: '火车车次',
     rule: /^[GCDZTSPKXLY1-9]\d{1,4}$/,
     examples: ['G1868', 'D102', 'D9', 'Z5', 'Z24', 'Z17']
@@ -243,11 +244,7 @@ module.exports = [{
     rule: /^\d+\.\d+$/,
     examples: ['0.0', '0.09']
 },
-{
-    title: '数字',
-    rule: /^\d{1,}$/,
-    examples: [12345678]
-},
+
 {
     title: 'html标签(宽松匹配)',
     rule: /<(\w+)[^>]*>(.*?<\/\1>)?/,
@@ -358,4 +355,29 @@ module.exports = [{
     rule: /^[a-zA-Z][0-9]{9}$/,
     examples: ['U193683453']
 },
+{
+    title: '数字',
+    rule: /^\d{1,}$/,
+    examples: [12345678]
+},
+{
+    title: '正整数，不包含0',
+    rule: /^\+?[1-9]\d*$/,
+    examples: [1231]
+},
+{
+    title: '负整数，不包含0',
+    rule: /^-[1-9]\d*$/,
+    examples: [-1231]
+},
+{
+    title: '负整数，不包含0',
+    rule: /^-[1-9]\d*$/,
+    examples: [-1231]
+},
+{
+    title: '浮点数',
+    rule: /^(-?\d+)(\.\d+)?$/,
+    examples: [1.5]
+}
 ];
