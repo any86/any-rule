@@ -244,11 +244,6 @@ module.exports = [{
     examples: ['0.0', '0.09']
 },
 {
-    title: '数字',
-    rule: /^\d{1,}$/,
-    examples: [12345678]
-},
-{
     title: 'html标签(宽松匹配)',
     rule: /<(\w+)[^>]*>(.*?<\/\1>)?/,
     examples: ['<div id="app"> 2333 </div>', '<input type="text">', '<br>']
@@ -358,4 +353,29 @@ module.exports = [{
     rule: /^[a-zA-Z][0-9]{9}$/,
     examples: ['U193683453']
 },
+{
+    title: '数字',
+    rule: /^\d{1,}$/,
+    examples: [12345678]
+},
+{
+    title: '正整数，不包含0',
+    rule: /^\+?[1-9]\d*$/,
+    examples: [1231]
+},
+{
+    title: '负整数，不包含0',
+    rule: /^-[1-9]\d*$/,
+    examples: [-1231]
+},
+{
+    title: '整数',
+    rule: /^-?[0-9]\d*$/,
+    examples: [-1231, 123]
+},
+{
+    title: '浮点数',
+    rule: /^(-?\d+)(\.\d+)?$/,
+    examples: [1.5]
+}
 ];
