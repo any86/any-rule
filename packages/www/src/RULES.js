@@ -371,9 +371,9 @@ module.exports = [
     examples: [-1231]
 },
 {
-    title: '负整数，不包含0',
-    rule: /^-[1-9]\d*$/,
-    examples: [-1231]
+    title: '整数',
+    rule: /^-?[0-9]\d*$/,
+    examples: [-1231, 123]
 },
 {
     title: '浮点数',
