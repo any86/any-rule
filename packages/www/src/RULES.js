@@ -244,6 +244,11 @@ module.exports = [{
     examples: ['0.0', '0.09']
 },
 {
+    title: '数字',
+    rule: /^\d{1,}$/,
+    examples: [12345678]
+},
+{
     title: 'html标签(宽松匹配)',
     rule: /<(\w+)[^>]*>(.*?<\/\1>)?/,
     examples: ['<div id="app"> 2333 </div>', '<input type="text">', '<br>']
@@ -352,11 +357,6 @@ module.exports = [{
     title: '台湾身份证 ',
     rule: /^[a-zA-Z][0-9]{9}$/,
     examples: ['U193683453']
-},
-{
-    title: '数字',
-    rule: /^\d{1,}$/,
-    examples: [12345678]
 },
 {
     title: '正整数，不包含0',
