@@ -430,3 +430,8 @@ vscode应用商店中搜索"**any-rule**".
 ```javascript
 /^(-?\d+)(\.\d+)?$/
 ```
+
+### email(支持中文邮箱)
+```javascript
+/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+```

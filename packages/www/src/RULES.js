@@ -17,7 +17,7 @@ module.exports = [{
 {
     title: '网址(url,支持端口和"?+参数"和"#+参数)',
     rule: /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/,
-    examples: ['www.qq.com', 'https://baidu.com', '360.com:8080/vue/#/a=1&b=2'],
+    examples: ['www.qq.com', 'https://baidu.com', 'http://baidu.com', '360.com:8080/vue/#/a=1&b=2'],
     counterExamples: ['....']
 },
 {
@@ -115,7 +115,7 @@ module.exports = [{
 {
     title: '图片(image)链接地址（图片格式可按需增删）',
     rule: /^https?:\/\/(.+\/)+.+(\.(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif))$/i,
-    examples: ['https://www.abc.com/logo.png']
+    examples: ['https://www.abc.com/logo.png', 'http://www.abc.com/logo.png']
 },
 {
     title: '24小时制时间（HH:mm:ss）',
@@ -377,5 +377,10 @@ module.exports = [{
     title: '浮点数',
     rule: /^(-?\d+)(\.\d+)?$/,
     examples: [1.5]
+},
+{
+    title: 'email(支持中文邮箱)',
+    rule: /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
+    examples: ['90203918@qq.com', 'nbilly@126.com', '啦啦啦@126.com']
 }
 ];
