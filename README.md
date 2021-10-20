@@ -1,4 +1,6 @@
+
 # 正则大全  ![已收录75条](https://img.shields.io/badge/已收录-75条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
@@ -411,6 +413,10 @@ vscode应用商店中搜索"**any-rule**".
 /^[a-zA-Z][0-9]{9}$/
 ```
 
+### 大写字母，小写字母，数字，特殊符号 `@#$%^&*`~()-+=` 中任意3项密码
+```javascript
+/^(?![a-zA-Z]+$)(?![A-Z0-9]+$)(?![A-Z\W_!@#$%^&*`~()-+=]+$)(?![a-z0-9]+$)(?![a-z\W_!@#$%^&*`~()-+=]+$)(?![0-9\W_!@#$%^&*`~()-+=]+$)[a-zA-Z0-9\W_!@#$%^&*`~()-+=]/
+
 ### 正整数，不包含0
 ```javascript
 /^\+?[1-9]\d*$/
@@ -434,4 +440,5 @@ vscode应用商店中搜索"**any-rule**".
 ### email(支持中文邮箱)
 ```javascript
 /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+
 ```
