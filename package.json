@@ -347,6 +347,26 @@
                 "title": "$(rocket) zz: 台湾身份证 "
             },
             {
+                "command": "extension.rule70",
+                "title": "$(rocket) zz: 正整数，不包含0 "
+            },
+            {
+                "command": "extension.rule71",
+                "title": "$(rocket) zz: 负整数，不包含0 "
+            },
+            {
+                "command": "extension.rule72",
+                "title": "$(rocket) zz: 整数 "
+            },
+            {
+                "command": "extension.rule73",
+                "title": "$(rocket) zz: 浮点数 "
+            },
+            {
+                "command": "extension.rule74",
+                "title": "$(rocket) zz: email(支持中文邮箱) "
+            },
+            {
                 "command": "extension.rule.callByMenu",
                 "title": "🦕正则大全(70条)"
             }

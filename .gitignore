@@ -1,5 +1,12 @@
 out
 node_modules
+coverage
+.nyc_output
 .vscode-test/
+.idea
+.vscode
+.DS_Store
 *.vsix
 yarn-error.log
+.rpt2_cache
+dist
