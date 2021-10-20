@@ -16,8 +16,8 @@ module.exports = [{
 },
 {
     title: '网址(url,支持端口和"?+参数"和"#+参数)',
-    rule: /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/,
-    examples: ['www.qq.com', 'https://baidu.com', 'http://baidu.com', '360.com:8080/vue/#/a=1&b=2'],
+    rule: /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-\(\)]*[\w@?^=%&/~+#-\(\)])?$/,
+    examples: ['www.qq.com', 'https://baidu.com', 'http://baidu.com', 'https://www.amap.com/search?id=BV10060895&city=420111&geoobj=113.207951%7C29.992557%7C115.785782%7C31.204369&query_type=IDQ&query=%E5%85%89%E8%B0%B7%E5%B9%BF%E5%9C%BA(%E5%9C%B0%E9%93%81%E7%AB%99)&zoom=10.15', '360.com:8080/vue/#/a=1&b=2'],
     counterExamples: ['....']
 },
 {
@@ -192,7 +192,7 @@ module.exports = [{
 {
     title: 'date(日期)',
     rule: /^\d{1,4}(-)(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31)$/,
-    examples: ['1990-12-12', '1-1-1','0000-1-1'],
+    examples: ['1990-12-12', '1-1-1', '0000-1-1'],
     counterExamples: ['2020-00-01']
 },
 {
