@@ -1,4 +1,6 @@
-# 正则大全  ![已收录71条](https://img.shields.io/badge/已收录-71条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+
+# 正则大全  ![已收录75条](https://img.shields.io/badge/已收录-75条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
@@ -78,7 +80,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 网址(url,支持端口和"?+参数"和"#+参数)
 ```javascript
-/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/
+/^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-\(\)]*[\w@?^=%&/~+#-\(\)])?$/
 ```
 
 ### 统一社会信用代码
@@ -148,7 +150,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### html注释
 ```javascript
-/^<!--[\s\S]*?-->$/
+/<!--[\s\S]*?-->/g
 ```
 
 ### md5格式(32位)
@@ -273,7 +275,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 身份证号, 支持1/2代(15位/18位数字)
 ```javascript
-/(^\d{8}(0\d|10|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0[1-9]|10|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/
+/^\d{6}((((((19|20)\d{2})(0[13-9]|1[012])(0[1-9]|[12]\d|30))|(((19|20)\d{2})(0[13578]|1[02])31)|((19|20)\d{2})02(0[1-9]|1\d|2[0-8])|((((19|20)([13579][26]|[2468][048]|0[48]))|(2000))0229))\d{3})|((((\d{2})(0[13-9]|1[012])(0[1-9]|[12]\d|30))|((\d{2})(0[13578]|1[02])31)|((\d{2})02(0[1-9]|1\d|2[0-8]))|(([13579][26]|[2468][048]|0[048])0229))\d{2}))(\d|X|x)$/
 ```
 
 ### 护照（包含香港、澳门）
@@ -414,4 +416,29 @@ vscode应用商店中搜索"**any-rule**".
 ### 大写字母，小写字母，数字，特殊符号 `@#$%^&*`~()-+=` 中任意3项密码
 ```javascript
 /^(?![a-zA-Z]+$)(?![A-Z0-9]+$)(?![A-Z\W_!@#$%^&*`~()-+=]+$)(?![a-z0-9]+$)(?![a-z\W_!@#$%^&*`~()-+=]+$)(?![0-9\W_!@#$%^&*`~()-+=]+$)[a-zA-Z0-9\W_!@#$%^&*`~()-+=]/
+
+### 正整数，不包含0
+```javascript
+/^\+?[1-9]\d*$/
+```
+
+### 负整数，不包含0
+```javascript
+/^-[1-9]\d*$/
+```
+
+### 整数
+```javascript
+/^-?[0-9]\d*$/
+```
+
+### 浮点数
+```javascript
+/^(-?\d+)(\.\d+)?$/
+```
+
+### email(支持中文邮箱)
+```javascript
+/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+
 ```

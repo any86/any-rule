@@ -3,7 +3,7 @@
     "publisher": "russell",
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
-    "version": "0.3.10",
+    "version": "0.3.12",
     "husky": {
         "hooks": {
             "pre-push": "npm run test:rules"
@@ -48,6 +48,11 @@
                     "type": "string",
                     "default": "@zz",
                     "description": "触发字符串"
+                },
+                "any-rule.supportedLanguages": {
+                    "type": "string",
+                    "default": "*,javascript,javascriptreact,typescript,typescriptreact,vue,vue-postcss,vue-sugarss,vue-html,json,jsonc,graphql,dart,sql,go,java,php,jade,python,swift,markdown",
+                    "description": "支持的开发语言(用','分割)"
                 }
             }
         },
@@ -342,8 +347,28 @@
                 "title": "$(rocket) zz: 台湾身份证 "
             },
             {
+                "command": "extension.rule70",
+                "title": "$(rocket) zz: 正整数，不包含0"
+            },
+            {
+                "command": "extension.rule71",
+                "title": "$(rocket) zz: 负整数，不包含0"
+            },
+            {
+                "command": "extension.rule72",
+                "title": "$(rocket) zz: 整数"
+            },
+            {
+                "command": "extension.rule73",
+                "title": "$(rocket) zz: 浮点数"
+            },
+            {
+                "command": "extension.rule74",
+                "title": "$(rocket) zz: email(支持中文邮箱)"
+            },
+            {
                 "command": "extension.rule.callByMenu",
-                "title": "🦕正则大全(70条)"
+                "title": "🦕正则大全(75条)"
             }
         ]
     },
