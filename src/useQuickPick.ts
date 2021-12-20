@@ -87,16 +87,16 @@ function insertRule(document: TextDocument, position: Position, ruleString: stri
 // 获取配置
 function getConfig() {
     const configuration = workspace.getConfiguration();
-    const { triggerString } = configuration['any-rule'];
+    const { triggerString, supportedLanguages } = configuration['any-rule'];
     const { length } = triggerString;
     const triggerStringStart = triggerString.substr(0, length - 1);
     const triggerStringEnd = triggerString.substr(-1);
-
+    console.log(supportedLanguages);
     return {
         triggerStringStart,
         triggerStringEnd,
         triggerString,
         // 预留
-        supportedLanguages: '*'
+        supportedLanguages
     }
 }

@@ -376,7 +376,7 @@ main {
                     color: #fff;
                     font-size: 12px;
                     cursor: pointer;
-                    box-shadow: 1px 2px 3px 1px $primary;
+                    box-shadow: 1px 2px 3px $primary;
                     &.success {
                         &:after {
                             content: '复制成功';
@@ -391,20 +391,19 @@ main {
                     }
                     &:active {
                         opacity: 0.6;
-                        color: #444;
+                        box-shadow: none;
                     }
 
                     &:hover {
                         transition: all 0.3s;
-                        opacity: 0.6;
-                        box-shadow: none;
+                        color: rgba(255, 255, 255, 0.6)
                     }
                 }
 
                 > .btn-better {
                     @extend .btn-copy;
                     background-color: $danger;
-                    box-shadow: 1px 2px 3px 1px $danger;
+                    box-shadow: 1px 2px 3px $danger;
                 }
 
                 > code {
