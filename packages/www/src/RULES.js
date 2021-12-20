@@ -64,7 +64,7 @@ module.exports = [{
 {
     title: 'linux文件夹路径',
     rule: /^\/(?:[^/]+\/)*$/,
-    examples: ['/usr/ad/dd/', '/', '/root/']
+    examples: ['/usr/ad/dd/', '/', '/root/', '/ a a / a / a a /']
 },
 {
     title: 'linux文件路径',
@@ -353,8 +353,10 @@ module.exports = [{
     examples: ['K034169(1)']
 },
 {
+    // 参考: 
+    // https://baike.baidu.com/item/%E6%BE%B3%E9%97%A8%E5%B1%85%E6%B0%91%E8%BA%AB%E4%BB%BD%E8%AF%81/12509098?fr=aladdin#5
     title: '澳门身份证 ',
-    rule: /^[1|5|7]\d{6}[(\d)]{3}$/,
+    rule: /^[1|5|7]\d{6}\(\d\)$/,
     examples: ['5686611(1)']
 },
 {
