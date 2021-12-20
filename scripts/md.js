@@ -40,31 +40,30 @@ vscode应用商店中搜索"**any-rule**".
 1. 按**F1**(mac下fn+F1)打开正则列表.
 2. **输入关键词搜索**, 比如"手机".
 
-![预览图](https://user-gold-cdn.xitu.io/2020/1/10/16f8e01a684a0a18?w=420&h=243&f=gif&s=414162)
+![GIF](https://user-images.githubusercontent.com/8264787/146724787-888a8666-5d2a-4e5e-b383-aec7c53bd312.gif)
 
 **方式2:**
 
 右键选择"🦕正则大全".
 
-![](https://user-gold-cdn.xitu.io/2020/2/28/17087735718cca3b?w=389&h=400&f=png&s=55934)
+![GIF](https://user-images.githubusercontent.com/8264787/146725447-4d92caed-2dd0-4f11-91d1-8da9cd8ff08b.gif)
 
 **方式3:**
 
 在代码任意位置输入"**@zz**".
 
-
-![预览图](https://user-gold-cdn.xitu.io/2020/2/28/17089999afc7a21c?w=722&h=408&f=gif&s=299355)
+![GIF](https://user-images.githubusercontent.com/8264787/146725402-30b34119-b709-4d49-adb2-af8dbb786d3b.gif)
 
 ## 👩‍🏫图解正则
 <details>
 <summary>查看详情</summary>
 每次在any-rule中选择正则后会弹出提示, 可点击"🤖图解正则".
 
-![预览图](https://user-gold-cdn.xitu.io/2020/2/23/1706e32c3a6fb116?w=533&h=95&f=png&s=21563)
+![image](https://user-images.githubusercontent.com/8264787/146726200-d97e48c3-df76-4531-8210-b6935fffb997.png)
 
 点击后可以看到正则解析, 方便大家学习.
 
-![预览图](https://user-gold-cdn.xitu.io/2020/2/23/1706e349b600c28b?w=1151&h=500&f=png&s=45210)
+![image](https://user-images.githubusercontent.com/8264787/146726350-58166bf9-7f7f-4685-86aa-f055d0c0b914.png)
 
 **注意**: 图解直接使用了https://regexper.com, 在此对作者表示敬意和感谢.
 </details>
