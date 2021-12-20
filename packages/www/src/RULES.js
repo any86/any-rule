@@ -21,7 +21,7 @@ module.exports = [{
     // 也参考谷歌浏览器的地址栏, 如果输入非字母不会被识别为域名
     title: '网址(URL)',
     rule: /^(((ht|f)tps?):\/\/)?([^!@#$%^&*?.\s-]([^!@#$%^&*?.\s]{0,63}[^!@#$%^&*?.\s])?\.)+[a-z]{2,6}\/?/,
-    examples: ['www.qq.com', 'www.qq.99', '//www.qq.com', 'www.腾讯.cs', 'ftp://baidu.qq', 'http://baidu.com', 'https://www.amap.com/search?id=BV10060895&city=420111&geoobj=113.207951%7C29.992557%7C115.785782%7C31.204369&query_type=IDQ&query=%E5%85%89%E8%B0%B7%E5%B9%BF%E5%9C%BA(%E5%9C%B0%E9%93%81%E7%AB%99)&zoom=10.15', '360.com:8080/vue/#/a=1&b=2'],
+    examples: ['www.qq.com','https://vuejs.org/v2/api/#v-model', 'www.qq.99', '//www.qq.com', 'www.腾讯.cs', 'ftp://baidu.qq', 'http://baidu.com', 'https://www.amap.com/search?id=BV10060895&city=420111&geoobj=113.207951%7C29.992557%7C115.785782%7C31.204369&query_type=IDQ&query=%E5%85%89%E8%B0%B7%E5%B9%BF%E5%9C%BA(%E5%9C%B0%E9%93%81%E7%AB%99)&zoom=10.15', '360.com:8080/vue/#/a=1&b=2'],
     counterExamples: ['....']
 },
 {
