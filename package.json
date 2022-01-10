@@ -80,7 +80,7 @@
             },
             {
                 "command": "extension.rule3",
-                "title": "$(rocket) zz: 网址(url,支持端口和\"?+参数\"和\"#+参数)"
+                "title": "$(rocket) zz: 网址(URL)"
             },
             {
                 "command": "extension.rule4",
@@ -104,7 +104,7 @@
             },
             {
                 "command": "extension.rule9",
-                "title": "$(rocket) zz: 子网掩码"
+                "title": "$(rocket) zz: 子网掩码(不包含 0.0.0.0)"
             },
             {
                 "command": "extension.rule10",
@@ -220,155 +220,163 @@
             },
             {
                 "command": "extension.rule38",
-                "title": "$(rocket) zz: email(邮箱)"
+                "title": "$(rocket) zz: 可以被moment转化成功的时间 YYYYMMDD HH:mm:ss"
             },
             {
                 "command": "extension.rule39",
-                "title": "$(rocket) zz: 座机(tel phone)电话(国内),如: 0341-86091234"
+                "title": "$(rocket) zz: email(邮箱)"
             },
             {
                 "command": "extension.rule40",
-                "title": "$(rocket) zz: 身份证号(1代,15位数字)"
+                "title": "$(rocket) zz: 座机(tel phone)电话(国内),如: 0341-86091234"
             },
             {
                 "command": "extension.rule41",
-                "title": "$(rocket) zz: 身份证号(2代,18位数字),最后一位是校验位,可能为数字或字符X"
+                "title": "$(rocket) zz: 身份证号(1代,15位数字)"
             },
             {
                 "command": "extension.rule42",
-                "title": "$(rocket) zz: 身份证号, 支持1/2代(15位/18位数字)"
+                "title": "$(rocket) zz: 身份证号(2代,18位数字),最后一位是校验位,可能为数字或字符X"
             },
             {
                 "command": "extension.rule43",
-                "title": "$(rocket) zz: 护照（包含香港、澳门）"
+                "title": "$(rocket) zz: 身份证号, 支持1/2代(15位/18位数字)"
             },
             {
                 "command": "extension.rule44",
-                "title": "$(rocket) zz: 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合"
+                "title": "$(rocket) zz: 护照（包含香港、澳门）"
             },
             {
                 "command": "extension.rule45",
-                "title": "$(rocket) zz: 中文/汉字"
+                "title": "$(rocket) zz: 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合"
             },
             {
                 "command": "extension.rule46",
-                "title": "$(rocket) zz: 小数"
+                "title": "$(rocket) zz: 中文/汉字"
             },
             {
                 "command": "extension.rule47",
-                "title": "$(rocket) zz: 数字"
+                "title": "$(rocket) zz: 小数"
             },
             {
                 "command": "extension.rule48",
-                "title": "$(rocket) zz: html标签(宽松匹配)"
+                "title": "$(rocket) zz: 数字"
             },
             {
                 "command": "extension.rule49",
-                "title": "$(rocket) zz: qq号格式正确"
+                "title": "$(rocket) zz: html标签(宽松匹配)"
             },
             {
                 "command": "extension.rule50",
-                "title": "$(rocket) zz: 数字和字母组成"
+                "title": "$(rocket) zz: qq号格式正确"
             },
             {
                 "command": "extension.rule51",
-                "title": "$(rocket) zz: 英文字母"
+                "title": "$(rocket) zz: 数字和字母组成"
             },
             {
                 "command": "extension.rule52",
-                "title": "$(rocket) zz: 小写英文字母组成"
+                "title": "$(rocket) zz: 英文字母"
             },
             {
                 "command": "extension.rule53",
-                "title": "$(rocket) zz: 大写英文字母"
+                "title": "$(rocket) zz: 小写英文字母组成"
             },
             {
                 "command": "extension.rule54",
-                "title": "$(rocket) zz: 密码强度校验，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"
+                "title": "$(rocket) zz: 大写英文字母"
             },
             {
                 "command": "extension.rule55",
-                "title": "$(rocket) zz: 用户名校验，4到16位（字母，数字，下划线，减号）"
+                "title": "$(rocket) zz: 密码强度校验，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"
             },
             {
                 "command": "extension.rule56",
-                "title": "$(rocket) zz: ip-v4[:端口]"
+                "title": "$(rocket) zz: 用户名校验，4到16位（字母，数字，下划线，减号）"
             },
             {
                 "command": "extension.rule57",
-                "title": "$(rocket) zz: ip-v6[:端口]"
+                "title": "$(rocket) zz: ip-v4[:端口]"
             },
             {
                 "command": "extension.rule58",
-                "title": "$(rocket) zz: 16进制颜色"
+                "title": "$(rocket) zz: ip-v6[:端口]"
             },
             {
                 "command": "extension.rule59",
-                "title": "$(rocket) zz: 微信号(wx)，6至20位，以字母开头，字母，数字，减号，下划线"
+                "title": "$(rocket) zz: 16进制颜色"
             },
             {
                 "command": "extension.rule60",
-                "title": "$(rocket) zz: 邮政编码(中国)"
+                "title": "$(rocket) zz: 微信号(wx)，6至20位，以字母开头，字母，数字，减号，下划线"
             },
             {
                 "command": "extension.rule61",
-                "title": "$(rocket) zz: 中文和数字"
+                "title": "$(rocket) zz: 邮政编码(中国)"
             },
             {
                 "command": "extension.rule62",
-                "title": "$(rocket) zz: 不能包含字母"
+                "title": "$(rocket) zz: 中文和数字"
             },
             {
                 "command": "extension.rule63",
-                "title": "$(rocket) zz: java包名"
+                "title": "$(rocket) zz: 不能包含字母"
             },
             {
                 "command": "extension.rule64",
-                "title": "$(rocket) zz: mac地址"
+                "title": "$(rocket) zz: java包名"
             },
             {
                 "command": "extension.rule65",
-                "title": "$(rocket) zz: 匹配连续重复的字符"
+                "title": "$(rocket) zz: mac地址"
             },
             {
                 "command": "extension.rule66",
-                "title": "$(rocket) zz: 数字和英文字母组成，并且同时含有数字和英文字母"
+                "title": "$(rocket) zz: 匹配连续重复的字符"
             },
             {
                 "command": "extension.rule67",
-                "title": "$(rocket) zz: 香港身份证 "
+                "title": "$(rocket) zz: 数字和英文字母组成，并且同时含有数字和英文字母"
             },
             {
                 "command": "extension.rule68",
-                "title": "$(rocket) zz: 澳门身份证 "
+                "title": "$(rocket) zz: 香港身份证 "
             },
             {
                 "command": "extension.rule69",
-                "title": "$(rocket) zz: 台湾身份证 "
+                "title": "$(rocket) zz: 澳门身份证 "
             },
             {
                 "command": "extension.rule70",
-                "title": "$(rocket) zz: 正整数，不包含0"
+                "title": "$(rocket) zz: 台湾身份证 "
             },
             {
                 "command": "extension.rule71",
-                "title": "$(rocket) zz: 负整数，不包含0"
+                "title": "$(rocket) zz: 大写字母，小写字母，数字，特殊符号 `@#$%^&*`~()-+=` 中任意3项密码"
             },
             {
                 "command": "extension.rule72",
-                "title": "$(rocket) zz: 整数"
+                "title": "$(rocket) zz: 正整数，不包含0"
             },
             {
                 "command": "extension.rule73",
-                "title": "$(rocket) zz: 浮点数"
+                "title": "$(rocket) zz: 负整数，不包含0"
             },
             {
                 "command": "extension.rule74",
+                "title": "$(rocket) zz: 整数"
+            },
+            {
+                "command": "extension.rule75",
+                "title": "$(rocket) zz: 浮点数"
+            },
+            {
+                "command": "extension.rule76",
                 "title": "$(rocket) zz: email(支持中文邮箱)"
             },
             {
                 "command": "extension.rule.callByMenu",
-                "title": "🦕正则大全(75条)"
+                "title": "🦕正则大全(77条)"
             }
         ]
     },
