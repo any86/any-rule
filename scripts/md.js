@@ -73,6 +73,8 @@ vscode应用商店中搜索"**any-rule**".
 
 [Alfred Workflow版](https://github.com/cccyb/workflows)
 
+[hyjs: 函数封装版](https://github.com/heiyehk/hyjs/tree/main/packages/utils)
+
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
 1. **正则**请在**packages/www/src/RULES.js**中添加.
