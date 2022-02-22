@@ -2,6 +2,11 @@
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
+## 🔥 我新开发的vscode插件
+**any-type, 一键JSON转Typescript类型**
+
+https://github.com/any86/any-type
+
 ## :rocket:web版本
 https://any86.github.io/any-rule/
 
