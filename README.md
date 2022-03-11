@@ -1,11 +1,6 @@
-# 正则大全  ![已收录77条](https://img.shields.io/badge/已收录-77条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录79条](https://img.shields.io/badge/已收录-79条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
-
-## 🔥 我新开发的vscode插件
-**any-type, 一键JSON转Typescript类型**
-
-https://github.com/any86/any-type
 
 ## :rocket:web版本
 https://any86.github.io/any-rule/
@@ -49,7 +44,7 @@ vscode应用商店中搜索"**any-rule**".
 **注意**: 图解直接使用了https://regexper.com, 在此对作者表示敬意和感谢.
 </details>
 
-## 🥠社区版本
+## 社区版本
 [idea版](https://github.com/zhoriya/idea-rule)
 
 [Alfred Workflow版](https://github.com/cccyb/workflows)
@@ -119,17 +114,17 @@ vscode应用商店中搜索"**any-rule**".
 
 ### linux"隐藏文件"路径
 ```javascript
-/^\/(?:[^/]+\/)*\.[^/]*/
+/^\/(?:[^\/]+\/)*\.[^\/]*/
 ```
 
 ### linux文件夹路径
 ```javascript
-/^\/(?:[^/]+\/)*$/
+/^\/(?:[^\/]+\/)*$/
 ```
 
 ### linux文件路径
 ```javascript
-/^\/(?:[^/]+\/)*[^/]+$/
+/^\/(?:[^\/]+\/)*[^\/]+$/
 ```
 
 ### window"文件夹"路径
@@ -194,7 +189,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### base64格式
 ```javascript
-/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)\s*$/i
+/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)\s*$/i
 ```
 
 ### 数字/货币金额（支持负数、千分位分隔符）
@@ -259,7 +254,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 可以被moment转化成功的时间 YYYYMMDD HH:mm:ss
 ```javascript
-/^\d{4}([/:-\S])(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31) (?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$/
+/^\d{4}([\/:-\S])(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31) (?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$/
 ```
 
 ### email(邮箱)
@@ -427,6 +422,11 @@ vscode应用商店中搜索"**any-rule**".
 /^(?![a-zA-Z]+$)(?![A-Z0-9]+$)(?![A-Z\W_!@#$%^&*`~()-+=]+$)(?![a-z0-9]+$)(?![a-z\W_!@#$%^&*`~()-+=]+$)(?![0-9\W_!@#$%^&*`~()-+=]+$)[a-zA-Z0-9\W_!@#$%^&*`~()-+=]/
 ```
 
+### ASCII码表中的全部的特殊字符
+```javascript
+/[\x21-\x2F\x3A-\x40\x5B-\x60\x7B-\x7E]+/
+```
+
 ### 正整数，不包含0
 ```javascript
 /^\+?[1-9]\d*$/
@@ -439,12 +439,17 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 整数
 ```javascript
-/^-?[0-9]\d*$/
+/^-?[1-9]\d*$/
 ```
 
 ### 浮点数
 ```javascript
-/^(-?\d+)(\.\d+)?$/
+/^(-?[1-9]\d*\.\d+|-?0\.\d*[1-9]\d*|0\.0+)$/
+```
+
+### 浮点数(严格)
+```javascript
+/^(-?[1-9]\d*\.\d+|-?0\.\d*[1-9])$/
 ```
 
 ### email(支持中文邮箱)
