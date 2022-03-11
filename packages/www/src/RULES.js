@@ -387,7 +387,7 @@ module.exports = [{
 },
 {
     title: '整数',
-    rule: /^-?[0-9]\d*$/,
+    rule: /^-?[1-9]\d*$/,
     examples: [-1231, 123]
 },
 {
