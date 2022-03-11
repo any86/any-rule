@@ -392,8 +392,9 @@ module.exports = [{
 },
 {
     title: '浮点数',
-    rule: /^(-?\d+)(\.\d+)?$/,
-    examples: [1.5]
+    rule: /^(-?[1-9]\d*\.\d+|-?0\.\d*[1-9]\d*|0\.0+)$/,
+    examples: ["1.23", "-1.01", "0.00"]
+    // allow "1.23", allow "-0.1", allow "0.00", ban "-0.00", allow "2.0", ban "2."
 },
 {
     title: 'email(支持中文邮箱)',
