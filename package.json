@@ -367,6 +367,10 @@
                 "title": "$(rocket) zz: email(支持中文邮箱)"
             },
             {
+                "command": "extension.rule77",
+                "title": "$(rocket) zz: 车架号"
+            },
+            {
                 "command": "extension.rule.callByMenu",
                 "title": "🦕正则大全(75条)"
             }
