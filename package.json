@@ -4,6 +4,7 @@
     "displayName": "any-rule",
     "description": "你要的\"正则\"都在这!",
     "version": "0.3.13",
+    "keywords": ["vscode","typescript", "regxp", "正则"],
     "husky": {
         "hooks": {
             "pre-push": "npm run test:rules"
@@ -25,6 +26,7 @@
         "vscode": "^1.12.0"
     },
     "categories": [
+        "Snippets",
         "Other"
     ],
     "icon": "images/vscode-logo.png",
