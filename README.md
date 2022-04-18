@@ -1,4 +1,4 @@
-# 正则大全  ![已收录79条](https://img.shields.io/badge/已收录-79条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录82条](https://img.shields.io/badge/已收录-82条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
@@ -114,17 +114,17 @@ vscode应用商店中搜索"**any-rule**".
 
 ### linux"隐藏文件"路径
 ```javascript
-/^\/(?:[^\/]+\/)*\.[^\/]*/
+/^\/(?:[^/]+\/)*\.[^/]*/
 ```
 
 ### linux文件夹路径
 ```javascript
-/^\/(?:[^\/]+\/)*$/
+/^\/(?:[^/]+\/)*$/
 ```
 
 ### linux文件路径
 ```javascript
-/^\/(?:[^\/]+\/)*[^\/]+$/
+/^\/(?:[^/]+\/)*[^/]+$/
 ```
 
 ### window"文件夹"路径
@@ -189,7 +189,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### base64格式
 ```javascript
-/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s]*?)\s*$/i
+/^\s*data:(?:[a-z]+\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)\s*$/i
 ```
 
 ### 数字/货币金额（支持负数、千分位分隔符）
@@ -247,14 +247,24 @@ vscode应用商店中搜索"**any-rule**".
 /^(?:(?:\+|00)86)?1\d{10}$/
 ```
 
-### date(日期)
+### 日期(宽松)
 ```javascript
 /^\d{1,4}(-)(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31)$/
 ```
 
+### 日期(严谨, 支持闰年判断)
+```javascript
+/^(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)$/
+```
+
+### 中国省
+```javascript
+/^浙江|上海|北京|天津|重庆|黑龙江|吉林|辽宁|内蒙古|河北|新疆|甘肃|青海|陕西|宁夏|河南|山东|山西|安徽|湖北|湖南|江苏|四川|贵州|云南|广西|西藏|江西|广东|福建|台湾|海南|香港|澳门$/
+```
+
 ### 可以被moment转化成功的时间 YYYYMMDD HH:mm:ss
 ```javascript
-/^\d{4}([\/:-\S])(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31) (?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$/
+/^\d{4}([/:-\S])(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31) (?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d$/
 ```
 
 ### email(邮箱)
@@ -302,14 +312,19 @@ vscode应用商店中搜索"**any-rule**".
 /^\d+\.\d+$/
 ```
 
-### 数字
+### 只包含数字
 ```javascript
-/^\d{1,}$/
+/^\d+$/
 ```
 
 ### html标签(宽松匹配)
 ```javascript
 /<(\w+)[^>]*>(.*?<\/\1>)?/
+```
+
+### 匹配中文汉字和中文标点
+```javascript
+/[\u4e00-\u9fa5|\u3002|\uff1f|\uff01|\uff0c|\u3001|\uff1b|\uff1a|\u201c|\u201d|\u2018|\u2019|\uff08|\uff09|\u300a|\u300b|\u3008|\u3009|\u3010|\u3011|\u300e|\u300f|\u300c|\u300d|\ufe43|\ufe44|\u3014|\u3015|\u2026|\u2014|\uff5e|\ufe4f|\uffe5]/
 ```
 
 ### qq号格式正确
