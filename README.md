@@ -13,7 +13,7 @@ vscode应用商店中搜索"**any-rule**".
 ### 使用
 **方式1:**
 
-1. 按**F1**(mac下fn+F1)打开正则列表.
+1. 按`F1`(mac下`⌥+a`)打开正则列表.
 2. **输入关键词搜索**, 比如"手机".
 
 ![GIF](https://user-images.githubusercontent.com/8264787/146724787-888a8666-5d2a-4e5e-b383-aec7c53bd312.gif)
