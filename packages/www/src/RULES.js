@@ -429,10 +429,4 @@ module.exports = [{
     examples: ["1.23", "-1.01"]
     // allow "1.23", allow "-0.1", ban "2.", ban "2.0"
 },
-{
-    title: 'email(支持中文邮箱)',
-    rule: /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
-    examples: ['90203918@qq.com', 'nbilly@126.com', '啦啦啦@126.com']
-
-}
 ];
