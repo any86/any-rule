@@ -402,8 +402,12 @@
                 "title": "$(rocket) zz: email(支持中文邮箱)"
             },
             {
+                "command": "extension.rule82",
+                "title": "$(rocket) zz: 域名(非网址, 不包含协议)"
+            },
+            {
                 "command": "extension.rule.callByMenu",
-                "title": "🦕正则大全(82条)"
+                "title": "🦕正则大全(83条)"
             }
         ]
     },
