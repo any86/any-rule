@@ -98,7 +98,7 @@ module.exports = [{
 },
 {
     title: 'md5格式(32位)',
-    rule: /^([a-f\d]{32}|[A-F\d]{32})$/,
+    rule: /^[a-fA-F0-9]{32}$/,
     examples: ['21fe181c5bfc16306a6828c1f7b762e8'],
 },
 {
