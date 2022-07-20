@@ -69,11 +69,18 @@ vscode应用商店中搜索"**any-rule**".
 </details>
 
 ## 社区版本
+
+社区版本非本人维护, 只是其他开发者使用了any-rule整理的正则内容, 如使用出现问题可直接与其开发者联系.
+
 [idea版](https://github.com/zhoriya/idea-rule)
 
 [Alfred Workflow版](https://github.com/cccyb/workflows)
 
 [hyjs: 函数封装版](https://github.com/heiyehk/hyjs/tree/main/packages/utils)
+
+[命令行版本](https://github.com/shenguanjiejie/workwork)
+
+[uTools版本](https://github.com/trentlee0/utools-any-rule)
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:

@@ -1,6 +1,6 @@
 # 正则大全  ![已收录82条](https://img.shields.io/badge/已收录-82条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
-🦕支持**web** / **vscode** / **idea** / **Alfred Workflow** / **uTools** 多平台
+🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
 ## :rocket:web版本
 https://any86.github.io/any-rule/
@@ -45,13 +45,18 @@ vscode应用商店中搜索"**any-rule**".
 </details>
 
 ## 社区版本
+
+社区版本非本人维护, 只是其他开发者使用了any-rule整理的正则内容, 如使用出现问题可直接与其开发者联系.
+
 [idea版](https://github.com/zhoriya/idea-rule)
 
 [Alfred Workflow版](https://github.com/cccyb/workflows)
 
 [hyjs: 函数封装版](https://github.com/heiyehk/hyjs/tree/main/packages/utils)
 
-[uTools版](https://github.com/trentlee0/utools-any-rule)
+[命令行版本](https://github.com/shenguanjiejie/workwork)
+
+[uTools版本](https://github.com/trentlee0/utools-any-rule)
 
 ## :fire:关于PR
 欢迎大家PR, 步骤如下:
@@ -156,7 +161,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### md5格式(32位)
 ```javascript
-/^([a-f\d]{32}|[A-F\d]{32})$/
+/^[a-fA-F0-9]{32}$/
 ```
 
 ### GUID/UUID
