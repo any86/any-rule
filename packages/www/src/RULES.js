@@ -414,8 +414,9 @@ module.exports = [{
 },
 {
     title: '整数',
-    rule: /^-?[1-9]\d*$/,
-    examples: [-1231, 123]
+    rule: /^(?:0|(?:-?[1-9]\d*))$/,
+    examples: [-1231, 123, 0],
+    counterExamples: ['01']
 },
 {
     title: '浮点数',
