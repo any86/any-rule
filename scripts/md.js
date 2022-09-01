@@ -27,7 +27,7 @@ let content = `# 正则大全  ${badges.join(' ')}
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
 ## :rocket:web版本
-https://any86.github.io/any-rule/
+https://any-rule.vercel.app/
 
 ## 🍭vscode插件
 
