@@ -30,7 +30,7 @@ jobs:
 
         # - run: yarn install
         # - run: yarn add codecov
-        - run: yarn add chalk
+        - run: yarn add chalk@2.4.2
 
         
 
