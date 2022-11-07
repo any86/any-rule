@@ -317,7 +317,7 @@ module.exports = [{
 },
 {
     title: '用户名校验，4到16位（字母，数字，下划线，减号）',
-    rule: /^[a-zA-Z0-9_-]{4,16}$/,
+    rule: /^[\w-]{4,16}$/,
     examples: ['xiaohua_qq']
 },
 {
