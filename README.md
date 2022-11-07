@@ -1,4 +1,4 @@
-# 正则大全  ![已收录77条](https://img.shields.io/badge/已收录-77条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
+# 正则大全  ![已收录84条](https://img.shields.io/badge/已收录-84条-673ab7.svg) [![版本](https://badgen.net/vs-marketplace/v/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![安装量](https://badgen.net/vs-marketplace/i/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) [![下载量](https://badgen.net/vs-marketplace/d/russell.any-rule)](https://marketplace.visualstudio.com/items?itemName=russell.any-rule) ![MIT](https://img.shields.io/badge/license-MIT-F44336.svg) [![CircleCI](https://badgen.net/github/status/any86/any-rule/master/ci/circleci)](https://circleci.com/gh/any86/any-rule)
 
 🦕支持**web** / **vscode** / **idea** / **Alfred Workflow**多平台
 
@@ -68,7 +68,6 @@ vscode应用商店中搜索"**any-rule**".
 在此感谢大家对**any-rule**做出的贡献! 
 
 ## 🍔正则
-<<<<<<< HEAD
 
 ### 火车车次
 ```javascript
@@ -162,7 +161,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### md5格式(32位)
 ```javascript
-/^([a-f\d]{32}|[A-F\d]{32})$/
+/^[a-fA-F0-9]{32}$/
 ```
 
 ### GUID/UUID
@@ -202,12 +201,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 数字/货币金额（支持负数、千分位分隔符）
 ```javascript
-/^-?\d+(,\d{3})*(\.\d{1,2})?$/
-```
-
-### 数字/货币金额 (只支持正数、不支持校验千分位分隔符)
-```javascript
-/(?:^[1-9]([0-9]+)?(?:\.[0-9]{1,2})?$)|(?:^(?:0)$)|(?:^[0-9]\.[0-9](?:[0-9])?$)/
+/^-?\d{1,3}(,\d{3})*(\.\d{1,2})?$/
 ```
 
 ### 银行卡号（10到30位, 覆盖对公/私账户, 参考[微信支付](https://pay.weixin.qq.com/wiki/doc/api/xiaowei.php?chapter=22_1)）
@@ -242,7 +236,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 手机号(mobile phone)中国(严谨), 根据工信部2019年最新公布的手机号段
 ```javascript
-/^(?:(?:\+|00)86)?1(?:(?:3[\d])|(?:4[5-79])|(?:5[0-35-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\d])|(?:9[189]))\d{8}$/
+/^(?:(?:\+|00)86)?1(?:(?:3[\d])|(?:4[5-79])|(?:5[0-35-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\d])|(?:9[1589]))\d{8}$/
 ```
 
 ### 手机号(mobile phone)中国(宽松), 只要是13,14,15,16,17,18,19开头即可
@@ -255,9 +249,19 @@ vscode应用商店中搜索"**any-rule**".
 /^(?:(?:\+|00)86)?1\d{10}$/
 ```
 
-### date(日期)
+### 日期(宽松)
 ```javascript
 /^\d{1,4}(-)(1[0-2]|0?[1-9])\1(0?[1-9]|[1-2]\d|30|31)$/
+```
+
+### 日期(严谨, 支持闰年判断)
+```javascript
+/^(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)$/
+```
+
+### 中国省
+```javascript
+/^浙江|上海|北京|天津|重庆|黑龙江|吉林|辽宁|内蒙古|河北|新疆|甘肃|青海|陕西|宁夏|河南|山东|山西|安徽|湖北|湖南|江苏|四川|贵州|云南|广西|西藏|江西|广东|福建|台湾|海南|香港|澳门$/
 ```
 
 ### 可以被moment转化成功的时间 YYYYMMDD HH:mm:ss
@@ -305,19 +309,24 @@ vscode应用商店中搜索"**any-rule**".
 /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/
 ```
 
-### 小数
+### 小数(支持科学计数)
 ```javascript
-/^\d+\.\d+$/
+/^[+-]?(\d+([.]\d*)?([eE][+-]?\d+)?|[.]\d+([eE][+-]?\d+)?)$/
 ```
 
-### 数字
+### 只包含数字
 ```javascript
-/^\d{1,}$/
+/^\d+$/
 ```
 
 ### html标签(宽松匹配)
 ```javascript
 /<(\w+)[^>]*>(.*?<\/\1>)?/
+```
+
+### 匹配中文汉字和中文标点
+```javascript
+/[\u4e00-\u9fa5|\u3002|\uff1f|\uff01|\uff0c|\u3001|\uff1b|\uff1a|\u201c|\u201d|\u2018|\u2019|\uff08|\uff09|\u300a|\u300b|\u3008|\u3009|\u3010|\u3011|\u300e|\u300f|\u300c|\u300d|\ufe43|\ufe44|\u3014|\u3015|\u2026|\u2014|\uff5e|\ufe4f|\uffe5]/
 ```
 
 ### qq号格式正确
@@ -352,7 +361,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 用户名校验，4到16位（字母，数字，下划线，减号）
 ```javascript
-/^[a-zA-Z0-9_-]{4,16}$/
+/^[\w-]{4,16}$/
 ```
 
 ### ip-v4[:端口]
@@ -397,7 +406,7 @@ vscode应用商店中搜索"**any-rule**".
 
 ### mac地址
 ```javascript
-/^((([a-f0-9]{2}:){5})|(([a-f0-9]{2}-){5}))[a-f0-9]{2}$/i
+/^(([a-f0-9][0,2,4,6,8,a,c,e]:([a-f0-9]{2}:){4})|([a-f0-9][0,2,4,6,8,a,c,e]-([a-f0-9]{2}-){4}))[a-f0-9]{2}$/i
 ```
 
 ### 匹配连续重复的字符
@@ -430,6 +439,11 @@ vscode应用商店中搜索"**any-rule**".
 /^(?![a-zA-Z]+$)(?![A-Z0-9]+$)(?![A-Z\W_!@#$%^&*`~()-+=]+$)(?![a-z0-9]+$)(?![a-z\W_!@#$%^&*`~()-+=]+$)(?![0-9\W_!@#$%^&*`~()-+=]+$)[a-zA-Z0-9\W_!@#$%^&*`~()-+=]/
 ```
 
+### ASCII码表中的全部的特殊字符
+```javascript
+/[\x21-\x2F\x3A-\x40\x5B-\x60\x7B-\x7E]+/
+```
+
 ### 正整数，不包含0
 ```javascript
 /^\+?[1-9]\d*$/
@@ -442,15 +456,35 @@ vscode应用商店中搜索"**any-rule**".
 
 ### 整数
 ```javascript
-/^-?[0-9]\d*$/
+/^(?:0|(?:-?[1-9]\d*))$/
 ```
 
 ### 浮点数
 ```javascript
-/^(-?\d+)(\.\d+)?$/
+/^(-?[1-9]\d*\.\d+|-?0\.\d*[1-9]\d*|0\.0+)$/
+```
+
+### 浮点数(严格)
+```javascript
+/^(-?[1-9]\d*\.\d+|-?0\.\d*[1-9])$/
 ```
 
 ### email(支持中文邮箱)
 ```javascript
 /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+```
+
+### 域名(非网址, 不包含协议)
+```javascript
+/^([0-9a-zA-Z-]{1,}\.)+([a-zA-Z]{2,})$/
+```
+
+### 军官/士兵证
+```javascript
+/^[\u4E00-\u9FA5](字第)([0-9a-zA-Z]{4,8})(号?)$/
+```
+
+### 户口薄
+```javascript
+/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/
 ```
