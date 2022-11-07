@@ -307,6 +307,10 @@ main {
 
     header {
         padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        background: linear-gradient(180deg, white 80%, transparent);
         > .search-input {
             display: block;
             margin-top: 15px;
