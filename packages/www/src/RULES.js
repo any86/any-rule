@@ -434,7 +434,6 @@ module.exports = [{
     title: 'email(支持中文邮箱)',
     rule: /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
     examples: ['90203918@qq.com', 'nbilly@126.com', '啦啦啦@126.com']
-
 },
 
 {
@@ -447,5 +446,12 @@ module.exports = [{
         'nodejs.org',
         'nodejs.cn'],
     counterExamples: ['http://baidu.com', 'https://baidu.com', 'www.百度.com']
+},
+
+{
+    title: '军官/士兵证',
+    rule: /^[\u4E00-\u9FA5](字第)([0-9a-zA-Z]{4,8})(号?)$/,
+    examples: ['军字第2001988号', '士字第P011816X号'],
 }
+
 ];
