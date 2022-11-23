@@ -327,7 +327,7 @@ module.exports = [{
 },
 {
     title: '16进制颜色',
-    rule: /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3}|[a-fA-F0-9]{9})$/,
+    rule: /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3}|[a-fA-F0-9]{8})$/,
     examples: ['#f00', '#F90', '#000', '#fe9de8', '#f8f8f8ff']
 },
 {
